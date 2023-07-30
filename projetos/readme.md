@@ -1,4 +1,5 @@
 Crie sua pasta de projetos aqui.
-Faça edições apenas na sua pasta de projetos.
 
-:warning: Não altere este arquivo.
+Faça edições e adicione arquivos apenas em sua pasta de projetos.
+
+:warning: Não altere este arquivo este arquivo readme.md
