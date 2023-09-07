@@ -77,3 +77,5 @@ MICROCONTROLLERS LAB. Solar Power Auto Irrigation System using Microcontroller. 
 WR KITS. Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. YouTube, Data de publicação. URL: https://www.youtube.com/playlist?list=PLZ8dBTV2_5HS_YaI8C4hsTzehRSgPjuxQ.
 
 SPARKFUN. Soil Moisture Sensor. GitHub. Disponível em: https://github.com/sparkfun/Soil_Moisture_Sensor. Acesso em: 07 de setembro de 2023.
+
+- https://www.mdpi.com/1424-8220/18/11/3786
