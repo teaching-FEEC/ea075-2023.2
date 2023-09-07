@@ -1,5 +1,5 @@
 # ` Sistema de Irrigação Inteligente `
-# ` Smart Watering System`
+# ` Smart Watering System `
 
 ## Apresentação
 
