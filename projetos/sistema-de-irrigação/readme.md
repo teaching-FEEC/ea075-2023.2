@@ -10,7 +10,7 @@ O presente projeto foi originado no contexto das atividades da disciplina de gra
 > |--|--|--|
 > | Felipe Rezende Gardin | 215766  | Eng. Elétrica|
 > | Igor Silva Mota | 199009 | Eng. Elétrica|
-> | Vinicius Errero| 206768 | Eng. Elétrica|
+> | Vinicius Errero| 206768 | Eng. Computação(AB)|
 
 
 ## Descrição do Projeto
@@ -77,5 +77,8 @@ MICROCONTROLLERS LAB. Solar Power Auto Irrigation System using Microcontroller. 
 WR KITS. Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. YouTube, Data de publicação. URL: https://www.youtube.com/playlist?list=PLZ8dBTV2_5HS_YaI8C4hsTzehRSgPjuxQ.
 
 SPARKFUN. Soil Moisture Sensor. GitHub. Disponível em: https://github.com/sparkfun/Soil_Moisture_Sensor. Acesso em: 07 de setembro de 2023.
+<<<<<<< HEAD
 
 - https://www.mdpi.com/1424-8220/18/11/3786
+=======
+>>>>>>> 5f933f902943792e5eefcadc0113074ecafa6226
