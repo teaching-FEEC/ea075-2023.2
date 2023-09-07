@@ -72,7 +72,7 @@ Os eventos são tratados a partir da leitura e escrita de dados na memória flas
 > 
 > Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
 > 
-![Diagrama Estrutural](https://github.com/Caio-Coldebella/ea075-2023.2/blob/9b9c55b04a4c8e208e22c4c054aa565ae6093147/projetos/black-box/Diagrama_black_box.drawio.png)
+![Diagrama Estrutural](./Diagrama_black_box.drawio.png)
 ## Referências
 > Seção obrigatória. Inclua aqui referências utilizadas no projeto.
 
