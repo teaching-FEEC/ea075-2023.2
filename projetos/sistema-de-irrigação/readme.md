@@ -10,7 +10,7 @@ O presente projeto foi originado no contexto das atividades da disciplina de gra
 > |--|--|--|
 > | Felipe Rezende Gardin | 215766  | Eng. Elétrica|
 > | Igor Silva Mota | 199009 | Eng. Elétrica|
-> | Vinicius Errero| 206768 | Eng. Elétrica|
+> | Vinicius Errero| 206768 | Eng. Computação(AB)|
 
 
 ## Descrição do Projeto
