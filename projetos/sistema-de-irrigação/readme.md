@@ -27,5 +27,27 @@ O projeto contará como componentes principais:
 
 - **microcontrolador PIC18F4550:**
   - Este que será reponsável por ser o cérebro do projeto podendo tomar decisões a partir dos dados coletados por meio dos sensores a serem especificados;
+  - 
 - **Sensores:** 
-    
+  - Sensor de Umidade do Solo (Solo Moisture Sensor) FC-28.
+  - Sensor de Temperatura e Umidade do Ar DHT-22
+- **Atuador:**
+  - Atuador será composto de 
+
+
+
+
+
+## Referências
+
+- https://www.academia.edu/24415757/Auto_Irrigation_System_using_Soil_Moisture_Sensor_and_PIC_Microcontroller
+
+- https://lyceumonline.usf.edu.br/salavirtual/documentos/1898.pdf
+
+- https://www.youtube.com/playlist?list=PLZ8dBTV2_5HS_YaI8C4hsTzehRSgPjuxQ
+
+- https://microcontrollerslab.com/solar-power-auto-irrigation-system-using-microcontroller/
+
+- https://www.electronicshub.org/auto-irrigation-system-using-soil-moisture-sensor-and-pic-microcontroller/
+
+- https://github.com/sparkfun/Soil_Moisture_Sensor
