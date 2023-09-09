@@ -10,7 +10,7 @@ Incluir nome RA e foco de especialização de cada membro do grupo. Os projetos 
 |Nome  | RA | Curso|
 |--|--|--|
 | Aron Simoes Ferreira Maciel  | 261064 | Eng. da Computação|
-| Nome2  | 123456  | Eng. Elétrica|
+| Erivelton da Rocha Tavares  | 170645  | Eng. Elétrica|
 
 
 ## Descrição do Projeto
