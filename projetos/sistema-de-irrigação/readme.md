@@ -63,6 +63,7 @@ Utilizando o temporizador presente no microcontrolador, iremos verificar a cada 
 ### Tratamento de Eventos
 Utilizando a informação dos sensores DHT-22 e FC-28 descritos acima, o sistema irá determinar se o solo deverá ser irrigado e a quantidade de água que será liberada.
 O principal indicador será a umidade do solo, com o solo estando mais seco, mais água será liberada. Além disso, caso a temperatura do ar esteja alta e/ou a umidade do ar estiver baixa, a quantidade de água a ser irrigada será maior.
+Por fim, os valores de temperatura, umidade do solo e umidade do ar da última medição serão mostrados no display LCD
 
 ## Descrição Estrutural do Sistema
 Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
@@ -71,7 +72,7 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
 3) Se estiver abaixo, o sistema ira medir a umidade e temperatura do ar
 4) Após a medição, o sistema deverá calcular o quanto de água é preciso para a irrigação
 5) Após o cálculo, o sistema irá realizar a irrigação e esperar 3h. 
-
+6) Mostrar no display LCD os valores obtidos nos sensores
 **Diagrama:**
 
 <p align="center">
