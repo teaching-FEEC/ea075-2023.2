@@ -61,7 +61,8 @@ P.S.: O modo de operação será descrito no subtópico Eventos e Tratamento de 
 A cada 6 horas, o sistema irá verificar a umidade do solo utilizando o sensor FC-28 e a umidade e temperatura do ar utilizando o sensor DHT-22.
 
 ### Tratamento de Eventos
-
+Utilizando a informação dos sensores, o sistema irá determinar se o solo deverá ser irrigado e a quantidade de água que será liberada.
+O principal indicador será a umidade do solo, com o solo estando mais seco, mais água será liberada. Além disso, caso a temperatura do ar esteja alta e/ou a umidade do ar estiver baixa, a quantidade de água a ser irrigada será maior.
 
 ## Descrição Estrutural do Sistema
 > Junto com a descrição do comportamento do sistema, deve-se especificar, em nível de bloco ou sistema, a estrutura necessária 
