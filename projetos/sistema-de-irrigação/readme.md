@@ -58,7 +58,7 @@ Mas, conforme o desenvolvimento do projeto estudaremos a possibilidade de adicio
 P.S.: O modo de operação será descrito no subtópico Eventos e Tratamento de Eventos
 
 ### Eventos
-A cada 6 horas, o sistema irá verificar a umidade do solo utilizando o sensor FC-28 e a umidade e temperatura do ar utilizando o sensor DHT-22.
+Utilizando o temporizador presente no microcontrolador, iremos verificar a cada 3 horas, a umidade do solo utilizando o sensor FC-28 e a umidade e temperatura do ar utilizando o sensor DHT-22, e utilizar esses parâmetros para determinar a ativação do relé responsável pela irrigação e sua duração, que será diretamente relacionado a quantidade de água irrigada.
 
 ### Tratamento de Eventos
 Utilizando a informação dos sensores, o sistema irá determinar se o solo deverá ser irrigado e a quantidade de água que será liberada.
