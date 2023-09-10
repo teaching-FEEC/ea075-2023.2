@@ -65,7 +65,7 @@ Utilizando a informação dos sensores, o sistema irá determinar se o solo deve
 O principal indicador será a umidade do solo, com o solo estando mais seco, mais água será liberada. Além disso, caso a temperatura do ar esteja alta e/ou a umidade do ar estiver baixa, a quantidade de água a ser irrigada será maior.
 
 ## Descrição Estrutural do Sistema
-Para o tratmaneto de eventos, o sistema deverá seguir conforme abaixo:
+Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
 1) O sistema irá medir a umidade do solo e ver se está abaixo de um valor pré-definido.
 2) Se estiver acima do valor, o sistema irá esperar 3h
 3) Se estiver abaixo, o sistema ira medir a umidade e temperatura do ar
