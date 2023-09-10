@@ -31,7 +31,7 @@ O projeto contará como componentes principais:
   - Sensor de Umidade do Solo (Solo Moisture Sensor) FC-28.
   - Sensor de Temperatura e Umidade do Ar DHT-22.
 - **Atuador:**
-  - Atuador é composto de um sistema envolvendo relé e válvula solenoide.
+  - Atuador é composto de um sistema envolvendo relé e válvula solenóide.
 - **Visualizador:**
   - Display LCD para visualizar as informações obtidas pelos sensores.
 - **Fonte de Alimentação:**
@@ -78,6 +78,9 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
 <p align="center">
   <img src="/projetos/sistema-de-irrigação/ea075-e1.drawio.png" />
 </p>
+
+Estrutura e funcionamento do sistema
+  O sistema será composto por um microcontrolador, dois sensores, um relé e uma válvula solenóide, um display LCD e uma fonte de alimentação de 5V. Basicamente, o funcionamento será de forma automática, sendo que ao alimentar o sistema, os sensores irão realizar medições dos parâmetros (umidade e temperatura), periodicamente, e assim, enviará os valores para o microcontrolador que irá decidir se a irrigação deverá ou não ser ativada, considerando um valor limite para os parâmetros medidos. Quando é medido o valor mínimo para a umidade do solo, o microcontrolador aciona o relé e a válvula solenóide para fazer a irrigação, até que seja atingido o valor ideal de umidade especificado. O display LCD, será utilizado para mostrar continuamente os valores de umidade e temperatura do solo e do ar. 
 
 ## Referências
 
