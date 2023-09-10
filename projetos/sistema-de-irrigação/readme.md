@@ -97,6 +97,7 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
 
 - SPARKFUN. Soil Moisture Sensor. GitHub. Disponível em: https://github.com/sparkfun/Soil_Moisture_Sensor. Acesso em: 07 de setembro de 2023.
 
-- https://www.mdpi.com/1424-8220/18/11/3786
+- DATTA, Sumon; TAGHVAEIAN, Saleh; OCHSNER, Tyson; MORIASI, Daniel; GOWDA, Prasanna; STEINER, Jean. Performance Assessment of Five Different Soil Moisture Sensors under Irrigated Field Conditions in Oklahoma. MDPI. Disponível em: https://www.mdpi.com/1424-8220/18/11/3786. Acesso em: 10 de setembro de 2023. 
 
-- https://harvesttotable.com/soil-and-air-temperatures-for-growing-vegetables/
+- ALBERT, Stephen. Soil and Air Temperatures for Growing Vegetables. Harvest to Table. Disponível em: https://harvesttotable.com/soil-and-air-temperatures-for-growing-vegetables/. Acesso em: 10 de setembro de 2023. 
+
