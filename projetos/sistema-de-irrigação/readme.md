@@ -72,6 +72,11 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
 4) Após a medição, o sistema deverá calcular o quanto de água é preciso para a irrigação
 5) Após o cálculo, o sistema irá realizar a irrigação e esperar 3h. 
 
+**Diagrama:**
+
+<p align="center">
+  <img src="/projetos/sistema-de-irrigação/ea075-e1.drawio.png" />
+</p>
 
 ## Referências
 
