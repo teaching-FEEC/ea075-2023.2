@@ -19,7 +19,7 @@ O "Smart Watering System" tem por objetivo principal o fornecimento de uma solu�
 
 Além disso, o sitema é capaz de entender a real necessidade dessa atividade, tentando evitar ao máximo irrigar o solo em momentos inapropriados através de informações obtidas por seus sensores.
 
-Utilizando, sensores de humidade e temperatura, sensor de humidade do solo, display LCD, e ainda, reles e motores (relacionados a bomba d'agua), o valor econômico do projeto navega ao redor de R$ 100,00.
+Utilizando, sensores de umidade e temperatura, sensor de umidade do solo, display LCD, e ainda, reles e motores (relacionados a bomba d'agua), o valor econômico do projeto navega ao redor de R$ 100,00.
 
 ## Descrição Funcional
 
