@@ -55,7 +55,7 @@ A Chocadeira Automatizada é um dispositivo projetado para incubação artificia
 
 ### Tratamento de Eventos
 
-![Draw.io](https://github.com/pedrosesti/ea075-2023.2/blob/main/projetos/chocadeira.drawio.png)
+![Draw.io](https://github.com/pedrosesti/ea075-2023.2/blob/main/projetos/chocadeira/chocadeira.drawio.png)
 ## Referências
 Material da disciplina de graduação *EA075 - Introdução ao Projeto de Sistemas Embarcados*
     
