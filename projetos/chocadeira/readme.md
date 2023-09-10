@@ -32,7 +32,7 @@ A Chocadeira Automatizada é um dispositivo projetado para incubação artificia
 
 **Umidade:** a configurabilidade da umidade é fundamental para criar as condições ideais para o desenvolvimento dos embriões. O usuário deve ajustar os níveis de umidade de acordo com as necessidades da espécie.
 
-**Viragem dos Ovos:** a chocadeira permite que o usuário configure a frequência da viragem automática dos ovos. Além disso, a viragem automática pode ser desativada, dando ao usuário a opção de virar os ovos manualmente.
+**Viragem dos ovos:** a chocadeira permite que o usuário configure a frequência da viragem automática dos ovos. Além disso, a viragem automática pode ser desativada, dando ao usuário a opção de virar os ovos manualmente.
 
 ### Eventos
 #### Periódicos:
@@ -54,20 +54,8 @@ A Chocadeira Automatizada é um dispositivo projetado para incubação artificia
 4. **Manutenção e limpeza:** a manutenção e a limpeza da chocadeira são eventos não-periódicos, mas importantes, que podem ocorrer em intervalos irregulares, dependendo da necessidade 
 
 ### Tratamento de Eventos
-O sistema de chocadeira automática deve tratar eventos periódicos, como viragem automática dos ovos e monitoramento de temperatura/umidade, ajustando automaticamente os parâmetros e registrando dados. Eventos não-periódicos incluem inserção dos ovos, configuração inicial, fim da incubação e manutenção/limpeza, exigindo respostas específicas, como alertas, manutenção de condições estáveis e registros adequados para garantir o sucesso do processo de incubação.
 
-## Descrição Estrutural do Sistema
-> Junto com a descrição do comportamento do sistema, deve-se especificar, em nível de bloco ou sistema, a estrutura necessária 
-> para captar os eventos do mundo externo, para alojar e processar o programa de tratamento de eventos, e para atuar sobre o mundo externo.
->
-> Para essa descrição recomenda-se a criação de diagramas de blocos.
-> Nesse diagrama, devem ser destacados os blocos funcionais que compõem o sistema, incluindo uma síntese das funcionalidades de cada bloco.
-> Além disso, deve-se esclarecer também o relacionamento entre estes blocos, incluindo os principais sinais de comunicação entre
-> os blocos de forma a assegurar a execução de todas as tarefas que o sistema deve realizar.
-> 
-> Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
-> 
-
+![Draw.io](https://github.com/pedrosesti/ea075-2023.2/blob/main/projetos/chocadeira.drawio.png)
 ## Referências
-> Seção obrigatória. Inclua aqui referências utilizadas no projeto.
+Material da disciplina de graduação *EA075 - Introdução ao Projeto de Sistemas Embarcados*
     
