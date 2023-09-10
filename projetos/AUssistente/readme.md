@@ -38,7 +38,8 @@ Sim, é possível, mas primeiramente é necessário realizar um levantamento dos
 
 ### Funcionalidades
 - Rastreamento de GPS
-- Monitoramento Cardíaco
+- Comunicação via BLE/rede sem fio
+- Monitoramento de batimentos cardíacos e oxigenação sanguínea
 - Acompanhamento dos Níveis de Atividades
 - Aferição de Hábitos Diários como frequência e nutrição das refeições e padrões de sono
 - Alertas de saída da área pré determinada pelo dono
@@ -61,6 +62,7 @@ Sim, é possível, mas primeiramente é necessário realizar um levantamento dos
 - Ativação do botão de pareamento BLE
 - Requisição recebida por BLE
 - Valores críticos de batimento cardíaco/oxigenação/temperatura
+- Fuga do pet (saída da área pré-determinada pelo dono)
 - Nível crítico de bateria
 
 ### Tratamento de Eventos
@@ -73,9 +75,9 @@ Sim, é possível, mas primeiramente é necessário realizar um levantamento dos
 
 - Ativação do botão de pareamento BLE: executa a rotina de pareamento para se conectar ao smartphone
 
-- Requisição recebida por BLE: invoca a rotina adequada para responder à requisição de maneira assíncrona (sem interromper o fluxo de leitura de sensores)
+- Requisição recebida por BLE/rede sem fio: invoca a rotina adequada para responder à requisição de maneira assíncrona (sem interromper o fluxo de leitura de sensores)
 
-- Valores críticos de batimento cardíaco/oxigenação/temperatura: toca um aviso sonoro e envia uma mensagem de alerta para o dispositivo conectado por Bluetooth (caso haja um)
+- Valores críticos de batimento cardíaco/oxigenação/temperatura e fuga de pet: toca um aviso sonoro e envia uma mensagem de alerta para o dispositivo conectado por Bluetooth/rede wireless (caso haja um)
 
 - Nível crítico de bateria: envia uma mensagem de alerta para o dispositivo conectado por Bluetooth, escreve dados relevantes na SRAM, desativa os sensores e entra em _deep sleep_
 
