@@ -31,13 +31,13 @@ Para o monitoramento adequado de estacionamentos o sistema deve ter algumas func
         - É importante que essa informação seja atualizada em tempo real;
 - Para coleta de dados para análise de fluxo:
     - Coletar a relação de vagas periodicamente;
-    - Enviar os dados via internet para o software analisador;
+    - Enviar os dados via internet para o software analisador.
 
 
 ### Configurabilidade
 O sistema projetado deve apresentar um comportamento semelhante em cada contexto em que for aplicado e, para apresentar um bom funcionamento em todos eles, deve ser possível:
 - Indicar a quantidade total de vagas que estarão disponíveis no estacionamento;
-- Indicar o threshold de tempo para considerar a mudança de estado de vaga disponível para ocupada;
+- Indicar o threshold de tempo para considerar a mudança de estado da vaga;
 - Indicar o intervalo de tempo em que serão coletados os logs para análise de fluxo.
 
 
