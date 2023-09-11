@@ -35,8 +35,15 @@ Para o monitoramento adequado de estacionamentos o sistema deve ter algumas func
 
 
 ### Configurabilidade
+O sistema projetado deve apresentar um comportamento semelhante em cada contexto em que for aplicado e, para apresentar um bom funcionamento em todos eles, deve ser possível:
+- Indicar a quantidade total de vagas que estarão disponíveis no estacionamento;
+- Indicar o threshold de tempo para considerar a mudança de estado de vaga disponível para ocupada;
+- Indicar o intervalo de tempo em que serão coletados os logs para análise de fluxo.
+
 
 ### Eventos
+
+
 
 ### Tratamento de Eventos
 
