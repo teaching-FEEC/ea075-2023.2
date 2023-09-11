@@ -58,7 +58,7 @@ Mas, conforme o desenvolvimento do projeto estudaremos a possibilidade de adicio
 P.S.: O modo de operação será descrito no subtópico Eventos e Tratamento de Eventos
 
 ### Eventos
-Utilizando o temporizador presente no microcontrolador, iremos verificar a cada 3 horas, a umidade do solo utilizando o sensor FC-28 e a umidade e temperatura do ar utilizando o sensor DHT-22, e utilizar esses parâmetros para determinar a ativação do relé responsável pela irrigação e sua duração, que será diretamente relacionado a quantidade de água irrigada.
+Utilizando o temporizador presente no microcontrolador, iremos verificar a cada minuto, a umidade do solo utilizando o sensor FC-28 e a umidade e temperatura do ar utilizando o sensor DHT-22, e utilizar esses parâmetros para determinar a ativação do relé responsável pela irrigação.
 
 ### Tratamento de Eventos
 Utilizando a informação dos sensores DHT-22 e FC-28 descritos acima, o sistema irá determinar se o solo deverá ser irrigado e a quantidade de água que será liberada.
@@ -67,16 +67,16 @@ Por fim, os valores de temperatura, umidade do solo e umidade do ar da última m
 
 ## Descrição Estrutural do Sistema
 Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
-1) O sistema irá medir a umidade do solo e ver se está abaixo de um valor pré-definido.
-2) Se estiver acima do valor, o sistema irá esperar 3h
-3) Se estiver abaixo, o sistema ira medir a umidade e temperatura do ar
-4) Após a medição, o sistema deverá calcular o quanto de água é preciso para a irrigação
-5) Após o cálculo, o sistema irá realizar a irrigação e esperar 3h. 
-6) Mostrar no display LCD os valores obtidos nos sensores
+1) Utilizando os sensores disponíveis, o sistema irá medir a umidade do solo, além da umidade e temperatura do ar
+2) Essas informações serão disponibilizadas no display LCD
+3) Utilizando as informações, irá decidir se o mesmo irrigará ou não
+4) Caso positivo, irá mandar um sinal para o atuador com fim de irrigar o solo
+5) Caso negativo, esse sinal não será enviado
+6) O sistema espera 60 segundos e retorna ao passo 1
 **Diagrama:**
 
 <p align="center">
-  <img src="/projetos/sistema-de-irrigação/ea075-e1.drawio.png" />
+  <img src="/projetos/sistema-de-irrigação/ea075-e1.drawio-att.png" />
 </p>
 
 **Estrutura e funcionamento do sistema**
