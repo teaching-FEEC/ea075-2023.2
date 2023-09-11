@@ -41,5 +41,6 @@ Para o monitoramento adequado de estacionamentos o sistema deve ter algumas func
 ### Tratamento de Eventos
 
 ## Descrição Estrutural do Sistema
+![parking-sys](https://github.com/felipe-benedet/ea075-2023.2/assets/144614560/08de9dc7-7366-438a-9cf2-0d44e0eeb147)
 
 ## Referências
