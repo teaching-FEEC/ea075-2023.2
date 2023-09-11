@@ -82,16 +82,8 @@ Sim, é possível, mas primeiramente é necessário realizar um levantamento dos
 - Nível crítico de bateria: envia uma mensagem de alerta para o dispositivo conectado por Bluetooth, escreve dados relevantes na SRAM, desativa os sensores e entra em _deep sleep_
 
 ## Descrição Estrutural do Sistema
-> Junto com a descrição do comportamento do sistema, deve-se especificar, em nível de bloco ou sistema, a estrutura necessária 
-> para captar os eventos do mundo externo, para alojar e processar o programa de tratamento de eventos, e para atuar sobre o mundo externo.
->
-> Para essa descrição recomenda-se a criação de diagramas de blocos.
-> Nesse diagrama, devem ser destacados os blocos funcionais que compõem o sistema, incluindo uma síntese das funcionalidades de cada bloco.
-> Além disso, deve-se esclarecer também o relacionamento entre estes blocos, incluindo os principais sinais de comunicação entre
-> os blocos de forma a assegurar a execução de todas as tarefas que o sistema deve realizar.
-> 
-> Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
-> 
+
+![Diagrama estrutural do projeto](images/diagrama_estrutural.png)
 
 ## Referências
 > Seção obrigatória. Inclua aqui referências utilizadas no projeto.
