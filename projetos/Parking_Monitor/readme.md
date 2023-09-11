@@ -19,6 +19,20 @@ Este projeto se trata de um sistema de monitoramento de estacionamento. O objeti
 ## Descrição Funcional
 
 ### Funcionalidades
+Para o monitoramento adequado de estacionamentos o sistema deve ter algumas funcionalidades básicas que envolvem ser capaz de:
+- Para monitoramento das vagas:
+    - Detectar a presença de qualquer veículo estacionado nas vagas;
+    - Indicar se as vagas estão disponíveis/ocupadas;
+        - A mudança de status da vaga só deve ser considerada após um certo período que a mudança for detectada;
+- Para exibição do controle de vagas:
+    - Contabilizar todas as vagas disponíveis;
+    - Ter registro do total de vagas;
+    - Mostrar em um painel a quantidade de vagas disponíveis;
+        - É importante que essa informação seja atualizada em tempo real;
+- Para coleta de dados para análise de fluxo:
+    - Coletar a relação de vagas periodicamente;
+    - Enviar os dados via internet para o software analisador;
+
 
 ### Configurabilidade
 
