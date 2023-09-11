@@ -1,5 +1,5 @@
-# `<Título em Português do Projeto>`
-# `<Project Title in in English>`
+# `<Gerenciamento das condições internas de uma residência: controle de temperatura e ventilação>`
+# `<Management of a house's internal conditions: temperature and ventilation control>`
 
 ## Apresentação
 
@@ -47,14 +47,14 @@ Modo manual | Modo automático | Híbrido ( habilitar função que permita ao us
 
 Detecção de chuva: Nesta função, o sistema é capaz de detectar detectar a intensidade da chuva no momento e, partir desse input, definir o nível de abertura da janela, bem como a variação da temperatura interna da residência. 
 
-Determinação da velocidade relativa do vento: o sensor afere o velocidade relativa do vento. A partir deste input, é possível identificar o grau de risco oferecido pela movimentação de ar, bem como alterar o nível de abertura da janela ( neste sentido, a função que detecta se um tornado,por exemplo, a partir das temperatura e intensidade do vento não entra no escopo deste projeto)
+Determinação da velocidade relativa do vento: o sensor afere o velocidade relativa do vento. A partir deste input, é possível identificar o grau de risco oferecido pela movimentação de ar, bem como alterar o nível de abertura da janela.
 
-Medição de temperatura: aqui, o sistema é capaz de quantificar o nível de temperatura externa e, com isso, alterar a temperatura interna e modificar ao grau de abertura da janela. 
+Medição de temperatura: aqui, o sistema é capaz de quantificar o nível da temperatura externa e, com isso, alterar a temperatura interna.
 
 A partir dessas variáveis de entada, o sistema será capaz de gerenciar a temperatura interna de um local fechado. 
 
 ### Tratamento de Eventos
-O tratamento de eventos pode ser descrito da seguinte maneira:
+O tratamento de eventos pode ser descrito da seguinte forma:
 
  |Evento  | Período de Avaliação |
  
@@ -65,16 +65,10 @@ O tratamento de eventos pode ser descrito da seguinte maneira:
  | Avaliar Temperatura Interna   | 5 minutos  | 
 
 ## Descrição Estrutural do Sistema
-> Junto com a descrição do comportamento do sistema, deve-se especificar, em nível de bloco ou sistema, a estrutura necessária 
-> para captar os eventos do mundo externo, para alojar e processar o programa de tratamento de eventos, e para atuar sobre o mundo externo.
->
-> Para essa descrição recomenda-se a criação de diagramas de blocos.
-> Nesse diagrama, devem ser destacados os blocos funcionais que compõem o sistema, incluindo uma síntese das funcionalidades de cada bloco.
-> Além disso, deve-se esclarecer também o relacionamento entre estes blocos, incluindo os principais sinais de comunicação entre
-> os blocos de forma a assegurar a execução de todas as tarefas que o sistema deve realizar.
-> 
-> Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
-> 
+
+A descrição estrutural do projeto é mostrada a seguir: 
+
+https://app.diagrams.net/#G1HePLPLfb2SfhvMzDoXYs2srMjPekHBUV#%7B%22pageId%22%3A%222EH2nfWBk5fQnlAncYlP%22%7D
 
 ## Referências
 Written with [StackEdit](https://stackedit.io/).
