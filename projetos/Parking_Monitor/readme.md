@@ -43,6 +43,7 @@ O sistema projetado deve apresentar um comportamento semelhante em cada contexto
 
 ### Eventos
 
+- Veículo estacionando em vaga; 
 
 
 ### Tratamento de Eventos
