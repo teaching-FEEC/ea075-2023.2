@@ -19,6 +19,11 @@ oferecida no segundo semestre de 2023, na Unicamp, sob supervisão da Profa. Dra
 > Qual problema vocês pretendem solucionar?
 > Quem são os potenciais usuários?
 > É possível estabelecer um valor econômico associado?
+>
+>
+>O propósito deste projeto é empregar uma variedade de sensores capazes de diagnosticar as condições climáticas, tais como umidade, >velocidade relativa do vento e temperatura, a fim de auxiliar no gerenciamento das condições internas de um espaço fechado. Esse >conceito pode ser extrapolado para uma ampla gama de ambientes que buscam o controle da temperatura interna, fazendo uso das condições >externas favoráveis, como exemplificado pelo caso de um Contêiner Data Center.
+>Apesar de possuir a possibilidade de tais extrapolações, este projeto será conduzido tomando como base o controle interno de uma >residência.
+
 
 
 ## Descrição Funcional
