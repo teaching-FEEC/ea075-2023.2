@@ -1,5 +1,5 @@
 # `Manta e sistema de controle de aquecimento para procedimentos hospitalares.`
-# `Blanket and heating control system for hospital procedures`
+# `Heating system for hospital procedures`
 
 ## Apresentação
 
