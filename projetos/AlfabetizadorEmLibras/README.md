@@ -64,7 +64,7 @@ Além disso, o processamento faz parte do tratamento de eventos, pois é atravé
 
 A descrição estrutural do sistema conta com um diagrama de blocos, no qual estão ilustrados os blocos funcionais (caixas retangulares) que compõem o sistema, juntamente com a sua respectiva síntese de funcionalidades e o relacionamento entre eles (representado por setas indicativas do fluxo de sinais). 
 
-![imagem 01](./Screenshot%20from%202023-09-11%2018-03-53.png "Diagrama inicial do projeto")
+![imagem 01](./DiagramaDeBlocos.png "Diagrama inicial do projeto")
 
 1. **Pessoa usuária:** é representada no diagrama como responsável pela emissão de ondas sonoras a serem captadas.
     **(a):** onda sonora emitida pela pessoa usuária.
