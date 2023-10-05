@@ -47,11 +47,18 @@ Os modos de funcionamento do sistema serão configurados por meio de um switch R
 	- Registro de leitura do altímetro (periódico, ~100ms)
 
 ### Tratamento de Eventos
-- Inserção do RBF: ao inserir o RBF, o sistema deve para de escrever os dados na memória, habilitar o web-server e a interface wifi e disponibilizar os dados lidos na interface.
+- Inserção do RBF: ao inserir o RBF, o sistema deve parar de escrever os dados na memória, habilitar o web-server e a interface wifi e disponibilizar os dados lidos na interface.
 - Remoção do RBF: ao remover o RBF, o sistema deve coletar as leituras do altímetro, filtrá-las (média móvel) e salvar na memória.
 
 ## Descrição Estrutural do Sistema
 ![Diagrama Estrutural](./Diagrama_black_box.drawio.png)
+
+## Especificações
+
+### Especificação Estrutural
+
+### Especificação de Algoritmos
+[Especificação de Algoritmos](./Especificacao_algoritmos.txt)
 
 ## Referências
 
