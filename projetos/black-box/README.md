@@ -58,7 +58,23 @@ Os modos de funcionamento do sistema serão configurados por meio de um switch R
 ### Especificação Estrutural
 
 ### Especificação de Algoritmos
-[Especificação de Algoritmos](./Especificacao_algoritmos.txt)
+![Diagrama de Algoritmos](./Especificacao_software.drawio.png)
+
+[Pseudocódigo de especificação do algoritmo](./Especificacao_algoritmos.txt)
+
+Para realizar a estimativa do tamanho que o código irá ocupar na memória, utilizamos o auxílio do ChatGPT para analisar o pseudocódigo, já que não temos como realizar a sua compilação. Para isso foram levados em conta os seguintes fatores:
+
+1. *Inclusão de Bibliotecas*: A inclusão de bibliotecas específicas para o ESP8266.
+
+2. *Código de Configuração*: Funções como `setup()` e `loop()` que possuem pouca complexidade.
+
+3. *Funções Adicionais*: As funções adicionais, como `setup_provide_data()`, `setup_flight()`, `provide_flight_data()`, `read_flight_data()`, `handle_OnConnect()`, e `handle_NotFound()`.
+
+4. *Operações de I2C e EEPROM*: Operações de leitura/gravação na EEPROM e comunicação I2C podem adicionar código extra, mas o tamanho exato depende da implementação específica dessas operações.
+
+5. *Manipulação de Variáveis e Controle de Fluxo*: O código que lida com variáveis, estruturas de controle de fluxo e lógica condicional também contribuirá para o tamanho do código.
+
+Dado esse conjunto de fatores e com a premissa de que o código não é excessivamente complexo e não inclui bibliotecas extremamente grandes, a estimativa de 20 KB a 50 KB parece uma faixa razoável.
 
 ## Referências
 
