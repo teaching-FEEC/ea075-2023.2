@@ -56,7 +56,13 @@ Os modos de funcionamento do sistema serão configurados por meio de um switch R
 ## Especificações
 
 ### Especificação Estrutural
+A ideia é comunicar o módulo BMP280 com o ESP8266 via I2C, pois ambos os dispositivos fornecem essa interface. Como vamos fazer uma leitura a cada 20ms, não é necessário um protocolo mais veloz, que seria o caso do SPI, além de que o I2C necessita de menos conexões. Além disso, o BMP280 possui uma acuracia de $\pm 0.12hPa (1m)$ e implementa um filtro IIR, que pode ser configurado via Software. Sua tensão de operação é de 1.8V a 3.6V, sendo a saída de 3.3V do microcontrolador suficiente para alimentação, e seu consumo de corrente em operação é de $2.7 \mu A$.
+O Switch RBF será um sistema de jumper conectado a uma interface apropriada disponibilizada. Essa interface conta com dois pinos, sendo um deles o VCC e outro uma GPIO do microcontrolador. Quando o RBF estiver inserido, o pino estará conectado ao VCC. Quando estiver removido, o pino estará conectado ao GND por meio de um sistema de pull-down.
+Além disso, a alimentação de todo o sistema será feita utilizando uma bateria Li-Ion 18650 de 3.7V ligada à um regulador de tensão (ME6217C33M5G) que fornecerá 3.3V ao microcontrolador. Essa bateria possui uma carga de 2500mAh, o que, considerando um consumo típico do ESP8266 de 70mA, é suficiente para aproximadamente 28 horas de operação. 
 
+![Especificação Estrutural](DiagramaBlackBox.png)
+
+Como trata-se de um sistema que estará embarcado em um foguete, suas dimensões devem, idealmente, seguir o padrão definido para um *Cansat* de 115mm de altura e 66mm de largura e também deve ser resistente a fortes vibrações e grandes acelerações. Além disso, o dispositivo não pode ser completamente vedado, pois o BMP280 precisa ler a variação de pressão externa para inferir a altitude, e a interface do RBF deve ficar disponivel externamente, para fazer rapidamente a inserção ou remoção do dispositivo. Por fim, não podem haver materiais que bloqueiem sinais de RF, pois a comunicação em solo será feita por meio de Wi-Fi. Por essas razões, será projetada uma estrutura em 3D que acomode de forma segura o dispositivo e cumpra todos os requisitos colocados  
 ### Especificação de Algoritmos
 ![Diagrama de Algoritmos](./Especificacao_software.drawio.png)
 
@@ -80,3 +86,9 @@ Dado esse conjunto de fatores e com a premissa de que o código não é excessiv
 
 - [Descrição ESP8266](https://www.huinfinito.com.br/home/1145-modulo-wifi-esp8266-nodemcu-esp-12e.html)
 - [Usando a EEPROM ESP8266](https://www.aranacorp.com/pt/usar-a-eeprom-com-um-esp8266/)
+- [Seven Pro Tips for ESP8266](https://www.instructables.com/ESP8266-Pro-Tips/)
+- [Datasheet BMP280](https://cdn-shop.adafruit.com/datasheets/BST-BMP280-DS001-11.pdf)
+- [LiIon 18650 datasheet](https://dalincom.ru/datasheet/SAMSUNG%20INR18650-25R.pdf)
+- [ME6217 datasheet](https://datasheet.lcsc.com/lcsc/1912111437_MICRONE-Nanjing-Micro-One-Elec-ME6217C33M5G_C427602.pdf)
+- [Dimensões Cansat](https://www.esa.int/SPECIALS/CanSat/SEM6JVCKP6G_0.html)
+
