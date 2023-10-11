@@ -62,7 +62,7 @@ A checagem da bateria é realizada a cada 10 minutos
 
 ## Descrição Estrutural do Sistema
 
-![Fluxograma](https://github.com/jiahas/ea075-2023.2/blob/main/projetos/regador/flowchart/regador_flowchart.png)
+![Fluxograma](flowchart/regador_flowchart.png)
 
 ## Referências
 
