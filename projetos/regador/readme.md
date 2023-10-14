@@ -83,7 +83,7 @@ ESCREVER SOBRE QUAIS PINOS SERAO DESTINADOS PARA CADA UM DELES (SENSORES ETC)
 
 ESCREVER SOBRE PERIFERICOS E QTD DE MEMORIA NECESSARIA (CHIP SELECT)
 
-O módulo responsável pela irrigação é composto por uma conexão para alimentar o sistema com água, seguido por uma válvula solenóide para controle do fluxo de água da irrigação e pela mangueira que realizará a irrigação. Entre a mangueira e a válvula, terá uma derivação conectada a outra válvula solenóide que por padrão ficará fechada, mas que será responsável por permitir a passagem do fertilizante no módulo de fertilização. Além disso, o módulo precisará dos sinais dos sensores de luminosidade e de umidade para decidir quando irrigar a horta e da função de temporização do microcontrolador. Cada sensor precisará de um pino de entrada analógica do microcontrolador. Na parte de atuação do módulo de irrigação, será necessário uma saída de propósito geral para o sinal de controle do relé de 5V que irá ativar a válvula solenóide que permite o fluxo de água da irrigação. O último componente deste módulo é o botão responsável por realizar uma irrigação de forma manual e no momento, que utilizará mais uma GPIO do microcontrolador como entrada.
+O módulo responsável pela irrigação é composto por uma conexão para alimentar o sistema com água sendo um tubo e uma mini bomba d'água. O módulo precisará do sinal do sensor de umidade para irrigar a horta quando necessário. O sensor de umidade será conectado à um pino de entrada analógica do microcontrolador. Na parte de atuação do módulo de irrigação, será necessário uma saída de propósito geral para o sinal de controle do relé de 5V que irá ativar a mini bomba d'água.
 
 ### Especificação de Algoritmos
 
