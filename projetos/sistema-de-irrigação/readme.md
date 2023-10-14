@@ -1,17 +1,16 @@
 # ` Sistema de Irrigação Inteligente `
+
 # ` Smart Watering System `
 
 ## Apresentação
 
 O presente projeto foi originado no contexto das atividades da disciplina de graduação *EA075 - Introdução ao Projeto de Sistemas Embarcados*, oferecida no segundo semestre de 2023, na Unicamp, sob supervisão da Profa. Dra. Paula Dornhofer Paro Costa, do Departamento de Engenharia de Computação e Automação (DCA) da Faculdade de Engenharia Elétrica e de Computação (FEEC).
 
-
 > |Nome  | RA | Curso|
 > |--|--|--|
 > | Felipe Rezende Gardin | 215766  | Eng. Elétrica|
 > | Igor Silva Mota | 199009 | Eng. Elétrica|
 > | Vinicius Errero| 206768 | Eng. Computação(AB)|
-
 
 ## Descrição do Projeto
 
@@ -27,7 +26,7 @@ O projeto contará como componentes principais:
 
 - **microcontrolador PIC18F4550:**
   - Este que será reponsável por ser o cérebro do projeto podendo tomar decisões a partir dos dados coletados por meio dos sensores a serem especificados.
-- **Sensores:** 
+- **Sensores:**
   - Sensor de Umidade do Solo (Solo Moisture Sensor) FC-28.
   - Sensor de Temperatura e Umidade do Ar DHT-22.
 - **Atuador:**
@@ -58,15 +57,19 @@ Mas, conforme o desenvolvimento do projeto estudaremos a possibilidade de adicio
 P.S.: O modo de operação será descrito no subtópico Eventos e Tratamento de Eventos
 
 ### Eventos
+
 Utilizando o temporizador presente no microcontrolador, iremos verificar a cada minuto, a umidade do solo utilizando o sensor FC-28 e a umidade e temperatura do ar utilizando o sensor DHT-22, e utilizar esses parâmetros para determinar a ativação do relé responsável pela irrigação.
 
 ### Tratamento de Eventos
+
 Utilizando a informação dos sensores DHT-22 e FC-28 descritos acima, o sistema irá determinar se o solo deverá ser irrigado e a quantidade de água que será liberada.
 O principal indicador será a umidade do solo, com o solo estando mais seco, mais água será liberada. Além disso, caso a temperatura do ar esteja alta e/ou a umidade do ar estiver baixa, a quantidade de água a ser irrigada será maior.
 Por fim, os valores de temperatura, umidade do solo e umidade do ar da última medição serão mostrados no display LCD
 
 ## Descrição Estrutural do Sistema
+
 Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
+
 1) Utilizando os sensores disponíveis, o sistema irá medir a umidade do solo, além da umidade e temperatura do ar
 2) Essas informações serão disponibilizadas no display LCD
 3) Utilizando as informações, irá decidir se o mesmo irrigará ou não
@@ -74,30 +77,28 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
 5) Caso negativo, esse sinal não será enviado
 6) O sistema espera 60 segundos e retorna ao passo 1
 
-**Diagrama:**
+### Diagrama
 
-<p align="center">
-  <img src="/projetos/sistema-de-irrigação/ea075-e1.drawio-att.png" />
-</p>
+<img align="center" width="33%" src="/projetos/sistema-de-irrigação/ea075-e1.drawio-att.png">
 
-**Estrutura e funcionamento do sistema**
+### Estrutura e funcionamento do sistema
 
-  O sistema será composto por um microcontrolador, dois sensores, um relé e uma válvula solenóide, um display LCD e uma fonte de alimentação de 5V. Basicamente, o funcionamento será de forma automática, sendo que ao alimentar o sistema, os sensores irão realizar medições dos parâmetros (umidade e temperatura), periodicamente, e assim, enviará os valores para o microcontrolador que irá decidir se a irrigação deverá ou não ser ativada, considerando um valor limite para os parâmetros medidos. Quando é medido o valor mínimo para a umidade do solo, o microcontrolador aciona o relé e a válvula solenóide para fazer a irrigação, até que seja atingido o valor ideal de umidade especificado. O display LCD, será utilizado para mostrar continuamente os valores de umidade e temperatura do solo e do ar. 
+  O sistema será composto por um microcontrolador, dois sensores, um relé e uma válvula solenóide, um display LCD e uma fonte de alimentação de 5V. Basicamente, o funcionamento será de forma automática, sendo que ao alimentar o sistema, os sensores irão realizar medições dos parâmetros (umidade e temperatura), periodicamente, e assim, enviará os valores para o microcontrolador que irá decidir se a irrigação deverá ou não ser ativada, considerando um valor limite para os parâmetros medidos. Quando é medido o valor mínimo para a umidade do solo, o microcontrolador aciona o relé e a válvula solenóide para fazer a irrigação, até que seja atingido o valor ideal de umidade especificado. O display LCD, será utilizado para mostrar continuamente os valores de umidade e temperatura do solo e do ar.
 
 ## Referências
 
-- Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. Academia.edu. Disponível em: https://www.academia.edu/24415757/Auto_Irrigation_System_using_Soil_Moisture_Sensor_and_PIC_Microcontroller. Acesso em: 07 de setembro de 2023.
+- Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. Academia.edu. Disponível em: <https://www.academia.edu/24415757/Auto_Irrigation_System_using_Soil_Moisture_Sensor_and_PIC_Microcontroller>. Acesso em: 07 de setembro de 2023.
 
-- SILVA, DANILO EDUARDO LASTÓRIA. Sistema Automático de Irrigação. Disponível em: https://lyceumonline.usf.edu.br/salavirtual/documentos/1898.pdf. Acesso em: 07 de setembro de 2023.
+- SILVA, DANILO EDUARDO LASTÓRIA. Sistema Automático de Irrigação. Disponível em: <https://lyceumonline.usf.edu.br/salavirtual/documentos/1898.pdf>. Acesso em: 07 de setembro de 2023.
 
-- ELECTRONICS HUB. Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. Disponível em: https://www.electronicshub.org/auto-irrigation-system-using-soil-moisture-sensor-and-pic-microcontroller/. Acesso em: 07 de setembro de 2023.
+- ELECTRONICS HUB. Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. Disponível em: <https://www.electronicshub.org/auto-irrigation-system-using-soil-moisture-sensor-and-pic-microcontroller/>. Acesso em: 07 de setembro de 2023.
 
-- MICROCONTROLLERS LAB. Solar Power Auto Irrigation System using Microcontroller. Disponível em: https://microcontrollerslab.com/solar-power-auto-irrigation-system-using-microcontroller/. Acesso em: 07 de setembro de 2023.
+- MICROCONTROLLERS LAB. Solar Power Auto Irrigation System using Microcontroller. Disponível em: <https://microcontrollerslab.com/solar-power-auto-irrigation-system-using-microcontroller/>. Acesso em: 07 de setembro de 2023.
 
-- WR KITS. Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. YouTube, Data de publicação. URL: https://www.youtube.com/playlist?list=PLZ8dBTV2_5HS_YaI8C4hsTzehRSgPjuxQ.
+- WR KITS. Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. YouTube, Data de publicação. URL: <https://www.youtube.com/playlist?list=PLZ8dBTV2_5HS_YaI8C4hsTzehRSgPjuxQ>.
 
-- SPARKFUN. Soil Moisture Sensor. GitHub. Disponível em: https://github.com/sparkfun/Soil_Moisture_Sensor. Acesso em: 07 de setembro de 2023.
+- SPARKFUN. Soil Moisture Sensor. GitHub. Disponível em: <https://github.com/sparkfun/Soil_Moisture_Sensor>. Acesso em: 07 de setembro de 2023.
 
-- DATTA, Sumon; TAGHVAEIAN, Saleh; OCHSNER, Tyson; MORIASI, Daniel; GOWDA, Prasanna; STEINER, Jean. Performance Assessment of Five Different Soil Moisture Sensors under Irrigated Field Conditions in Oklahoma. MDPI. Disponível em: https://www.mdpi.com/1424-8220/18/11/3786. Acesso em: 10 de setembro de 2023. 
+- DATTA, Sumon; TAGHVAEIAN, Saleh; OCHSNER, Tyson; MORIASI, Daniel; GOWDA, Prasanna; STEINER, Jean. Performance Assessment of Five Different Soil Moisture Sensors under Irrigated Field Conditions in Oklahoma. MDPI. Disponível em: <https://www.mdpi.com/1424-8220/18/11/3786>. Acesso em: 10 de setembro de 2023.
 
-- ALBERT, Stephen. Soil and Air Temperatures for Growing Vegetables. Harvest to Table. Disponível em: https://harvesttotable.com/soil-and-air-temperatures-for-growing-vegetables/. Acesso em: 10 de setembro de 2023. 
+- ALBERT, Stephen. Soil and Air Temperatures for Growing Vegetables. Harvest to Table. Disponível em: <https://harvesttotable.com/soil-and-air-temperatures-for-growing-vegetables/>. Acesso em: 10 de setembro de 2023.
