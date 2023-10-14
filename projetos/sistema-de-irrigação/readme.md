@@ -87,6 +87,16 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
 
   O sistema será composto por um microcontrolador, dois sensores, um relé e uma válvula solenóide, um display LCD e uma fonte de alimentação de 5V. Basicamente, o funcionamento será de forma automática, sendo que ao alimentar o sistema, os sensores irão realizar medições dos parâmetros (umidade e temperatura), periodicamente, e assim, enviará os valores para o microcontrolador que irá decidir se a irrigação deverá ou não ser ativada, considerando um valor limite para os parâmetros medidos. Quando é medido o valor mínimo para a umidade do solo, o microcontrolador aciona o relé e a válvula solenóide para fazer a irrigação, até que seja atingido o valor ideal de umidade especificado. O display LCD, será utilizado para mostrar continuamente os valores de umidade e temperatura do solo e do ar.
 
+## Especificações
+
+### Especificação Estrutural
+
+  some text
+
+### Especificação de Algoritmos
+
+  some text
+
 ## Referências
 
 - Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. Academia.edu. Disponível em: <https://www.academia.edu/24415757/Auto_Irrigation_System_using_Soil_Moisture_Sensor_and_PIC_Microcontroller>. Acesso em: 07 de setembro de 2023.
