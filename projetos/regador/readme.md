@@ -67,27 +67,50 @@ A checagem da bateria é realizada a cada 10 minutos
 |Componente|Funcionalidade|
 |--|--|
 |ATMega328|Unidade Micro-Controladora|
-|LED Vermelho|Nível de bateria crítico|
 |LED Vermelho|Nível de água crítico|
+|LED Vermelho|Nível de bateria crítico|
+|LED Amarelo|Nível de bateria baixo|
 |LED Azul|Bombeamento de água ativo|
+|Resistor|Para polarizar os LED (4 de 1kOhm)|
 |Sensor de umidade|Verificar umidade do solo|
-|Resistor|QUANTIDADE E VALOR|
+|Sensor de nível de água|Verificar nível do reservatório|
+|Transistor|Acionamento da bomba|
 
 |Item|Funcionalidade|
 |--|--|
-|Bateria 5V|Alimentar a UMC, arduino e demais componentes|
+|Bateria 5V|Alimentar a UMC e demais componentes|
 |Mini bomba d'água|Bombear água para a planta|
 |Tubo|Levar água à planta|
 
-ESCREVER SOBRE QUAIS PINOS SERAO DESTINADOS PARA CADA UM DELES (SENSORES ETC)
+O sensor de umidade será conectado a algum pino da entrada analógica digital do ATMega328.
 
-ESCREVER SOBRE PERIFERICOS E QTD DE MEMORIA NECESSARIA (CHIP SELECT)
+Os LEDs serão conectados às entradas de propósito geral do ATMega328 (GPIO) para pull-up.
 
-O módulo responsável pela irrigação é composto por uma conexão para alimentar o sistema com água sendo um tubo e uma mini bomba d'água. O módulo precisará do sinal do sensor de umidade para irrigar a horta quando necessário. O sensor de umidade será conectado à um pino de entrada analógica do microcontrolador. Na parte de atuação do módulo de irrigação, será necessário uma saída de propósito geral para o sinal de controle do relé de 5V que irá ativar a mini bomba d'água.
+O módulo responsável pela irrigação é composto por uma conexão para alimentar o sistema com água sendo um tubo e uma mini bomba d'água. O módulo precisará do sinal do sensor de umidade para irrigar a horta quando necessário. O sensor de umidade será conectado à um pino de entrada analógica do microcontrolador. Na parte de atuação do módulo de irrigação, será necessário uma saída de propósito geral para o sinal de controle do transistor que irá ativar/desativar a mini bomba d'água.
 
 ### Especificação de Algoritmos
 
+3 variáveis de de 2 bytes para contar tempo
 
+2 variáveis de 2 bytes para medir a bateria (VOLTAGE LOW e VOLTAGE HIGH)
+
+2 variáveis de 2 bytes para armazenar o nível do sensor de nível de água (LIMIT LOW e LIMIT HIGH)
+
+2 variáveis de 2 bytes para armazenar o nível do sensor de umidade (LIMIT LOW e LIMIT HIGH)
+
+1 variável de 2 bytes para verificar o nível de bateria
+
+1 registrador de 1 byte para utilização dos LEDs
+
+1 bit para acionar o pino de controle da bomba
+
+1 ADC de 10 bits para utilização do sensor de nível de água
+
+1 ADC de 10 bits para utilização do sensor umidade
+
+Total de memória de armazenamento de dados: 24 Bytes
+
+Memória de programa: ?
 
 ## Referências
 
@@ -95,8 +118,20 @@ https://grupolenotre.com/post/qual-o-melhor-horario-para-regar-o-seu-jardim
 
 https://www.amazon.com/ALAMSCN-Submersible-Aquariums-Fountain-Hydroponics/dp/B08PBQ1N1G/ref=sr_1_5?keywords=5v+water+pump&qid=1694209040&sr=8-5
 
-https://footprinthero.com/how-to-solar-power-an-arduino
-
 https://www.digikey.com/en/resources/conversion-calculators/conversion-calculator-battery-life
 
 https://curtocircuito.com.br/blog/Categoria%20Arduino/como-usar-um-sensor-de-nivel-de-agua
+
+https://curtocircuito.com.br/datasheet/sensor/nivel_de_agua_analogico.pdf
+
+https://www.electronicshub.org/transistor-as-a-switch/#:~:text=Both%20NPN%20and%20PNP%20transistors,drive%20the%20high%2Dpower%20transistor
+
+https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf
+
+https://5.imimg.com/data5/IQ/GJ/PF/SELLER-1833510/dc-mini-submersible-water-pump.pdf
+
+https://wp.josh.com/2014/11/06/battery-fuel-guage-with-zero-parts-and-zero-pins-on-avr/
+
+https://ww1.microchip.com/downloads/en/AppNotes/00002447A.pdf
+
+https://www.mouser.com/datasheet/2/744/Seeed_101020008-838655.pdf
