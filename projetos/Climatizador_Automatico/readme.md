@@ -70,5 +70,12 @@ os blocos de forma a assegurar a execução de todas as tarefas que o sistema de
 Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
 
 
+## Especificações
+
+### Especificação Estrutural
+
+### Especificação de Algoritmos
+
+
 ## Referências
 Seção obrigatória. Inclua aqui referências utilizadas no projeto.
