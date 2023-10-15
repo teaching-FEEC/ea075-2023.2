@@ -79,9 +79,9 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
 
 ### Diagrama
 
-<p align="center"
-  <img src="/projetos/sistema-de-irrigação/ea075-e1.drawio-att.png" /
-</p
+<p align="center">
+  <img src="/projetos/sistema-de-irrigação/ea075-e1.drawio-att.png" />
+</p>
 
 ### Estrutura e funcionamento do sistema
 
@@ -92,11 +92,11 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
 ### Especificação Estrutural
 
   (Se preferir, adicione um link para o documento de especificação estrutural)
-  
+
   Entende-se por estrutural a descrição tanto das características elétricas e temporais como das  restrições físicas de cada bloco funcional.
   Nessa etapa do projeto, ainda não será solicitado o diagrama elétrico mas espera-se que já  estejam identificados os componentes e circuitos integrados propostos
   para implementação do sistema embarcado proposto.
-  
+
   Como o projeto de um sistema embarcado é centralizado nas tarefas, recomenda-se iniciar com a definição dos periféricos de entrada e saída (atuadores e/ou sensores) apropriados para o
   sistema. Pode ser necessário definir um endereço distinto para cada um deles. 
   Este endereço será utilizado pela unidade micro-controladora para acessá-los tanto para leitura como para escrita. 
@@ -104,13 +104,13 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
   Tendo definidos os periféricos e a memória, é possível projetar um decodificador de endereços
   que converte o endereço referenciado no programa em sinal *Chip Select – CS* do dispositivo
   correspondente, habilitando-o para realizar um ciclo de leitura ou de escrita.
-  
+
   Nesta etapa do projeto espera-se que sejam identificada também a eventual necessidade do  projeto de circuitos de interface para os periféricos do projeto.
   Assim, devem ser incluídos na especificação, se necessário:
   - conversores AD e DA;
   - padrões de comunicação a serem adotados;
   - circuitos de sincronização de sinais temporais.
-  
+
   Finalmente, deve-se especificar as restrições físicas e ambientais de funcionamento do  circuito, tais como limites mecânicos
   (altura, largura, profundidade) e limites de dissipação térmica.
 
