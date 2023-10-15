@@ -74,8 +74,65 @@ Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
 
 ### Especificação Estrutural
 
+O projeto do climatizador automático trabalhará com duas interfaces elétricas: 5 V e 127 V. 
+A interface de 5 V foi utilizada para alimentação do sensor de temperatura e umidade, acionamento dos relés responsáveis pelos acionamentos do umidificador de ar e do desumidificador de ar, das ventoinhas de refrigeração, do display e para realizar a leitura dos botões responsáveis pela escolha de modo de operação e controle de setpoint.
+A interface de 127 V foi utilizada para alimentar o umidificador de ar e desumidificador de ar que devem ser ligados na rede elétrica. Logo, a interface de 5 V (através do uso de relés) funcionará como driver para ligar/desligar esses periféricos.
+
+Definição dos periféricos:
+
+Sensor de temperatura e umidade: 
+Modelo: DHT 11
+Tensão de alimentação: Entre 3 V e 5.5 V
+Corrente de alimentação: Entre 0.5 mA e 2.5 mA
+Protocolo de comunicaão: Interface Serial (Single-Wire Two-Way)
+Precisão: 4% para umidade 2 °C para temperatura
+Range de detecção: de 0 °C a 50 °C e 20 % a 90 % UR
+
+Display:
+Modelo: LCD 16x2 
+Tensão de Alimentação: Entre 4.5 V e 5.5 V
+Corrente de alimentação: Entre 75 mA  e 200 mA
+Protocolo de comunicação: Paralelo de 4 a 8 bits
+
+Ventoinha: 
+Potência: 2 W
+Tensão de alimentação: 5 V
+Corrente de alimentação: 400 mA
+
+Umidificador de Ar:
+Tensão de Alimentação: 110 V
+
+Desumidificador de Ar:
+Tensão de alimentação: 110 V
+
+O sensor de temperatura e umidade escolhido já vem com conversor A/D embutido e por isso não será necessário o uso de um conversor A/D externo. Do ponto de vista das saídas, as cargas que o sistema controlará são analógicas, contudo, não será necessário um conversor D/A pois a saída digital do microcontrolador irá acionar o driver de controle/potência utilizado para acionar a carga - no caso da ventoinha a saída irá polarizar os transistores de potência que fazem a interface de corrente da ventoinha ou para acionar a bobina do relé que ligará o umidificador de ar e o desumidificador de ar à rede elétrica.
+
+Especificações do Climatizador Automático:
+Temperatura de Operação: de 0 °C a 50 °C
+Umidade Relativa para operação: de 20 % UR a 90 % UR
+Dimensões Físicas: O Climatizador automático fica limitado às dimensões físicas da ventoinha, umidificador e desumidificador de ar utilizados. Podem ser utilizados diferentes modelos desde que atendam às especificações citadas acima. Assim sendo, é necessário uma mesa que comporte estes periféricos e que se tenha disponível uma tomada com 110 V para o umidificador de ar e desumidificador de ar.
+
 ### Especificação de Algoritmos
 
 
 ## Referências
-Seção obrigatória. Inclua aqui referências utilizadas no projeto.
+Sensor de Temperatura e Umidade:
+https://html.alldatasheet.com/html-pdf/1440068/ETC/DHT11/60/1/DHT11.html
+
+Controle de umidificador de ar:
+https://www.youtube.com/watch?v=ppVheVtNlcc
+
+controle de temperatura:
+https://www.youtube.com/watch?v=AbpNE_0faU0
+
+display:
+https://www.arducore.com.br/display-lcd-16x2-c-blacklight
+
+BC548:
+https://html.alldatasheet.com/html-pdf/857905/SUNMATE/BC548/292/1/BC548.html
+
+TIP122: 
+https://html.alldatasheet.com/html-pdf/5764/MOTOROLA/TIP122/257/1/TIP122.html
+
+
+
