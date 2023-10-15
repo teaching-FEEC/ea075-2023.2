@@ -6,11 +6,11 @@
 
 O presente projeto foi originado no contexto das atividades da disciplina de graduação *EA075 - Introdução ao Projeto de Sistemas Embarcados*, oferecida no segundo semestre de 2023, na Unicamp, sob supervisão da Profa. Dra. Paula Dornhofer Paro Costa, do Departamento de Engenharia de Computação e Automação (DCA) da Faculdade de Engenharia Elétrica e de Computação (FEEC).
 
-> |Nome  | RA | Curso|
-> |--|--|--|
-> | Felipe Rezende Gardin | 215766  | Eng. Elétrica|
-> | Igor Silva Mota | 199009 | Eng. Elétrica|
-> | Vinicius Errero| 206768 | Eng. Computação(AB)|
+ |Nome  | RA | Curso|
+ |--|--|--|
+ | Felipe Rezende Gardin | 215766  | Eng. Elétrica|
+ | Igor Silva Mota | 199009 | Eng. Elétrica|
+ | Vinicius Errero| 206768 | Eng. Computação(AB)|
 
 ## Descrição do Projeto
 
@@ -79,9 +79,9 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
 
 ### Diagrama
 
-<p align="center">
-  <img src="/projetos/sistema-de-irrigação/ea075-e1.drawio-att.png" />
-</p>
+<p align="center"
+  <img src="/projetos/sistema-de-irrigação/ea075-e1.drawio-att.png" /
+</p
 
 ### Estrutura e funcionamento do sistema
 
@@ -91,26 +91,54 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
 
 ### Especificação Estrutural
 
-  some text
+  (Se preferir, adicione um link para o documento de especificação estrutural)
+  
+  Entende-se por estrutural a descrição tanto das características elétricas e temporais como das  restrições físicas de cada bloco funcional.
+  Nessa etapa do projeto, ainda não será solicitado o diagrama elétrico mas espera-se que já  estejam identificados os componentes e circuitos integrados propostos
+  para implementação do sistema embarcado proposto.
+  
+  Como o projeto de um sistema embarcado é centralizado nas tarefas, recomenda-se iniciar com a definição dos periféricos de entrada e saída (atuadores e/ou sensores) apropriados para o
+  sistema. Pode ser necessário definir um endereço distinto para cada um deles. 
+  Este endereço será utilizado pela unidade micro-controladora para acessá-los tanto para leitura como para escrita. 
+  Nesta etapa do projeto espera-se que a unidade micro-controladora seja definida.
+  Tendo definidos os periféricos e a memória, é possível projetar um decodificador de endereços
+  que converte o endereço referenciado no programa em sinal *Chip Select – CS* do dispositivo
+  correspondente, habilitando-o para realizar um ciclo de leitura ou de escrita.
+  
+  Nesta etapa do projeto espera-se que sejam identificada também a eventual necessidade do  projeto de circuitos de interface para os periféricos do projeto.
+  Assim, devem ser incluídos na especificação, se necessário:
+  - conversores AD e DA;
+  - padrões de comunicação a serem adotados;
+  - circuitos de sincronização de sinais temporais.
+  
+  Finalmente, deve-se especificar as restrições físicas e ambientais de funcionamento do  circuito, tais como limites mecânicos
+  (altura, largura, profundidade) e limites de dissipação térmica.
 
 ### Especificação de Algoritmos
 
-  some text
+  (Se preferir, adicione um link para o documento de especificação de algoritmos).
+
+  Deve ser elaborado para CADA evento o algoritmo de tratamento deste evento. Com base no
+  tamanho de cada algoritmo, estima-se o tamanho de memória necessária para armazenar todos
+  os programas e os dados associados. Isso permitirá especificar a memória a ser utilizada e o
+  espaço onde serão armazenados os programas. O algoritmo de tratamento de evento pode
+  ser representado graficamente por um fluxograma. Recomenda-se usar símbolos gráficos consistentes 
+  com a norma internacional ISO 1028-1973 e IS0 2972-1979.
 
 ## Referências
 
-- Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. Academia.edu. Disponível em: <https://www.academia.edu/24415757/Auto_Irrigation_System_using_Soil_Moisture_Sensor_and_PIC_Microcontroller>. Acesso em: 07 de setembro de 2023.
+- Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. Academia.edu. Disponível em: <https://www.academia.edu/24415757/Auto_Irrigation_System_using_Soil_Moisture_Sensor_and_PIC_Microcontroller. Acesso em: 07 de setembro de 2023.
 
-- SILVA, DANILO EDUARDO LASTÓRIA. Sistema Automático de Irrigação. Disponível em: <https://lyceumonline.usf.edu.br/salavirtual/documentos/1898.pdf>. Acesso em: 07 de setembro de 2023.
+- SILVA, DANILO EDUARDO LASTÓRIA. Sistema Automático de Irrigação. Disponível em: <https://lyceumonline.usf.edu.br/salavirtual/documentos/1898.pdf. Acesso em: 07 de setembro de 2023.
 
-- ELECTRONICS HUB. Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. Disponível em: <https://www.electronicshub.org/auto-irrigation-system-using-soil-moisture-sensor-and-pic-microcontroller/>. Acesso em: 07 de setembro de 2023.
+- ELECTRONICS HUB. Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. Disponível em: <https://www.electronicshub.org/auto-irrigation-system-using-soil-moisture-sensor-and-pic-microcontroller/. Acesso em: 07 de setembro de 2023.
 
-- MICROCONTROLLERS LAB. Solar Power Auto Irrigation System using Microcontroller. Disponível em: <https://microcontrollerslab.com/solar-power-auto-irrigation-system-using-microcontroller/>. Acesso em: 07 de setembro de 2023.
+- MICROCONTROLLERS LAB. Solar Power Auto Irrigation System using Microcontroller. Disponível em: <https://microcontrollerslab.com/solar-power-auto-irrigation-system-using-microcontroller/. Acesso em: 07 de setembro de 2023.
 
-- WR KITS. Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. YouTube, Data de publicação. URL: <https://www.youtube.com/playlist?list=PLZ8dBTV2_5HS_YaI8C4hsTzehRSgPjuxQ>.
+- WR KITS. Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. YouTube, Data de publicação. URL: <https://www.youtube.com/playlist?list=PLZ8dBTV2_5HS_YaI8C4hsTzehRSgPjuxQ.
 
-- SPARKFUN. Soil Moisture Sensor. GitHub. Disponível em: <https://github.com/sparkfun/Soil_Moisture_Sensor>. Acesso em: 07 de setembro de 2023.
+- SPARKFUN. Soil Moisture Sensor. GitHub. Disponível em: <https://github.com/sparkfun/Soil_Moisture_Sensor. Acesso em: 07 de setembro de 2023.
 
-- DATTA, Sumon; TAGHVAEIAN, Saleh; OCHSNER, Tyson; MORIASI, Daniel; GOWDA, Prasanna; STEINER, Jean. Performance Assessment of Five Different Soil Moisture Sensors under Irrigated Field Conditions in Oklahoma. MDPI. Disponível em: <https://www.mdpi.com/1424-8220/18/11/3786>. Acesso em: 10 de setembro de 2023.
+- DATTA, Sumon; TAGHVAEIAN, Saleh; OCHSNER, Tyson; MORIASI, Daniel; GOWDA, Prasanna; STEINER, Jean. Performance Assessment of Five Different Soil Moisture Sensors under Irrigated Field Conditions in Oklahoma. MDPI. Disponível em: <https://www.mdpi.com/1424-8220/18/11/3786. Acesso em: 10 de setembro de 2023.
 
-- ALBERT, Stephen. Soil and Air Temperatures for Growing Vegetables. Harvest to Table. Disponível em: <https://harvesttotable.com/soil-and-air-temperatures-for-growing-vegetables/>. Acesso em: 10 de setembro de 2023.
+- ALBERT, Stephen. Soil and Air Temperatures for Growing Vegetables. Harvest to Table. Disponível em: <https://harvesttotable.com/soil-and-air-temperatures-for-growing-vegetables/. Acesso em: 10 de setembro de 2023.
