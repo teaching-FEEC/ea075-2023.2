@@ -79,9 +79,8 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
 
 ### Diagrama
 
-<p align="center">
-  <img src="/projetos/sistema-de-irrigação/ea075-e1.drawio-att.png" />
-</p>
+
+<h1 align="center"><img src="/projetos/sistema-de-irrigação/ea075-e1.drawio-att.png"/></h1>
 
 ### Estrutura e funcionamento do sistema
 
@@ -127,18 +126,18 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
 
 ## Referências
 
-- Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. Academia.edu. Disponível em: <https://www.academia.edu/24415757/Auto_Irrigation_System_using_Soil_Moisture_Sensor_and_PIC_Microcontroller. Acesso em: 07 de setembro de 2023.
+- Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. Academia.edu. Disponível em: <<https://www.academia.edu/24415757/Auto_Irrigation_System_using_Soil_Moisture_Sensor_and_PIC_Microcontroller>. Acesso em: 07 de setembro de 2023.
 
-- SILVA, DANILO EDUARDO LASTÓRIA. Sistema Automático de Irrigação. Disponível em: <https://lyceumonline.usf.edu.br/salavirtual/documentos/1898.pdf. Acesso em: 07 de setembro de 2023.
+- SILVA, DANILO EDUARDO LASTÓRIA. Sistema Automático de Irrigação. Disponível em: <<https://lyceumonline.usf.edu.br/salavirtual/documentos/1898.pdf>. Acesso em: 07 de setembro de 2023.
 
-- ELECTRONICS HUB. Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. Disponível em: <https://www.electronicshub.org/auto-irrigation-system-using-soil-moisture-sensor-and-pic-microcontroller/. Acesso em: 07 de setembro de 2023.
+- ELECTRONICS HUB. Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. Disponível em: <<https://www.electronicshub.org/auto-irrigation-system-using-soil-moisture-sensor-and-pic-microcontroller/>. Acesso em: 07 de setembro de 2023.
 
-- MICROCONTROLLERS LAB. Solar Power Auto Irrigation System using Microcontroller. Disponível em: <https://microcontrollerslab.com/solar-power-auto-irrigation-system-using-microcontroller/. Acesso em: 07 de setembro de 2023.
+- MICROCONTROLLERS LAB. Solar Power Auto Irrigation System using Microcontroller. Disponível em: <<https://microcontrollerslab.com/solar-power-auto-irrigation-system-using-microcontroller/>. Acesso em: 07 de setembro de 2023.
 
-- WR KITS. Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. YouTube, Data de publicação. URL: <https://www.youtube.com/playlist?list=PLZ8dBTV2_5HS_YaI8C4hsTzehRSgPjuxQ.
+- WR KITS. Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. YouTube, Data de publicação. URL: <<https://www.youtube.com/playlist?list=PLZ8dBTV2_5HS_YaI8C4hsTzehRSgPjuxQ>.
 
-- SPARKFUN. Soil Moisture Sensor. GitHub. Disponível em: <https://github.com/sparkfun/Soil_Moisture_Sensor. Acesso em: 07 de setembro de 2023.
+- SPARKFUN. Soil Moisture Sensor. GitHub. Disponível em: <<https://github.com/sparkfun/Soil_Moisture_Sensor>. Acesso em: 07 de setembro de 2023.
 
-- DATTA, Sumon; TAGHVAEIAN, Saleh; OCHSNER, Tyson; MORIASI, Daniel; GOWDA, Prasanna; STEINER, Jean. Performance Assessment of Five Different Soil Moisture Sensors under Irrigated Field Conditions in Oklahoma. MDPI. Disponível em: <https://www.mdpi.com/1424-8220/18/11/3786. Acesso em: 10 de setembro de 2023.
+- DATTA, Sumon; TAGHVAEIAN, Saleh; OCHSNER, Tyson; MORIASI, Daniel; GOWDA, Prasanna; STEINER, Jean. Performance Assessment of Five Different Soil Moisture Sensors under Irrigated Field Conditions in Oklahoma. MDPI. Disponível em: <<https://www.mdpi.com/1424-8220/18/11/3786>. Acesso em: 10 de setembro de 2023.
 
-- ALBERT, Stephen. Soil and Air Temperatures for Growing Vegetables. Harvest to Table. Disponível em: <https://harvesttotable.com/soil-and-air-temperatures-for-growing-vegetables/. Acesso em: 10 de setembro de 2023.
+- ALBERT, Stephen. Soil and Air Temperatures for Growing Vegetables. Harvest to Table. Disponível em: <<https://harvesttotable.com/soil-and-air-temperatures-for-growing-vegetables/>. Acesso em: 10 de setembro de 2023.
