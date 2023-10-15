@@ -90,27 +90,27 @@ O módulo responsável pela irrigação é composto por uma conexão para alimen
 
 ### Especificação de Algoritmos
 
-3 variáveis de de 2 bytes para contar tempo
+Com base no fluxograma apresentado na descrição estrutural do sistema, definimos as seguintes variáveis e registradores utilizados para armazenar os dados do programa:
 
-2 variáveis de 2 bytes para medir a bateria (VOLTAGE LOW e VOLTAGE HIGH)
+- 3 variáveis de de 2 bytes para contar tempo
 
-2 variáveis de 2 bytes para armazenar o nível do sensor de nível de água (LIMIT LOW e LIMIT HIGH)
+- 2 variáveis de 2 bytes para medir a bateria (VOLTAGE LOW e VOLTAGE HIGH)
 
-2 variáveis de 2 bytes para armazenar o nível do sensor de umidade (LIMIT LOW e LIMIT HIGH)
+- 2 variáveis de 2 bytes para armazenar o nível do sensor de nível de água (LIMIT LOW e LIMIT HIGH)
 
-1 variável de 2 bytes para verificar o nível de bateria
+- 2 variáveis de 2 bytes para armazenar o nível do sensor de umidade (LIMIT LOW e LIMIT HIGH)
 
-1 registrador de 1 byte para utilização dos LEDs
+- 1 variável de 2 bytes para verificar o nível de bateria
 
-1 bit para acionar o pino de controle da bomba
+- 1 registrador de 1 byte para utilização dos LEDs
 
-1 ADC de 10 bits para utilização do sensor de nível de água
+- 1 bit para acionar o pino de controle da bomba
 
-1 ADC de 10 bits para utilização do sensor umidade
+- 1 ADC de 10 bits para utilização do sensor de nível de água
+
+- 1 ADC de 10 bits para utilização do sensor umidade
 
 Total de memória de armazenamento de dados: 24 Bytes
-
-Memória de programa: ?
 
 ## Referências
 
