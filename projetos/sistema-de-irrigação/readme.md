@@ -93,23 +93,23 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
 
   Abaixo especifica-se os principais materiais necessários aos subsistemas deste projeto:
 
-  |P.N.| Nome |Qtde. | Link-datasheet | Funcionalidade | Observação |
+  |P.N.| Nome |Qtde. | Funcionalidade | Observação | Link-datasheet |
   |--|--|--|--|--|--|
-  | PIC18F4550 | Microcontrolador PIC18 | 1  | <https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/39632e.pdf> | "Cérebro" do Sistema | Microcontrolador|
-  | LM16255K | Display LCD 16x2 | 1 | <https://pdf.datasheetcatalog.com/datasheet/Sharp/mXvtrzw.pdf> | Mostrar as medidas captadas pelos sensores | Faz parte da categoria visualizadores|
+  | PIC18F4550 | Microcontrolador PIC18 | 1  | "Cérebro" do Sistema | Microcontrolador| <https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/39632e.pdf> |
+  | LM16255K | Display LCD 16x2 | 1 | Mostrar as medidas captadas pelos sensores | Faz parte da categoria visualizadores| <https://pdf.datasheetcatalog.com/datasheet/Sharp/mXvtrzw.pdf> |
   | PCF8574 | Expansor de I/O remoto de 8 bits para barramento I2C | 1 | <https://www.ti.com/lit/ds/symlink/pcf8574.pdf> | Realizar intermediário entre a comunicação serial do MC e a paralela do display LCD | |
-  | FC-28 | Sensor de Umidade do Solo | 1 | <https://datasheethub.com/wp-content/uploads/2022/08/SEN0114_Web.pdf> | Através de suas pontas de prova, medir a resistência do solo | Faz parte da categoria sensores|
-  | DHT-22 | Sensor de Umidade e Temperatura | 1 | <https://datasheetspdf.com/pdf-file/792211/Aosong/DHT22/1> | Medir temperatura e umidade do ar | Faz parte da categoria sensores|
-  | HC-49S | Cristal Oscilador 20 MHz | 1 | <https://datasheet.lcsc.com/lcsc/2008251934_HD-71008000RW1_C655216.pdf> | Gerar sinal de clock ao microcontrolador | |
-  | GCM1885C1H150JA16D | Capacitor 15 pF 50V | 2 | <https://br.mouser.com/datasheet/2/281/1/GCM1885C1H150JA16_01A-3142522.pdf> | Componente auxiliar do circuito cristal| |
-  | BC547 | Transistor de silício epitaxial NPN | 1 | <https://www.sparkfun.com/datasheets/Components/BC546.pdf> | Componente auxiliar do circuito do acionamento do motor | Faz parte da categoria atuadores |
-  | JQC-3F | Relé | 1 | <https://pdf.voron.ua/files/pdf/relay/JQC-3F(T73).pdf> | Relé que aciona a valvula solenóide | Faz parte da categoria atuadores |
-  | 1N4007 | Retificador de plástico de uso geral | 1 | <https://www.vishay.com/docs/88503/1n4001.pdf> | Diodo de proteção do relé | Faz parte da categoria atuadores |
+  | FC-28 | Sensor de Umidade do Solo | 1 |  Através de suas pontas de prova, medir a resistência do solo | Faz parte da categoria sensores|<https://datasheethub.com/wp-content/uploads/2022/08/SEN0114_Web.pdf> |
+  | DHT-22 | Sensor de Umidade e Temperatura | 1 |  Medir temperatura e umidade do ar | Faz parte da categoria sensores|<https://datasheetspdf.com/pdf-file/792211/Aosong/DHT22/1> |
+  | HC-49S | Cristal Oscilador 20 MHz | 1 | Gerar sinal de clock ao microcontrolador | | <https://datasheet.lcsc.com/lcsc/2008251934_HD-71008000RW1_C655216.pdf> |
+  | GCM1885C1H150JA16D | Capacitor 15 pF 50V | 2 |  Componente auxiliar do circuito cristal| |<https://br.mouser.com/datasheet/2/281/1/GCM1885C1H150JA16_01A-3142522.pdf> |
+  | BC547 | Transistor de silício epitaxial NPN | 1 |  Componente auxiliar do circuito do acionamento do motor | Faz parte da categoria atuadores | <https://www.sparkfun.com/datasheets/Components/BC546.pdf> |
+  | JQC-3F | Relé | 1 |  Relé que aciona a valvula solenóide | Faz parte da categoria atuadores |<https://pdf.voron.ua/files/pdf/relay/JQC-3F(T73).pdf> |
+  | 1N4007 | Retificador de plástico de uso geral | 1 |  Diodo de proteção do relé | Faz parte da categoria atuadores |<https://www.vishay.com/docs/88503/1n4001.pdf> |
 
   O microcontrolador escolhido para realizar a tarefa escolhida pelo projeto foi o PIC18F4550, este que conta com mais de uma entrada analógica,
   conta com suporte ao protocolo de comunicação serial I2C, e claro possui uma estrutura de oscilação flexível.
 
-  
+
   <!-- (Se preferir, adicione um link para o documento de especificação estrutural)
 
   Entende-se por estrutural a descrição tanto das características elétricas e temporais como das  restrições físicas de cada bloco funcional.
