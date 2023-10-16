@@ -54,6 +54,8 @@ Portanto, atualmente o sistema é considerado "Plug and Play", ou seja, tendo co
 
 Mas, conforme o desenvolvimento do projeto estudaremos a possibilidade de adicionar novos modos de operação.
 
+Vale a pena ressaltar que o display LCD abrande o protocolo I2C, tendo um CI intermediário que realiza essa conversão.
+
 P.S.: O modo de operação será descrito no subtópico Eventos e Tratamento de Eventos
 
 ### Eventos
@@ -79,7 +81,6 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
 
 ### Diagrama
 
-
 <h1 align="center"><img src="/projetos/sistema-de-irrigação/ea075-e1.drawio-att.png"/></h1>
 
 ### Estrutura e funcionamento do sistema
@@ -90,15 +91,25 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
 
 ### Especificação Estrutural
 
-  (Se preferir, adicione um link para o documento de especificação estrutural)
+  |P.N.| Nome |Qtde. | Link-datasheet | Funcionalidade | Observação |
+  |--|--|--|--|--|--|
+  | PIC18F4550 | Microcontrolador PIC18 | 1  | <https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/39632e.pdf> | "Cérebro" do Sistema | |
+  | LM16255K | Display LCD 16x2 | 1 | <https://pdf.datasheetcatalog.com/datasheet/Sharp/mXvtrzw.pdf> | Mostrar as medidas captadas pelos sensores | |
+  | PCF8574 | Expansor de I/O remoto de 8 bits para barramento I2C | 1 | <https://www.ti.com/lit/ds/symlink/pcf8574.pdf> | Realizar intermediário entre a comunicação serial do MC e a paralela do display LCD | |
+  | FC-28 | Sensor de Umidade do Solo | 1 | <https://datasheethub.com/wp-content/uploads/2022/08/SEN0114_Web.pdf> | Através de suas pontas de prova, medir a resistência do solo | |
+  | DHT-22 | Sensor de Umidade e Temperatura | 1 | <https://datasheetspdf.com/pdf-file/792211/Aosong/DHT22/1> | Medir temperatura e umidade do ar | |
+  <!-- | FC-28 | Sensor de Umidade e Temperatura | 1 | <https://datasheethub.com/wp-content/uploads/2022/08/SEN0114_Web.pdf> | Através de suas pontas de prova, medir a resistência do solo | | -->
+
+
+  <!-- (Se preferir, adicione um link para o documento de especificação estrutural)
 
   Entende-se por estrutural a descrição tanto das características elétricas e temporais como das  restrições físicas de cada bloco funcional.
   Nessa etapa do projeto, ainda não será solicitado o diagrama elétrico mas espera-se que já  estejam identificados os componentes e circuitos integrados propostos
   para implementação do sistema embarcado proposto.
 
   Como o projeto de um sistema embarcado é centralizado nas tarefas, recomenda-se iniciar com a definição dos periféricos de entrada e saída (atuadores e/ou sensores) apropriados para o
-  sistema. Pode ser necessário definir um endereço distinto para cada um deles. 
-  Este endereço será utilizado pela unidade micro-controladora para acessá-los tanto para leitura como para escrita. 
+  sistema. Pode ser necessário definir um endereço distinto para cada um deles.
+  Este endereço será utilizado pela unidade micro-controladora para acessá-los tanto para leitura como para escrita.
   Nesta etapa do projeto espera-se que a unidade micro-controladora seja definida.
   Tendo definidos os periféricos e a memória, é possível projetar um decodificador de endereços
   que converte o endereço referenciado no programa em sinal *Chip Select – CS* do dispositivo
@@ -106,38 +117,39 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
 
   Nesta etapa do projeto espera-se que sejam identificada também a eventual necessidade do  projeto de circuitos de interface para os periféricos do projeto.
   Assim, devem ser incluídos na especificação, se necessário:
-  - conversores AD e DA;
-  - padrões de comunicação a serem adotados;
-  - circuitos de sincronização de sinais temporais.
+
+- conversores AD e DA;
+- padrões de comunicação a serem adotados;
+- circuitos de sincronização de sinais temporais.
 
   Finalmente, deve-se especificar as restrições físicas e ambientais de funcionamento do  circuito, tais como limites mecânicos
-  (altura, largura, profundidade) e limites de dissipação térmica.
+  (altura, largura, profundidade) e limites de dissipação térmica. -->
 
 ### Especificação de Algoritmos
 
-  (Se preferir, adicione um link para o documento de especificação de algoritmos).
+  <!-- (Se preferir, adicione um link para o documento de especificação de algoritmos).
 
   Deve ser elaborado para CADA evento o algoritmo de tratamento deste evento. Com base no
   tamanho de cada algoritmo, estima-se o tamanho de memória necessária para armazenar todos
   os programas e os dados associados. Isso permitirá especificar a memória a ser utilizada e o
   espaço onde serão armazenados os programas. O algoritmo de tratamento de evento pode
-  ser representado graficamente por um fluxograma. Recomenda-se usar símbolos gráficos consistentes 
-  com a norma internacional ISO 1028-1973 e IS0 2972-1979.
+  ser representado graficamente por um fluxograma. Recomenda-se usar símbolos gráficos consistentes
+  com a norma internacional ISO 1028-1973 e IS0 2972-1979. -->
 
 ## Referências
 
-- Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. Academia.edu. Disponível em: <<https://www.academia.edu/24415757/Auto_Irrigation_System_using_Soil_Moisture_Sensor_and_PIC_Microcontroller>. Acesso em: 07 de setembro de 2023.
+- Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. Academia.edu. Disponível em: <https://www.academia.edu/24415757/Auto_Irrigation_System_using_Soil_Moisture_Sensor_and_PIC_Microcontroller>. Acesso em: 07 de setembro de 2023.
 
-- SILVA, DANILO EDUARDO LASTÓRIA. Sistema Automático de Irrigação. Disponível em: <<https://lyceumonline.usf.edu.br/salavirtual/documentos/1898.pdf>. Acesso em: 07 de setembro de 2023.
+- SILVA, DANILO EDUARDO LASTÓRIA. Sistema Automático de Irrigação. Disponível em: <https://lyceumonline.usf.edu.br/salavirtual/documentos/1898.pdf>. Acesso em: 07 de setembro de 2023.
 
-- ELECTRONICS HUB. Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. Disponível em: <<https://www.electronicshub.org/auto-irrigation-system-using-soil-moisture-sensor-and-pic-microcontroller/>. Acesso em: 07 de setembro de 2023.
+- ELECTRONICS HUB. Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. Disponível em: <https://www.electronicshub.org/auto-irrigation-system-using-soil-moisture-sensor-and-pic-microcontroller/>. Acesso em: 07 de setembro de 2023.
 
-- MICROCONTROLLERS LAB. Solar Power Auto Irrigation System using Microcontroller. Disponível em: <<https://microcontrollerslab.com/solar-power-auto-irrigation-system-using-microcontroller/>. Acesso em: 07 de setembro de 2023.
+- MICROCONTROLLERS LAB. Solar Power Auto Irrigation System using Microcontroller. Disponível em: <https://microcontrollerslab.com/solar-power-auto-irrigation-system-using-microcontroller/>. Acesso em: 07 de setembro de 2023.
 
-- WR KITS. Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. YouTube, Data de publicação. URL: <<https://www.youtube.com/playlist?list=PLZ8dBTV2_5HS_YaI8C4hsTzehRSgPjuxQ>.
+- WR KITS. Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. YouTube, Data de publicação. URL: <https://www.youtube.com/playlist?list=PLZ8dBTV2_5HS_YaI8C4hsTzehRSgPjuxQ>.
 
-- SPARKFUN. Soil Moisture Sensor. GitHub. Disponível em: <<https://github.com/sparkfun/Soil_Moisture_Sensor>. Acesso em: 07 de setembro de 2023.
+- SPARKFUN. Soil Moisture Sensor. GitHub. Disponível em: <https://github.com/sparkfun/Soil_Moisture_Sensor>. Acesso em: 07 de setembro de 2023.
 
-- DATTA, Sumon; TAGHVAEIAN, Saleh; OCHSNER, Tyson; MORIASI, Daniel; GOWDA, Prasanna; STEINER, Jean. Performance Assessment of Five Different Soil Moisture Sensors under Irrigated Field Conditions in Oklahoma. MDPI. Disponível em: <<https://www.mdpi.com/1424-8220/18/11/3786>. Acesso em: 10 de setembro de 2023.
+- DATTA, Sumon; TAGHVAEIAN, Saleh; OCHSNER, Tyson; MORIASI, Daniel; GOWDA, Prasanna; STEINER, Jean. Performance Assessment of Five Different Soil Moisture Sensors under Irrigated Field Conditions in Oklahoma. MDPI. Disponível em: <https://www.mdpi.com/1424-8220/18/11/3786>. Acesso em: 10 de setembro de 2023.
 
-- ALBERT, Stephen. Soil and Air Temperatures for Growing Vegetables. Harvest to Table. Disponível em: <<https://harvesttotable.com/soil-and-air-temperatures-for-growing-vegetables/>. Acesso em: 10 de setembro de 2023.
+- ALBERT, Stephen. Soil and Air Temperatures for Growing Vegetables. Harvest to Table. Disponível em: <https://harvesttotable.com/soil-and-air-temperatures-for-growing-vegetables/>. Acesso em: 10 de setembro de 2023.
