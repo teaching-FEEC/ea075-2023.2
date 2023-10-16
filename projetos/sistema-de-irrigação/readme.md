@@ -91,17 +91,18 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
 
 ### Especificação Estrutural
 
-  Abaixo especifica-se os principais materiais necessários aos subsistemas deste projeto:
+  Abaixo especifica-se os principais materiais necessários aos subsistemas deste projeto, não está especificado por exemplo os resistores, pois entende-se que o intuito desta tabela é
+  apenas listar componentes chaves:
 
   |P.N.| Nome |Qtde. | Funcionalidade | Observação | Link-datasheet |
   |--|--|--|--|--|--|
   | PIC18F4550 | Microcontrolador PIC18 | 1  | "Cérebro" do Sistema | Microcontrolador| <https://ww1.microchip.com/downloads/aemDocuments/documents/OTH/ProductDocuments/DataSheets/39632e.pdf> |
   | LM16255K | Display LCD 16x2 | 1 | Mostrar as medidas captadas pelos sensores | Faz parte da categoria visualizadores| <https://pdf.datasheetcatalog.com/datasheet/Sharp/mXvtrzw.pdf> |
-  | PCF8574 | Expansor de I/O remoto de 8 bits para barramento I2C | 1 | <https://www.ti.com/lit/ds/symlink/pcf8574.pdf> | Realizar intermediário entre a comunicação serial do MC e a paralela do display LCD | |
+  | PCF8574 | Expansor de I/O remoto de 8 bits para barramento I2C | 1 | Realizar intermediário entre a comunicação serial do MC e a paralela do display LCD | - | <https://www.ti.com/lit/ds/symlink/pcf8574.pdf> |
   | FC-28 | Sensor de Umidade do Solo | 1 |  Através de suas pontas de prova, medir a resistência do solo | Faz parte da categoria sensores|<https://datasheethub.com/wp-content/uploads/2022/08/SEN0114_Web.pdf> |
   | DHT-22 | Sensor de Umidade e Temperatura | 1 |  Medir temperatura e umidade do ar | Faz parte da categoria sensores|<https://datasheetspdf.com/pdf-file/792211/Aosong/DHT22/1> |
-  | HC-49S | Cristal Oscilador 20 MHz | 1 | Gerar sinal de clock ao microcontrolador | | <https://datasheet.lcsc.com/lcsc/2008251934_HD-71008000RW1_C655216.pdf> |
-  | GCM1885C1H150JA16D | Capacitor 15 pF 50V | 2 |  Componente auxiliar do circuito cristal| |<https://br.mouser.com/datasheet/2/281/1/GCM1885C1H150JA16_01A-3142522.pdf> |
+  | HC-49S | Cristal Oscilador 20 MHz | 1 | Gerar sinal de clock ao microcontrolador | - | <https://datasheet.lcsc.com/lcsc/2008251934_HD-71008000RW1_C655216.pdf> |
+  | GCM1885C1H150JA16D | Capacitor 15 pF 50V | 2 |  Componente auxiliar do circuito cristal| - |<https://br.mouser.com/datasheet/2/281/1/GCM1885C1H150JA16_01A-3142522.pdf> |
   | BC547 | Transistor de silício epitaxial NPN | 1 |  Componente auxiliar do circuito do acionamento do motor | Faz parte da categoria atuadores | <https://www.sparkfun.com/datasheets/Components/BC546.pdf> |
   | JQC-3F | Relé | 1 |  Relé que aciona a valvula solenóide | Faz parte da categoria atuadores |<https://pdf.voron.ua/files/pdf/relay/JQC-3F(T73).pdf> |
   | 1N4007 | Retificador de plástico de uso geral | 1 |  Diodo de proteção do relé | Faz parte da categoria atuadores |<https://www.vishay.com/docs/88503/1n4001.pdf> |
@@ -109,7 +110,22 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
   O microcontrolador escolhido para realizar a tarefa escolhida pelo projeto foi o PIC18F4550, este que conta com mais de uma entrada analógica,
   conta com suporte ao protocolo de comunicação serial I2C, e claro possui uma estrutura de oscilação flexível.
 
+  Para a escolha de visualização, escolheu-se prezar pela pouca estrutura, utilizando comunicação serial I2C para transmitir as informações necessárias ao display LCD (LM16255K).
+  Utiliza-se o CI PCF8574 para realizar a expansão de portas de 2 para 8 portas, com isso, poderia por exemplo, utilizar outras portas do microcontrolador para outra
+  tarefa por exemplo, ou adicionar mais "features" ao meu projeto futuramente.
 
+  De início, não identificamos a necessidade de circuitos auxiliares para leitura das informações medidas pelos sensores FC-28 e DHT-22, onde pretende-se utilizar duas entradas analógicas
+  que o microcontrolador fornece, sendo elas (RA0 / AN0) e (RA1 / AN1). Com isso, tendo essas tensões lidas pelo MC, ocorre a conversão desses valores para as gradezas de cada sensor, e a
+  partir da lógica definida na subseção "Especificação de Algoritmos", ocorre a comunicação com o atuador.
+  
+  Já para a configuração de oscilação, procurando no datasheet do microcontrolador, identificou-se que existem diversas possibilidades de configuração de clock, onde
+  para esta aplicação escolheu-se o cristal de 20 MHz, juntamente com os capacitores de cerâmica de 15 pF.
+
+  Para o circuito do atuador [1], pensou-se em um circuito de chaveamento com transistores, onde o transistor aciona um relé, este que aciona a válvula solenóide.
+
+  Por fim, o sensor FC-28 precisa estar infincado ao solo, enquanto o restante pode estar sobre a pcb mesmo, espera-se deixar uma quantidade considerável de área para o microcontrolador
+  e para o transistor e relé, no momento, não identifica-se a necessidade de um dissipador de calor.
+  
   <!-- (Se preferir, adicione um link para o documento de especificação estrutural)
 
   Entende-se por estrutural a descrição tanto das características elétricas e temporais como das  restrições físicas de cada bloco funcional.
@@ -147,18 +163,18 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
 
 ## Referências
 
-- Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. Academia.edu. Disponível em: <https://www.academia.edu/24415757/Auto_Irrigation_System_using_Soil_Moisture_Sensor_and_PIC_Microcontroller>. Acesso em: 07 de setembro de 2023.
+  [1] Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. Academia.edu. Disponível em: <https://www.academia.edu/24415757/Auto_Irrigation_System_using_Soil_Moisture_Sensor_and_PIC_Microcontroller>. Acesso em: 07 de setembro de 2023.
 
-- SILVA, DANILO EDUARDO LASTÓRIA. Sistema Automático de Irrigação. Disponível em: <https://lyceumonline.usf.edu.br/salavirtual/documentos/1898.pdf>. Acesso em: 07 de setembro de 2023.
+  [2] SILVA, DANILO EDUARDO LASTÓRIA. Sistema Automático de Irrigação. Disponível em: <https://lyceumonline.usf.edu.br/salavirtual/documentos/1898.pdf>. Acesso em: 07 de setembro de 2023.
 
-- ELECTRONICS HUB. Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. Disponível em: <https://www.electronicshub.org/auto-irrigation-system-using-soil-moisture-sensor-and-pic-microcontroller/>. Acesso em: 07 de setembro de 2023.
+  [3] ELECTRONICS HUB. Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. Disponível em: <https://www.electronicshub.org/auto-irrigation-system-using-soil-moisture-sensor-and-pic-microcontroller/>. Acesso em: 07 de setembro de 2023.
 
-- MICROCONTROLLERS LAB. Solar Power Auto Irrigation System using Microcontroller. Disponível em: <https://microcontrollerslab.com/solar-power-auto-irrigation-system-using-microcontroller/>. Acesso em: 07 de setembro de 2023.
+  [4] MICROCONTROLLERS LAB. Solar Power Auto Irrigation System using Microcontroller. Disponível em: <https://microcontrollerslab.com/solar-power-auto-irrigation-system-using-microcontroller/>. Acesso em: 07 de setembro de 2023.
 
-- WR KITS. Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. YouTube, Data de publicação. URL: <https://www.youtube.com/playlist?list=PLZ8dBTV2_5HS_YaI8C4hsTzehRSgPjuxQ>.
+  [5] WR KITS. Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. YouTube, Data de publicação. URL: <https://www.youtube.com/playlist?list=PLZ8dBTV2_5HS_YaI8C4hsTzehRSgPjuxQ>.
 
-- SPARKFUN. Soil Moisture Sensor. GitHub. Disponível em: <https://github.com/sparkfun/Soil_Moisture_Sensor>. Acesso em: 07 de setembro de 2023.
+  [6] SPARKFUN. Soil Moisture Sensor. GitHub. Disponível em: <https://github.com/sparkfun/Soil_Moisture_Sensor>. Acesso em: 07 de setembro de 2023.
 
-- DATTA, Sumon; TAGHVAEIAN, Saleh; OCHSNER, Tyson; MORIASI, Daniel; GOWDA, Prasanna; STEINER, Jean. Performance Assessment of Five Different Soil Moisture Sensors under Irrigated Field Conditions in Oklahoma. MDPI. Disponível em: <https://www.mdpi.com/1424-8220/18/11/3786>. Acesso em: 10 de setembro de 2023.
+  [7] DATTA, Sumon; TAGHVAEIAN, Saleh; OCHSNER, Tyson; MORIASI, Daniel; GOWDA, Prasanna; STEINER, Jean. Performance Assessment of Five Different Soil Moisture Sensors under Irrigated Field Conditions in Oklahoma. MDPI. Disponível em: <https://www.mdpi.com/1424-8220/18/11/3786>. Acesso em: 10 de setembro de 2023.
 
-- ALBERT, Stephen. Soil and Air Temperatures for Growing Vegetables. Harvest to Table. Disponível em: <https://harvesttotable.com/soil-and-air-temperatures-for-growing-vegetables/>. Acesso em: 10 de setembro de 2023.
+  [8] ALBERT, Stephen. Soil and Air Temperatures for Growing Vegetables. Harvest to Table. Disponível em: <https://harvesttotable.com/soil-and-air-temperatures-for-growing-vegetables/>. Acesso em: 10 de setembro de 2023.
