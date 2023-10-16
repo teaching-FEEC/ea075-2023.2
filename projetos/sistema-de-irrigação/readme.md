@@ -162,6 +162,53 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
   ser representado graficamente por um fluxograma. Recomenda-se usar símbolos gráficos consistentes
   com a norma internacional ISO 1028-1973 e IS0 2972-1979. -->
 
+Variáveis:
+    Umidade do ar
+    Umidade do solo
+    Temperatura do ar
+Temporização de 60s
+Display LCD
+Válvula de irrigação
+
+Pseudoalgoritmo(C):  
+  ...
+  
+Inclusão das bibliotecas dos sensores, display e temporização
+
+Declaração do endereço onde está mapeado o FC-28 na variável sensor_fc
+Declaração do endereço onde está mapeado o DHT_22 na variável sensor_dht
+
+Declaração da variável UmiSolo com valor inicial Null
+Declaração da variável UmiAr com valor inicial Null
+Declaração da variável Temp com valor inicial Null
+Declaração da variável Duracao_Irrigacao com valor inicial Null
+
+Declaração da variável UmiSolo-min com valor inicial 800
+
+interrupção {
+a cada 10 segundos atualizar display via protocolo i2c
+}
+
+loop infinito {
+
+sleep/delay 60s
+
+Ler umidade do solo e armazenar em UmiSolo
+Ler temperatura do solo e armazenar em Temp
+Ler umidade do ar e armazenar em UmiAr
+
+VR-UmiSolo = -0,17*UmiSolo + 171,4
+
+Se(If) VR-UmiSolo > UmiSolo-min:
+	Pular para próximo loop
+
+Calcular Duracao_Irrigacao com as variaveis
+Abrir relés por Duracao_Irrigacao
+
+}  
+
+  ...
+
 ## Referências
 
   [1] Auto Irrigation System using Soil Moisture Sensor and PIC Microcontroller. Academia.edu. Disponível em: <https://www.academia.edu/24415757/Auto_Irrigation_System_using_Soil_Moisture_Sensor_and_PIC_Microcontroller>. Acesso em: 07 de setembro de 2023.
