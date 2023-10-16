@@ -162,52 +162,71 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
   ser representado graficamente por um fluxograma. Recomenda-se usar símbolos gráficos consistentes
   com a norma internacional ISO 1028-1973 e IS0 2972-1979. -->
 
-Variáveis:
-    Umidade do ar
-    Umidade do solo
-    Temperatura do ar
-Temporização de 60s
-Display LCD
-Válvula de irrigação
+  A fim de representar o algoritmo utilizado para efetuar a irrigação do solo periodicamente, dependendo das variavéis de umidade (solo e ar), e temperatura (ar).
+  Criou-se um pseudo-código que representa o algoritmo a ser utilizado, onde suas variáveis são:
+
+- Variáveis:
+  - Umidade do ar
+  - Umidade do solo
+  - Temperatura do ar
+- Temporização de 60s
+- Display LCD
+- Válvula de irrigação
 
 Pseudoalgoritmo(C):  
-  ...
-  
-Inclusão das bibliotecas dos sensores, display e temporização
 
-Declaração do endereço onde está mapeado o FC-28 na variável sensor_fc
-Declaração do endereço onde está mapeado o DHT_22 na variável sensor_dht
+```text
+  Inclusão das bibliotecas dos sensores, display e temporização
 
-Declaração da variável UmiSolo com valor inicial Null
-Declaração da variável UmiAr com valor inicial Null
-Declaração da variável Temp com valor inicial Null
-Declaração da variável Duracao_Irrigacao com valor inicial Null
+  Declaração do modo de operação do timer
 
-Declaração da variável UmiSolo-min com valor inicial 800
+  Declaração do endereço onde está mapeado o FC-28 na variável sensor_fc
+  Declaração do endereço onde está mapeado o DHT_22 na variável sensor_dht
 
-interrupção {
-a cada 10 segundos atualizar display via protocolo i2c
-}
+  Declaração da variável UmiSolo com valor inicial Null
+  Declaração da variável UmiAr com valor inicial Null
+  Declaração da variável Temp com valor inicial Null
+  Declaração da variável Duracao_Irrigacao com valor inicial Null
 
-loop infinito {
+  Declaração da variável UmiSolo-min com valor inicial 800
 
-sleep/delay 60s
+  interrupção {
 
-Ler umidade do solo e armazenar em UmiSolo
-Ler temperatura do solo e armazenar em Temp
-Ler umidade do ar e armazenar em UmiAr
+    a cada 10 segundos atualizar display via protocolo i2c
 
-VR-UmiSolo = -0,17*UmiSolo + 171,4
+  }
 
-Se(If) VR-UmiSolo > UmiSolo-min:
-	Pular para próximo loop
+  loop infinito {
 
-Calcular Duracao_Irrigacao com as variaveis
-Abrir relés por Duracao_Irrigacao
+    sleep/delay 60s
+
+    Ler umidade do solo e armazenar em UmiSolo
+    Ler temperatura do solo e armazenar em Temp
+    Ler umidade do ar e armazenar em UmiAr
+
+    VR-UmiSolo = -0,17*UmiSolo + 171,4
+
+    Se(If) VR-UmiSolo > UmiSolo-min:
+     Pular para próximo loop
+
+    Calcular Duracao_Irrigacao com as variaveis
+    Abrir relés por Duracao_Irrigacao
 
 }  
 
-  ...
+```
+
+  Para atualização do display, optou-se por utilizar interrupção, a fim de que o
+  usuário possa obter a informação dos sensores em tempo real, como o período de irrigação se da por uma espera longa, de início especificou-se 60 segundos.
+
+  Ainda, sabendo que o sensor se trata de "medidor de grandeza fisíca", onde o valor de tensão medido na entrada analógica é proporcional a grandeza medida.
+  No caso do sensor FC-28, afirma-se que percentagem de umidade do solo pode ser dada por:
+
+  $$
+    y = -0.17 x + 171.4
+  $$  
+
+  Onde $y$ se trata da umidade relativa do solo, e $x$ o valor de entrada do microcontrolador.
 
 ## Referências
 
