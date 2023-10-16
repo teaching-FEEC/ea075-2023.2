@@ -106,6 +106,7 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
   | BC547 | Transistor de silício epitaxial NPN | 1 |  Componente auxiliar do circuito do acionamento do motor | Faz parte da categoria atuadores | <https://www.sparkfun.com/datasheets/Components/BC546.pdf> |
   | JQC-3F | Relé | 1 |  Relé que aciona a valvula solenóide | Faz parte da categoria atuadores |<https://pdf.voron.ua/files/pdf/relay/JQC-3F(T73).pdf> |
   | 1N4007 | Retificador de plástico de uso geral | 1 |  Diodo de proteção do relé | Faz parte da categoria atuadores |<https://www.vishay.com/docs/88503/1n4001.pdf> |
+  | - | Válvula de Vazão Solenóide Água 12VDC | 1 |  Realizar a irrigação do solo | Faz parte da categoria atuadores |<https://www.makerhero.com/produto/valvula-de-vazao-solenoide-agua-12vdc/#tab-description> |
 
   O microcontrolador escolhido para realizar a tarefa escolhida pelo projeto foi o PIC18F4550, este que conta com mais de uma entrada analógica,
   conta com suporte ao protocolo de comunicação serial I2C, e claro possui uma estrutura de oscilação flexível.
