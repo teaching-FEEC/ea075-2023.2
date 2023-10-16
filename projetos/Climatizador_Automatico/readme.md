@@ -15,7 +15,7 @@ oferecida no segundo semestre de 2023, na Unicamp, sob supervisão da Profa. Dra
 
 ## Descrição do Projeto
 O Climatizador Automático foi idealizado pensando no conforto das pessoas que aderiram às novas modalidades de trabalho (home office) e estudo (aulas EAD) para que elas possam ter um ambiente agradável tanto em termos de temperatura quanto de umidade.  
-O nosso Climatizador se propõe a ser uma solução portátil, ou seja, de encapsulamento razoavelmente pequeno e também ser uma solução mais ecônica em relação às soluções disponíveis hoje no mercado.
+O nosso Climatizador se propõe a ser uma solução portátil, ou seja, de encapsulamento razoavelmente pequeno e também ser uma solução mais ecônomica em relação às soluções disponíveis hoje no mercado.
 
 
 ## Descrição Funcional
@@ -59,16 +59,14 @@ Além disso, a cada minuto o display LCD será atualizado com as leituras dos se
 Por fim, a ação do usuário que se dará por meio dos botões será tratada via interrupções do processador.
 
 ## Descrição Estrutural do Sistema
-Junto com a descrição do comportamento do sistema, deve-se especificar, em nível de bloco ou sistema, a estrutura necessária 
-para captar os eventos do mundo externo, para alojar e processar o programa de tratamento de eventos, e para atuar sobre o mundo externo.
+O sistema será composto pelas seguintes dispositivos: 
+- De entrada: 2 Termômetros digitais, um para medir a temperatura de saída do ar, outra pra medir a temperatura na placa térmica, um higrômetro para medir a umidade do ar, botoeiras e/ou switches para configuração do módulo.
+- De saída: 2 Ventoinhas de circulação do ar, uma ventoinha de dissipação da placa termica, a placa termica em si, um dispositivo umidificador e displays LCD e/ou Leds para informar as informações de Temperatura e Umidade para o usuário.
+- De controle: Um micro-controlador para realizar o controle de todos os dispositivos acoplados.
 
-Para essa descrição recomenda-se a criação de diagramas de blocos.
-Nesse diagrama, devem ser destacados os blocos funcionais que compõem o sistema, incluindo uma síntese das funcionalidades de cada bloco.
-Além disso, deve-se esclarecer também o relacionamento entre estes blocos, incluindo os principais sinais de comunicação entre
-os blocos de forma a assegurar a execução de todas as tarefas que o sistema deve realizar.
+Abaixo podemos ver um Diagrama em blocos com a descrição estrutural do sistema:
 
-Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
-
+![Diagrama Estrutural](./Descrição_Estrutural.png)
 
 ## Especificações
 
