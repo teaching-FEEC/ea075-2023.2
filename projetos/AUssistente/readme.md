@@ -89,29 +89,46 @@ Sim, é possível, mas primeiramente é necessário realizar um levantamento dos
 
 ### Especificação Estrutural
 
-> (Se preferir, adicione um link para o documento de especificação estrutural)
-> 
-> Entende-se por estrutural a descrição tanto das características elétricas e temporais como das restrições físicas de cada bloco funcional.
-> Nessa etapa do projeto, ainda não será solicitado o diagrama elétrico mas espera-se que já estejam identificados os componentes e circuitos integrados propostos
-> para implementação do sistema embarcado proposto.
-> 
-> Como o projeto de um sistema embarcado é centralizado nas tarefas, recomenda-se iniciar com a definição dos periféricos de entrada e saída (atuadores e/ou sensores) apropriados para o
-> sistema. Pode ser necessário definir um endereço distinto para cada um deles. 
-> Este endereço será utilizado pela unidade micro-controladora para acessá-los tanto para leitura como para escrita.
+#### Tabela de componentes
+| Componente    | Descrição | Funcionalidades | Interface de comunicação | Datasheet |
+| ----------    | --------- |    ---------    |         ---------        |  -------  |
+| ESP32-U4WDH   | Microcontrolador | Wi-Fi + BLE; excelente gerenciamento de energia; suporte a UART/I2C/SPI; memória flash SPI de 4MB integrada | - | [esp32.pdf](datasheets/esp32.pdf) |
+| TMP117        | Sensor digital de temperatura | Alta precisão + baixo consumo de energia| I2C | [tmp117.pdf](datasheets;tmp117.pdf) |
+| MAX30102      | Oxímetro + sensor de batimentos | Baixo consumo de energia, resistência a estresse mecânico | I2C | [max30102.pdf](datasheets/max30102.pdf) |
+| MAX17043      | Medidor de carga de bateria | Baixo consumo de energia, alta precisão de medição | I2C | [max17043.pdf](datasheets/max17043.pdf) |
+| BMI270        | Unidade de medida inercial (IMU) de 6 eixos | Baixo consumo de energia; correção de erro integrada em hardware | I2C/SPI | [bmi270.pdf](datasheets/bmi270.pdf) |
+| MAX-M10S      | GPS | Baixo consumo de energia, alta precisão, monitoramento contínuo de geoposicionamento | UART/I2C | [max-m10s.pdf](datasheets/max-ma10s.pdf)
 
-> Nesta etapa do projeto espera-se que a unidade micro-controladora seja definida.
-> Tendo definidos os periféricos e a memória, é possível projetar um decodificador de endereços
-> que converte o endereço referenciado no programa em sinal *Chip Select – CS* do dispositivo
-> correspondente, habilitando-o para realizar um ciclo de leitura ou de escrita.
-> 
-> Nesta etapa do projeto espera-se que sejam identificada também a eventual necessidade do projeto de circuitos de interface para os periféricos do projeto.
-> Assim, devem ser incluídos na especificação, se necessário:
-> - conversores AD e DA;
-> - padrões de comunicação a serem adotados;
-> - circuitos de sincronização de sinais temporais.
-> 
-> Finalmente, deve-se especificar as restrições físicas e ambientais de funcionamento do circuito, tais como limites mecânicos
-> (altura, largura, profundidade) e limites de dissipação térmica.
+#### Características de operação
+
+| Parâmetro | Min. | Típico | Máx. | Unidade |
+| --------  |  --  |  --  | ------ |  -----  |
+| Tensão de alimentação | 3.0 | 3.3 | 3.6 | V |
+| Capacidade de corrente da bateria | 0.5 | - | - | A |
+| Temperatura | -30 | - | 125 | °C |
+
+
+#### Limites absolutos de operação
+
+Estresse acima dos limites da tabela abaixo podem causar dano permanente ao dispositivo.
+
+| Parâmetro | Min. | Máx. | Unidade |
+| --------  |  --  |  --  |  -----  |
+| Tensão de entrada | -0.3  | 3.6 | V |
+| Corrente | - | 1200 | mA |
+| Temperatura | -50 | 150 | °C |
+| Impacto mecânico | - | 20000 | g |
+| Queda livre sobre superfícies rígidas | - | 1.8 | m |
+
+
+#### Interfaces de periféricos planejadas
+
+Será necessário projetar um barramento I2C com características elétricas adequadas, seguindo as recomendações
+da [especificação oficial](https://www.nxp.com/docs/en/user-guide/UM10204.pdf) do protocolo, no qual os periféricos
+serão conectados de modo a atuar como targets, com a MCU assumindo o papel de controller.
+
+Será necessário também projetar um _buzzer_ piezoelétrico de modo a tocar os alertas sonoros especificados nos algoritmos
+de tratamento de eventos.
 
 ### Especificação de Algoritmos 
 
@@ -231,15 +248,8 @@ função hibernar():
 
 ```
 
-> (Se preferir, adicione um link para o documento de especificação de algoritmos).
-> 
-> Deve ser elaborado para CADA evento o algoritmo de tratamento deste evento. Com base no
-> tamanho de cada algoritmo, estima-se o tamanho de memória necessária para armazenar todos
-> os programas e os dados associados. Isso permitirá especificar a memória a ser utilizada e o
-> espaço onde serão armazenados os programas. O algoritmo de tratamento de evento pode
-> ser representado graficamente por um fluxograma. Recomenda-se usar símbolos gráficos consistentes 
-> com a norma internacional ISO 1028-1973 e IS0 2972-1979.
-
 ## Referências (ATUALIZAR SE NECESSÁRIO)
-> Seção obrigatória. Inclua aqui referências utilizadas no projeto.
+- Especificação do protocolo I2C https://www.nxp.com/docs/en/user-guide/UM10204.pdf
+- Cálculos de valores de resistência em barramentos I2C https://www.allaboutcircuits.com/technical-articles/the-i2c-bus-hardware-implementation-details/
+- Design de buzzers piezoelétricos https://www.diodes.com/assets/App-Note-Files/Design-Considerations-for-Driving-Piezoelectric-Buzzers.pdf
 
