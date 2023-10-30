@@ -132,7 +132,7 @@ função principal():
 
 função processar_evento(evento):
   caso evento == evento.botao_ligar:
-		  se AUssistente.estado == estado.desligado || AUssistente.estado == eestado.hibernar:
+		  se AUssistente.estado == estado.desligado || AUssistente.estado == estado.hibernar:
       configs = carregar_dados_configuracao( )
       inicializar_componentes(configs)
 
