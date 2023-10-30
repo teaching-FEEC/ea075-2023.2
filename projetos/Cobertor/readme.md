@@ -83,20 +83,30 @@ O sistema deve ler as temperaturas do sistema e ajustar a corrente fornecida às
 9.  Permitirá que seja feito um novo ciclo.
 
 
-## Descrição Estrutural do Sistema - Não iniciado
-> Junto com a descrição do comportamento do sistema, deve-se especificar, em nível de bloco ou sistema, a estrutura necessária 
-> para captar os eventos do mundo externo, para alojar e processar o programa de tratamento de eventos, e para atuar sobre o mundo externo.
->
-> Para essa descrição recomenda-se a criação de diagramas de blocos.
-> Nesse diagrama, devem ser destacados os blocos funcionais que compõem o sistema, incluindo uma síntese das funcionalidades de cada bloco.
-> Além disso, deve-se esclarecer também o relacionamento entre estes blocos, incluindo os principais sinais de comunicação entre
-> os blocos de forma a assegurar a execução de todas as tarefas que o sistema deve realizar.
-> 
-> Você sabia? Ferramentas como o `draw.io` permitem integração com o Github.
-> 
+## Descrição Estrutural do Sistema
+
+A partir da descrição funcional foi montado a primeira versão do fluxo de processo dos projetos indicando correlação e passagem de informações, além de mapear os processos.
+
+![Projeto manta drawio](https://github.com/piaiman/phms.2023.s2-feec-ea075/assets/62679350/65ec84dc-b258-4028-aa54-cd52aa2d2bd3)
+
+## Especificações
+
+### Especificação Estrutural
+
+ A elicitação dos requistos está sendo feito [via Sheets](%28https://docs.google.com/spreadsheets/d/1-1rj091qlxhiRs93vTr5_trmvLaekvoHrqH35_JUYkg/edit?usp=sharing%29%20%20do%20Axhttps://docs.google.com/spreadsheets/d/1-1rj091qlxhiRs93vTr5_trmvLaekvoHrqH35_JUYkg/edit?usp=sharing). A primeira aba do documento  "Requisito Sistêmico" contém uma lista de processos sistêmicos (hardware e software) que foram extraído a partir da descrição do projeto e que compõem o fluxo gerado na Descrição Estrutural do Sistema, cada item da lista é referente a um processo mapeado e suas ramificações recebeu um *RS-SAXX* para ser identificado. Segue a imagem.
+ 
+  ![image](https://github.com/piaiman/phms.2023.s2-feec-ea075/assets/62679350/b796bf82-d057-45c4-8fe2-b529ad15c862)
+
+Na segunda aba do arquivo “Requisito Funcional”, cada processo gerou um conjunto de requisitos funcionais, RF-SAXX, para esclarecer e identificar o que cada função e componente do processo deve fazer. Além de já conter a indicação de componente de possam atender a demanda. Conforme a imagem abaixo.
+
+  ![image](https://github.com/piaiman/phms.2023.s2-feec-ea075/assets/62679350/cc66dbc1-754a-4a36-815e-c2141c1f1384)
+
+### Especificação de Algoritmos 
+
+Estão presentes no processo descritos no sheet, contudo serão passados algoritimos.
 
 ## Referências
-> Seção obrigatória. Inclua aqui referências utilizadas no projeto.
+
+[ABNT NBR IEC 60601-1-2010: Equipamento eletromédico Parte 1: Requisitos gerais para segurança básica e desempenho essencial](https://www.zambini.org.br/pdfs/ABNT%20NBR%20IEC%2060601-1-2010%20Emenda%201-2016%20-%20Equipamento%20eletrom%C3%A9dico%20-%20Parte%201-%20Requisitos%20gerais%20para%20seguran%C3%A7a%20b%C3%A1sica%20e%20desempenho%20essencial.pdf)
 
 
-https://www.saude.df.gov.br/documents/37101/87400/Protocolo+Transfusional+%E2%80%93+Indica%C3%A7%C3%A3o+de+Hemocomponentes.pdf/51637b5a-167b-1022-ccfe-fb588c34a56c?t=1648647623844
