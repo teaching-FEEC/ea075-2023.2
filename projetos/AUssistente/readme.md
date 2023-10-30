@@ -85,5 +85,161 @@ Sim, é possível, mas primeiramente é necessário realizar um levantamento dos
 
 ![Diagrama estrutural do projeto](images/diagrama_estrutural.png)
 
-## Referências
+## Especificações
+
+### Especificação Estrutural
+
+> (Se preferir, adicione um link para o documento de especificação estrutural)
+> 
+> Entende-se por estrutural a descrição tanto das características elétricas e temporais como das restrições físicas de cada bloco funcional.
+> Nessa etapa do projeto, ainda não será solicitado o diagrama elétrico mas espera-se que já estejam identificados os componentes e circuitos integrados propostos
+> para implementação do sistema embarcado proposto.
+> 
+> Como o projeto de um sistema embarcado é centralizado nas tarefas, recomenda-se iniciar com a definição dos periféricos de entrada e saída (atuadores e/ou sensores) apropriados para o
+> sistema. Pode ser necessário definir um endereço distinto para cada um deles. 
+> Este endereço será utilizado pela unidade micro-controladora para acessá-los tanto para leitura como para escrita.
+
+> Nesta etapa do projeto espera-se que a unidade micro-controladora seja definida.
+> Tendo definidos os periféricos e a memória, é possível projetar um decodificador de endereços
+> que converte o endereço referenciado no programa em sinal *Chip Select – CS* do dispositivo
+> correspondente, habilitando-o para realizar um ciclo de leitura ou de escrita.
+> 
+> Nesta etapa do projeto espera-se que sejam identificada também a eventual necessidade do projeto de circuitos de interface para os periféricos do projeto.
+> Assim, devem ser incluídos na especificação, se necessário:
+> - conversores AD e DA;
+> - padrões de comunicação a serem adotados;
+> - circuitos de sincronização de sinais temporais.
+> 
+> Finalmente, deve-se especificar as restrições físicas e ambientais de funcionamento do circuito, tais como limites mecânicos
+> (altura, largura, profundidade) e limites de dissipação térmica.
+
+### Especificação de Algoritmos 
+
+Para podermos tratar os eventos decorrentes do sistema do AUssistente, desenvolvemos o seguinte algoritmo em pseudocódigo.
+
+```text
+AUssistente;
+timer_sensor_inercial;
+timer_sensor_batimento;
+timer_sensor_temperatura;
+timer_sensor_bateria;
+timer_gps;
+buffer_circular;
+
+função principal():
+  em caso de evento:
+		  processar_evento(evento)
+
+função processar_evento(evento):
+  caso evento == evento.botao_ligar:
+		  se AUssistente.estado == estado.desligado || AUssistente.estado == eestado.hibernar:
+      configs = carregar_dados_configuracao( )
+      inicializar_componentes(configs)
+
+  senão, se AUssistente.estado == estado.ativo || AUssistente.estado == estado.ocioso:
+    salvar_dados( )
+    desligar_placa( )
+
+  caso evento == evento.leitura_sensor:
+		  dados = ler_sensor(evento.enum_sensor)
+    se buffer_circular está cheio:
+      salvar_memoria(dados)
+		  senão:
+      buffer_circular[dados.enum_sensor].proximo(dados.info)
+
+  caso evento == evento.pareamento:
+    AUssistente.dispositivo = parear( )
+
+  caso evento == evento.requisicao:
+    tratar_requisicao(evento.requisicao)
+
+  caso evento == evento.valores_criticos:
+    tocar_aviso_sonoro(evento.valor)
+    enviar_mensagem_dispositivo(evento.valor)
+
+  caso evento == evento.bateria_critica:
+    enviar_alerta_bateria( )
+    salvar_dados( )
+    desativar_sensores( )
+    hibernar( )
+
+  caso default:
+    emitir_erro_evento()
+
+função carregar_dados_configuracao():
+  configs = ler_arquivo(caminho_arquivo)
+  retornar configs
+
+função inicializar_componentes(configs):
+  AUssistente = novo AUssistente;
+  novo buffer_circular = [5][configs[tamBuffer]]
+  AUssistente.perfil_energia = configs[pEnergia]
+  AUssistente.ultimo_dispositivo = configs[ultimoDispositivoConectado]
+  AUssistente.sensores_ativos = true
+  timer_gps = configs[tGPS] ? configs[tGPS] : 30s
+  timer_sensor_bateria = configs[tBateria] ? configs[tBateria] : 30s
+  timer_sensor_batimento = configs[tBatimento] ? configs[tBatimento] : 5s
+  timer_sensor_inercial = configs[tIMU] ? configs[tIMU] : 1s
+  timer_sensor_temperatura = configs[tTemperatura] ? configs[tTemperatura] : 30s
+  AUssistente.dispositivo = parear(AUssistente.ultimo_dispositivo)
+
+função salvar_dados():
+  escrever(caminho_arquivo, AUssistente, buffer_circular)
+
+função desligar_placa():
+  power_off_mode()
+
+função ler_sensor(sensor_id):
+  retornar pegar_leitura_sensor(sensor_id)
+
+função salvar_memoria(dados):
+  EEPROM.write(dados);
+
+função parear(dispositivo):
+  BTSerial.begin(dispositivo.serial)
+  sucesso = BTSerial.available()
+	 retornar sucesso ? dispositivo : null
+
+função parear():
+  device = BTSerial.emparelhar()
+	 retornar device
+
+função tratar_requisicao(requisicao):
+	 caso requisicao == requisicao.1:
+		  tratamento_1()
+	 caso requisicao == requisicao.2:
+		  tratamento_2()
+	 caso default:
+		  tratamento_default()
+
+função tocar_aviso_sonoro(tipo):
+	 tone(buzzer_pin, tipo * 800)
+	 delay(15000)
+	 noTone(buzzer_pin)
+
+função enviar_mensagem_dispositivo(tipo):
+	 BTSerial.write("Atenção: O " + tipo + " está com valores criticos!")
+
+função enviar_alerta_bateria():
+	 BTSerial.write("Atenção: Bateria do AUssistente em niveis criticos, entrando em hibernação...")
+
+função desativar_sensores():
+	 AUssistente.sensores_ativos = false
+
+função hibernar():
+	 power_save_mode()
+
+```
+
+> (Se preferir, adicione um link para o documento de especificação de algoritmos).
+> 
+> Deve ser elaborado para CADA evento o algoritmo de tratamento deste evento. Com base no
+> tamanho de cada algoritmo, estima-se o tamanho de memória necessária para armazenar todos
+> os programas e os dados associados. Isso permitirá especificar a memória a ser utilizada e o
+> espaço onde serão armazenados os programas. O algoritmo de tratamento de evento pode
+> ser representado graficamente por um fluxograma. Recomenda-se usar símbolos gráficos consistentes 
+> com a norma internacional ISO 1028-1973 e IS0 2972-1979.
+
+## Referências (ATUALIZAR SE NECESSÁRIO)
 > Seção obrigatória. Inclua aqui referências utilizadas no projeto.
+
