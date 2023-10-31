@@ -112,6 +112,28 @@ Dimensões Físicas: O Climatizador automático fica limitado às dimensões fí
 
 ### Especificação de Algoritmos
 
+O Algoritmo irá contemplar dois modos de funcionamento, um modo automatico e um modo manual. No modo automático, um preset de temperatura e umidade será seguido, ajustando a velocidade da ventoinha pra manter sempre a temperatura dentro de uma faixa e umidade acima de um valor dado pelo usuário previamente, ambos os valores de temperatura e umidade medidos são mostrados a todo tempo no display. 
+
+![Modo Automático](./modo_automatico.png)
+
+Nesse modo haverão os seguintes eventos: 
+- Temperatura normal: O sensor de temperatura está registrando temperaturas dentro do limiar especificado, sendo assim, o programa deve executar seu estado padrão
+- Temperatura elevada: O sensor de temperatura está registrando temperaturas acima do limiar especificado sendo assim, o programa deve executar seu estado 'Diminuir velocidade do cooler'
+- Temperatura baixa: O sensor de temperatura está registrando temperaturas abaixo do limiar especificado sendo assim, o programa deve executar seu estado 'Aumentar velocidade do cooler'
+- Umidade normal: O sensor de umidade está registrando umidade acima do limite minimo, sendo assim, o programa deve estar no modo 'Umidificador desligado'
+- Umidade baixa: O sensor de umidade está registrando umidade abaixo do limite minimo, sendo assim, o programa deve estar no modo 'Umidificador ligado' 
+
+Já no modo manual, o usuário poderá controlar a velocidade da ventoinha pro valor que quiser, assim como o status de funcionamento do umidificador.
+
+![Modo Manual](./modo_manual.png)
+
+Nesse modo haverão os seguintes eventos: 
+
+- Idle: O usuário não realizou nenhuma interrupção
+- Baixar Temperatura: O usuário acionou a botoeira para aumento da velocidade
+- Aumentar Temperatura: O usuário acionou a botoeira para diminuir a velocidade
+- Aumentar Umidade: O usuário acionou o switch de ativação do umidificador
+- Abaixar Umidade: O usuário desligou o switch de ativação do umidificador
 
 ## Referências
 Sensor de Temperatura e Umidade:
