@@ -1,5 +1,5 @@
-# `<Título em Português do Projeto>`
-# `<Project Title in in English>`
+# `<Gerenciamento das condições internas de uma residência: controle de temperatura e ventilação>`
+# `<Management of a house's internal conditions: temperature and ventilation control>`
 
 ## Apresentação (MANTER)
 
@@ -9,8 +9,8 @@ oferecida no segundo semestre de 2023, na Unicamp, sob supervisão da Profa. Dra
 > Incluir nome RA e foco de especialização de cada membro do grupo. Os projetos devem ser desenvolvidos em duplas.
 > |Nome  | RA | Curso|
 > |--|--|--|
-> | Nome1  | 123456  | Eng. Elétrica|
-> | Nome2  | 123456  | Eng. Elétrica|
+> | Bruno Moreira Pilarski | 195119 | Eng. Elétrica|
+> | Felipe Martins Nogueira | 167263 | Eng. Elétrica|
 
 ## Arquivos Importantes (:warning: NOVO :warning:)
 
@@ -23,21 +23,12 @@ oferecida no segundo semestre de 2023, na Unicamp, sob supervisão da Profa. Dra
 ## Descrição do Projeto (:warning: ATUALIZAR :warning:)
 > Deve refletir a última versão do projeto.
 >
-> Descrição do objetivo principal do projeto, incluindo contexto gerador, motivação.
-> 
-> Escreva essa seção imaginando que está tentando convencer alguém a investir financeiramente no seu projeto.
-> 
-> Qual problema vocês pretendem solucionar?
-> 
-> Quem são os potenciais usuários?
-> 
-> É possível estabelecer um valor econômico associado?
+>O propósito deste projeto é empregar uma variedade de sensores capazes de diagnosticar as condições climáticas, tais como umidade, velocidade relativa do vento e temperatura, a fim de auxiliar no gerenciamento das condições internas de um espaço fechado. Esse conceito pode ser extrapolado para uma ampla gama de ambientes que buscam o controle da temperatura interna, fazendo uso das condições externas favoráveis, como exemplificado pelo caso de um Contêiner Data Center. Apesar de possuir a possibilidade de tais extrapolações, este projeto será conduzido tomando como base o controle interno de uma residência. Com o dispositivo em mãos, o usuário diminuirá o tempo despendido no gerenciamento e controle da temperatura da sua residência. A instalação deve ser conduzida a partir das instruções apresentadas no manual.
 >
 
 ## Descrição Funcional (:warning: ATUALIZAR :warning:)
-> Esta seção deve estar atualizada, refletindo o status do projeto no momento da entrega final (E3). 
-> 
-> Alterações realizadas no projeto entre a entrega E2 e a entrega E3 devem ser justificadas nas se, relatando claramente as dificuldades encontradas e as decisões > tomadas.
+
+ > O sistema em questão deve ser capaz de diagnosticar, por meio de sensores, as mudanças de temperatura externa, probabilidade de chuva e a temperatura relativa do vento. A partir desses dados, ou variáveis de controle, o dispositivo determinará o grau/nível de abertura das janelas e a temperatura gerada pelo ar-condicionado do local. Ou seja, há dois inputs principais a serem considerados neste projeto. Conforme mencionado inicialmente, o projeto é voltado para aplicações residenciais. Na figura a seguir, temos um exemplo de uma residência e a vista superior dela. A seta indica a janela em que o embarcado construído pode atuar.
 
 
 ### Funcionalidades (ATUALIZAÇÃO NECESSÁRIA)
