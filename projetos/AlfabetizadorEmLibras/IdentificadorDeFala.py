@@ -1,6 +1,8 @@
 import speech_recognition as sr
 # IMPORTANTE: é necessário baixar a biblioteca SpeechRecognition do python!
 # sudo pip3 install SpeechRecognition
+# IMPORTANTE: é necessário baixar a biblioteca pyaudio caso vá utilizar o microfone!
+# sudo pip3 install pyaudio
 
 reconhecimento = sr.Recognizer()
 
