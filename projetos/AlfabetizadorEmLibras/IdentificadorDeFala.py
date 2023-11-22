@@ -1,12 +1,8 @@
 import speech_recognition as sr
-import pyttsx3
+# IMPORTANTE: é necessário baixar a biblioteca SpeechRecognition do python!
+# sudo pip3 install SpeechRecognition
 
 reconhecimento = sr.Recognizer()
-
-def SoundToText(sound):
-    tradutor = pyttsx3.init()
-    tradutor.say()
-    tradutor.runAndWait
 
 def MicrofoneToText():
     # ao invés de usar o microfone, podemos usar:
