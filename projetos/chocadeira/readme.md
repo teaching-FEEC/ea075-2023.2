@@ -56,6 +56,47 @@ A Chocadeira Automatizada é um dispositivo projetado para incubação artificia
 ### Tratamento de Eventos
 
 ![Draw.io](https://github.com/pedrosesti/ea075-2023.2/blob/main/projetos/chocadeira/chocadeira.drawio.png)
+
+## Especificação Estrutural
+
+### Unidade Micro-Controladora:
+1. A unidade micro-controladora escolhida para o projeto é o Microcontrolador AVR ATmega328P, devido à sua confiabilidade e ampla aceitação na comunidade de projetos embarcados.
+
+### Periféricos de Entrada e Saída:
+1. **Sensor de Temperatura e Umidade:** Será utilizado um sensor DHT22 para monitorar a temperatura e a umidade dentro da chocadeira.
+2. **Atuador de Aquecimento:** Um elemento de aquecimento será controlado para manter a temperatura interna dentro dos limites desejados.
+3. **Ventilador:** Um ventilador será usado para garantir a circulação adequada do ar dentro da chocadeira.
+4. **Tela de Exibição:** Uma tela LCD será utilizada para mostrar informações relevantes aos usuários, como temperatura, umidade e status dos ovos.
+   
+### Circuitos de Interface:
+1. **Conversor Analógico-Digital (ADC):** Um ADC será utilizado para converter sinais analógicos do sensor de temperatura e umidade para valores digitais processáveis pelo microcontrolador.
+2. **Conversor Digital-Analógico (DAC):** Um DAC pode ser utilizado para controlar o aquecedor, ajustando a potência de acordo com a temperatura desejada.
+3. **Comunicação:** A comunicação será realizada principalmente via I2C para garantir uma transferência de dados eficiente entre os dispositivos periféricos e o microcontrolador.
+4. **Circuito de Sincronização de Sinais Temporais:** Um circuito de sincronização será implementado para garantir a sincronia adequada entre os diferentes componentes, especialmente o ventilador e o aquecedor.
+
+### Restrições Físicas e Ambientais:
+
+1. **Dimensões:** A chocadeira terá dimensões de 50 cm (largura) x 50 cm (altura) x 60 cm (profundidade) para acomodar uma quantidade significativa de ovos.
+2. **Dissipação Térmica:** O sistema será projetado para dissipar calor de forma eficiente, evitando superaquecimento e mantendo uma temperatura interna estável.
+   
+## Especificação de Algoritmos
+
+## Algoritmo de Controle de Temperatura e Umidade:
+### Inicialização:
+1. Inicializar o sistema e calibrar os sensores.
+2. Configurar os pinos de entrada/saída do microcontrolador.
+3. Inicializar a tela LCD para exibir informações.
+
+### Loop Principal:
+1. Ler os valores do sensor de temperatura e umidade.
+2. Comparar os valores lidos com os limites predefinidos.
+3. Ativar o aquecedor ou o ventilador conforme necessário para manter a temperatura e umidade dentro dos limites aceitáveis.
+4. Atualizar a tela LCD com os valores atuais de temperatura e umidade.
+
+## Algoritmo de Controle dos Ovos na Chocadeira:
+### Verificação de Presença de Ovos:
+1. Ler os sinais dos sensores de ovos.
+2. Atualizar o status de cada compartimento da chocadeira com base na presença ou ausência de ovos.
+
 ## Referências
 Material da disciplina de graduação *EA075 - Introdução ao Projeto de Sistemas Embarcados*
-    
