@@ -10,12 +10,17 @@ oferecida no segundo semestre de 2023, na Unicamp, sob supervisão da Profa. Dra
 | Caio Ruiz Coldebella  | 232621  | Eng. de Computação|
 | Gustavo de Souza dos Reis  | 217425  | Eng. de Computação|
 
+## Arquivos Importantes
+- [Esquemático](./pdf/esquematico.pdf)
+- [Lista de Componentes](./components.md)
+- [PCB](./images/circuito.jpeg)
+
 ## Descrição do Projeto
 O Black Box é um sistema de registro e transmissão de dados de vôo de um foguete, ele foi pensado para
 atender uma demanda da equipe Antares Unicamp, aonde se viu a necessidade de análise de informações do lançamento.
 
 Dessa forma, mesmo que haja um acidente que comprometa o vôo, o sistema deve ser seguro e resistente o suficiente para
-resistir ao impacto da queda e permitir a leitura de informações sobre o lançamento ao ser encontrado em terra, além disso
+resistir ao impacto da queda e permitir a leitura de informações via rede WiFi sobre o lançamento ao ser encontrado em terra, além disso
 é necessário que seja de baixo custo.
 
 ## Descrição Funcional
@@ -23,14 +28,15 @@ O sistema será projetado utilizando uma plataforma de IOT Wemos D1 Mini Pro bas
 que será responsável por fornecer com precisão os dados de altitude. 
 
 A vantagem de utilizarmos o ESP8266 é que este possui uma memória EEPROM de 4MB, além de uma flash de 32MB, nas quais podemos salvar os dados do sensor de forma segura. Tem também um  módulo wi-fi para podermos receber com praticidade os dados de log do vôo. Além disso ele possui outros pontos positivos como bluetooth, um microprocessador de baixa potência,
- antena embutida, conversor USB serial integrado e porta micro USB para alimentação e programação. 
+ antena embutida, conversor USB serial integrado e porta micro USB para alimentação e programação. Inicialmente foi planejado utilizar a placa NodeMCU Amica, porém verificamos que a plataforma Wemos D1 Mini Pro atendia aos requisitos de tamanho e consumo de energia de maneira mais adequada.
 
 ### Funcionalidades
 As funcionalidades planejadas para o sistema serão:
 
 - Detecção de Apogeu (altitude máxima de vôo)
 - Tempo de Apogeu
-- Variação da altitude ao longo de itervalos de tempo 
+- Variação da altitude ao longo de intervalos de tempo
+- Tranmissão de dados via WiFi e visualização no navegador web.
 
 ### Configurabilidade
 Os modos de funcionamento do sistema serão configurados por meio de um switch RBF (Remove Before Flight).
@@ -48,10 +54,10 @@ Os modos de funcionamento do sistema serão configurados por meio de um switch R
 
 ### Tratamento de Eventos
 - Inserção do RBF: ao inserir o RBF, o sistema deve parar de escrever os dados na memória, habilitar o web-server e a interface wifi e disponibilizar os dados lidos na interface.
-- Remoção do RBF: ao remover o RBF, o sistema deve coletar as leituras do altímetro, filtrá-las (média móvel) e salvar na memória.
+- Remoção do RBF: ao remover o RBF, o sistema deve coletar as leituras do altímetro, filtrá-las (média móvel) e salvar na memória EEPROM.
 
 ## Descrição Estrutural do Sistema
-![Diagrama Estrutural](./Diagrama_black_box.drawio.png)
+![Diagrama Estrutural](./images/Diagrama_black_box.drawio.png)
 
 ## Especificações
 
@@ -60,13 +66,13 @@ A ideia é comunicar o módulo BMP280 com o ESP8266 via I2C, pois ambos os dispo
 O Switch RBF será um sistema de jumper conectado a uma interface apropriada disponibilizada. Essa interface conta com dois pinos, sendo um deles o VCC e outro uma GPIO do microcontrolador. Quando o RBF estiver inserido, o pino estará conectado ao VCC. Quando estiver removido, o pino estará conectado ao GND por meio de um sistema de pull-down.
 Além disso, a alimentação de todo o sistema será feita utilizando uma bateria Li-Ion 18650 de 3.7V ligada à um regulador de tensão (TL431) que fornecerá 3.3V ao microcontrolador. Essa bateria possui uma carga de 2500mAh, o que, considerando um consumo típico do ESP8266 de 70mA, é suficiente para aproximadamente 28 horas de operação. 
 
-![Especificação Estrutural](DiagramaBlackBox.png)
+![Especificação Estrutural](./images/DiagramaBlackBox.png)
 
 Como trata-se de um sistema que estará embarcado em um foguete, suas dimensões devem, idealmente, seguir o padrão definido para um *Cansat* de 115mm de altura e 66mm de largura e também deve ser resistente a fortes vibrações e grandes acelerações. Além disso, o dispositivo não pode ser completamente vedado, pois o BMP280 precisa ler a variação de pressão externa para inferir a altitude, e a interface do RBF deve ficar disponivel externamente, para fazer rapidamente a inserção ou remoção do dispositivo. Por fim, não podem haver materiais que bloqueiem sinais de RF, pois a comunicação em solo será feita por meio de Wi-Fi. Por essas razões, será projetada uma estrutura em 3D que acomode de forma segura o dispositivo e cumpra todos os requisitos colocados  
 ### Especificação de Algoritmos
-![Diagrama de Algoritmos](./Especificacao_software.drawio.png)
+![Diagrama de Algoritmos](./images/Especificacao_software.drawio.png)
 
-[Pseudocódigo de especificação do algoritmo](./Especificacao_algoritmos.txt)
+[Pseudocódigo de especificação do algoritmo](./pdf/Especificacao_algoritmos.pdf)
 
 Para realizar a estimativa do tamanho que o código irá ocupar na memória, utilizamos o auxílio do ChatGPT para analisar o pseudocódigo, já que não temos como realizar a sua compilação. Para isso foram levados em conta os seguintes fatores:
 
