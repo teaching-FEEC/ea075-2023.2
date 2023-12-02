@@ -133,3 +133,7 @@ https://wp.josh.com/2014/11/06/battery-fuel-guage-with-zero-parts-and-zero-pins-
 https://ww1.microchip.com/downloads/en/AppNotes/00002447A.pdf
 
 https://www.mouser.com/datasheet/2/744/Seeed_101020008-838655.pdf
+
+https://pdf1.alldatasheet.com/datasheet-pdf/view/713320/DIODES/DMN10H220L-13.html
+
+https://www.e-lab.de/downloads/DOCs/Tiny43U.pdf
