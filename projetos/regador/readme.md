@@ -126,8 +126,6 @@ https://curtocircuito.com.br/datasheet/sensor/nivel_de_agua_analogico.pdf
 
 https://www.electronicshub.org/transistor-as-a-switch/#:~:text=Both%20NPN%20and%20PNP%20transistors,drive%20the%20high%2Dpower%20transistor
 
-https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf
-
 https://5.imimg.com/data5/IQ/GJ/PF/SELLER-1833510/dc-mini-submersible-water-pump.pdf
 
 https://wp.josh.com/2014/11/06/battery-fuel-guage-with-zero-parts-and-zero-pins-on-avr/
