@@ -18,13 +18,14 @@ Como o cuidado de plantas é constante e pode ocorrer o esquecimento em fazê-lo
 Apenas duas atividades manuais continuarão sendo necessárias: Preencher o reservatório com água e trocar a bateria.
 Valor econômico estimado associado ao projeto:
 
- - Micro controlador ATMega328: R$20
+ - Micro controlador ATTiny40: R$20
  - Mini bomba d'água: R$20
  - Bateria: R$10
  - Tubo para regar plantas: R$5
  - Impressão da placa PCB: R$10
  - Componentes da placa: R$10
  - Sensor de nível d'água: R$20
+ - Sensor de umidade: R$20
 
 ## Descrição Funcional
 
