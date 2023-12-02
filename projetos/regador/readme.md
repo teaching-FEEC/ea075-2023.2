@@ -137,3 +137,11 @@ https://www.mouser.com/datasheet/2/744/Seeed_101020008-838655.pdf
 https://pdf1.alldatasheet.com/datasheet-pdf/view/713320/DIODES/DMN10H220L-13.html
 
 https://www.e-lab.de/downloads/DOCs/Tiny43U.pdf
+
+https://www.molex.com/en-us/products/part-detail/510210200
+
+https://www.circuitlab.com/editor/#?id=wb7uaq4s4fb6
+
+https://pdf1.alldatasheet.com/datasheet-pdf/view/37028/SAMSUNG/IRF9530.html
+
+https://pdf1.alldatasheet.com/datasheet-pdf/view/3043/MOTOROLA/IRF530.html

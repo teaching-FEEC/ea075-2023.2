@@ -4,12 +4,16 @@ Sensor de nível d'água: https://curtocircuito.com.br/datasheet/sensor/nivel_de
 
 Sensor de umidade: https://www.mouser.com/datasheet/2/744/Seeed_101020008-838655.pdf
 
-Transistor MOSFET DMN10H220L operando como chave de acionamento para a bomba d'água: https://pdf1.alldatasheet.com/datasheet-pdf/view/713320/DIODES/DMN10H220L-13.html
+Transistores MOSFET PMOS e NMOS para circuito de acionamento da bomba:
+https://pdf1.alldatasheet.com/datasheet-pdf/view/37028/SAMSUNG/IRF9530.html
+https://pdf1.alldatasheet.com/datasheet-pdf/view/3043/MOTOROLA/IRF530.html
 
 Mini bomba d'água: https://5.imimg.com/data5/IQ/GJ/PF/SELLER-1833510/dc-mini-submersible-water-pump.pdf
 
 Bateria 5V: https://www.ineltro.ch/media/downloads/SAAItem/45/45958/36e3e7f3-2049-4adb-a2a7-79c654d92915.pdf
 
-LEDs Amarelo, Azul e Vermelho para tratamento dos eventos críticos.
+Conector da bateria: https://www.molex.com/en-us/products/part-detail/510210200
 
-Resistores 1kOhm para pull-up e para polarização dos componentes.
+LEDs Amarelo, Azul e Vermelho para tratamento dos eventos críticos (LED_THT:LED_D3.0mm).
+
+Resistores 1kOhm para pull-up e para polarização dos componentes (Resistor_SMD:R_0815_2038Metric_Pad1.20x4.05mm_HandSolder).
