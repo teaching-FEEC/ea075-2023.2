@@ -18,7 +18,7 @@ Como o cuidado de plantas é constante e pode ocorrer o esquecimento em fazê-lo
 Apenas duas atividades manuais continuarão sendo necessárias: Preencher o reservatório com água e trocar a bateria.
 Valor econômico estimado associado ao projeto:
 
- - Micro controlador ATTiny40: R$20
+ - Micro controlador ATTiny43U: R$20
  - Mini bomba d'água: R$20
  - Bateria: R$10
  - Tubo para regar plantas: R$5
@@ -67,7 +67,7 @@ A checagem da bateria é realizada a cada 10 minutos
 
 |Componente|Funcionalidade|
 |--|--|
-|ATTiny40|Unidade Micro-Controladora|
+|ATTiny43U|Unidade Micro-Controladora|
 |LED Vermelho|Nível de água e bateria crítico|
 |LED Amarelo|Nível de bateria baixo|
 |LED Azul|Bombeamento de água ativo|
@@ -82,9 +82,9 @@ A checagem da bateria é realizada a cada 10 minutos
 |Mini bomba d'água|Bombear água para a planta|
 |Tubo|Levar água à planta|
 
-O sensor de umidade será conectado a algum pino da entrada analógica digital do ATTiny40.
+O sensor de umidade será conectado a algum pino da entrada analógica digital do ATTiny43U.
 
-Os LEDs serão conectados às entradas de propósito geral do ATTiny40 (GPIO) para pull-up.
+Os LEDs serão conectados às entradas de propósito geral do ATTiny43U (GPIO) para pull-up.
 
 O módulo responsável pela irrigação é composto por uma conexão para alimentar o sistema com água sendo um tubo e uma mini bomba d'água. O módulo precisará do sinal do sensor de umidade para irrigar a horta quando necessário. O sensor de umidade será conectado à um pino de entrada analógica do microcontrolador. Na parte de atuação do módulo de irrigação, será necessário uma saída de propósito geral para o sinal de controle do transistor que irá ativar/desativar a mini bomba d'água.
 
