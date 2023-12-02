@@ -67,12 +67,11 @@ A checagem da bateria é realizada a cada 10 minutos
 
 |Componente|Funcionalidade|
 |--|--|
-|ATMega328|Unidade Micro-Controladora|
-|LED Vermelho|Nível de água crítico|
-|LED Vermelho|Nível de bateria crítico|
+|ATTiny40|Unidade Micro-Controladora|
+|LED Vermelho|Nível de água e bateria crítico|
 |LED Amarelo|Nível de bateria baixo|
 |LED Azul|Bombeamento de água ativo|
-|Resistor|Para polarizar os LED (4 de 1kOhm)|
+|Resistor|Para polarizar os LEDs (4 de 1kOhm)|
 |Sensor de umidade|Verificar umidade do solo|
 |Sensor de nível de água|Verificar nível do reservatório|
 |Transistor|Acionamento da bomba|
@@ -83,9 +82,9 @@ A checagem da bateria é realizada a cada 10 minutos
 |Mini bomba d'água|Bombear água para a planta|
 |Tubo|Levar água à planta|
 
-O sensor de umidade será conectado a algum pino da entrada analógica digital do ATMega328.
+O sensor de umidade será conectado a algum pino da entrada analógica digital do ATTiny40.
 
-Os LEDs serão conectados às entradas de propósito geral do ATMega328 (GPIO) para pull-up.
+Os LEDs serão conectados às entradas de propósito geral do ATTiny40 (GPIO) para pull-up.
 
 O módulo responsável pela irrigação é composto por uma conexão para alimentar o sistema com água sendo um tubo e uma mini bomba d'água. O módulo precisará do sinal do sensor de umidade para irrigar a horta quando necessário. O sensor de umidade será conectado à um pino de entrada analógica do microcontrolador. Na parte de atuação do módulo de irrigação, será necessário uma saída de propósito geral para o sinal de controle do transistor que irá ativar/desativar a mini bomba d'água.
 
