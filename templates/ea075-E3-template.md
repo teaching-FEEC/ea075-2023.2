@@ -34,6 +34,9 @@ O sistema em questão deve ser capaz de diagnosticar, por meio de sensores, as m
 
 ### Funcionalidades (ATUALIZAÇÃO NECESSÁRIA)
 
+Detectar a presença de chuva e solicitar o fechamento das janelas;
+Comparar o nível de temperatura interna e externa. A partir dessa diferença, liga ou desliga o ar condicionado, bem como indicar se a janela deverá ou não ser fechada.
+
 ### Configurabilidade
 
 O desenvolvimento do projeto em questão considera duas possíveis configurações de operação. A primeira delas consiste na operação padrão do dispositivo. O sensor estão configirurado para operar em uma temperatura de 22ºC. Dessa forma, as regras de controle obedecerão e critério de decisão obederão esse padrão de temperatura.
