@@ -22,8 +22,7 @@ Demais componentes:
 1. Sensor de umidade: https://www.eletrogate.com/modulo-sensor-de-umidade-de-solo
 
 4. Transistores MOSFET PMOS e NMOS para circuito de acionamento da bomba:
-https://www.infineon.com/dgdl/irf9540npbf.pdf?fileId=5546d462533600a401535611cfa21dc8&redirId=112299
-https://www.infineon.com/dgdl/irf540npbf.pdf?fileId=5546d462533600a4015355e39f0d19a1&redirId=112283
+http://www.diodes.com/assets/Datasheets/DMN10H220L.pdf
 
 5. Mini bomba d'água: https://5.imimg.com/data5/IQ/GJ/PF/SELLER-1833510/dc-mini-submersible-water-pump.pdf
 

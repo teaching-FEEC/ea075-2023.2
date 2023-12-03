@@ -162,10 +162,6 @@ https://www.e-lab.de/downloads/DOCs/Tiny43U.pdf
 
 https://www.circuitlab.com/editor/#?id=wb7uaq4s4fb6
 
-https://www.infineon.com/dgdl/irf9540npbf.pdf?fileId=5546d462533600a401535611cfa21dc8&redirId=112299
-
-https://www.infineon.com/dgdl/irf540npbf.pdf?fileId=5546d462533600a4015355e39f0d19a1&redirId=112283
-
 https://www.yuden.co.jp/productdata/catalog/mlcc06_e.pdf
 
 https://assets.nexperia.com/documents/data-sheet/PMEG2010AEH_PMEG2010AET.pdf
@@ -175,3 +171,5 @@ https://www.mouser.com/datasheet/2/597/lps6235-270704.pdf
 https://ww1.microchip.com/downloads/en/Appnotes/00002447A.pdf
 
 https://www.molex.com/en-us/products/part-detail/510210200
+
+http://www.diodes.com/assets/Datasheets/DMN10H220L.pdf
