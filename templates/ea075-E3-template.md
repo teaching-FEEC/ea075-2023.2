@@ -79,22 +79,22 @@ Neste projeto, estamos considerando que a leitura dos dois tipos de eventos segu
 Na PCB desenvolvida temos a presença dos seguintes componentes::
 
 Botão Switch - Responsável pelo ligamento de desligamento do circuito;
-3 Reles do tipo biestável 314A24 ( Datasheet ) 
+3 Reles do tipo biestável 314A24;
 Atmega328 
 Placas de cobre para forma a PCB. 
 3 Resistores;
-2 sensores digitais de humidade e temperatura DHT22 ( Datasheet ) 
+2 sensores digitais de humidade e temperatura DHT211
 
 Os  componentes externos à placa são: 
 
 1 Módulo sensore de chuva - Datasheet
-1 Módulo fim de curso ( Datasheet )
+1 Módulo fim de curso;
 1 Motor para controlar a abertura da janela. 
 
 
 O Atmega328 é o CI principal responsável pelo gerenciamento das informações. Por meio dos inputs obtidos durante o perído de amostragem, ele produz os outputs necessários para executar as ações prestabelcidas.  Os periféricos de entrada são: sensores de temperatura e humidade, detector de chuva, módulo fiim de curso. Os periféricos de saída são: motores e reles. A temporização e controles de temporização estão definidos no CI. 
 
-É recomendável que o embarcado esteja em um posição do ambiente isenta de influência de outros equipamentos emissores de energia que  podem, eventualmente, produzir inputs indesejados na entrada dos sensores ( fogueira, equipamentos com alta dissipação de calor e afins ). 
+É recomendável que o embarcado esteja em um posição do ambiente isenta de influência de outros equipamentos emissores de energia que  podem, eventualmente, produzir inputs indesejados na entrada dos sensores ( equipamentos com alta dissipação de calor e afins ). 
 
 
 ### Especificação de Algoritmos (:warning: ATUALIZAR :warning:)
