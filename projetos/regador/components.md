@@ -19,7 +19,7 @@ Demais componentes:
 
 1. Sensor de nível d'água: https://curtocircuito.com.br/datasheet/sensor/nivel_de_agua_analogico.pdf
 
-1. Sensor de umidade: https://www.mouser.com/datasheet/2/744/Seeed_101020008-838655.pdf
+1. Sensor de umidade: https://www.eletrogate.com/modulo-sensor-de-umidade-de-solo
 
 4. Transistores MOSFET PMOS e NMOS para circuito de acionamento da bomba:
 https://www.infineon.com/dgdl/irf9540npbf.pdf?fileId=5546d462533600a401535611cfa21dc8&redirId=112299
@@ -27,7 +27,7 @@ https://www.infineon.com/dgdl/irf540npbf.pdf?fileId=5546d462533600a4015355e39f0d
 
 5. Mini bomba d'água: https://5.imimg.com/data5/IQ/GJ/PF/SELLER-1833510/dc-mini-submersible-water-pump.pdf
 
-6. Bateria 5V: https://www.ineltro.ch/media/downloads/SAAItem/45/45958/36e3e7f3-2049-4adb-a2a7-79c654d92915.pdf
+6. Bateria 5V: https://ww1.microchip.com/downloads/en/Appnotes/00002447A.pdf
 
 7. Conector da bateria: https://www.molex.com/en-us/products/part-detail/510210200
 

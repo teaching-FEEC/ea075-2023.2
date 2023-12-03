@@ -92,7 +92,7 @@ O módulo responsável pela irrigação é composto por uma conexão para alimen
 
 Com base no fluxograma apresentado na descrição estrutural do sistema, definimos as seguintes variáveis e registradores utilizados para armazenar os dados do programa:
 
-- 3 variáveis de de 2 bytes para contar tempo
+- 3 variáveis de 2 bytes para contar tempo
 
 - 2 variáveis de 2 bytes para medir a bateria (VOLTAGE LOW e VOLTAGE HIGH)
 
@@ -110,7 +110,30 @@ Com base no fluxograma apresentado na descrição estrutural do sistema, definim
 
 - 1 ADC de 10 bits para utilização do sensor umidade
 
-Total de memória de armazenamento de dados: 24 Bytes
+Verificação no datasheet da bateria para medir o nível dela através do microcontrolador:
+
+|ATtiny devices|Have ADC|Vbg as input|VCC as VREF|Conclusion|
+|--|--|--|--|--|
+|ATTiny43U|Yes|Yes, 1.1V|Yes|OK|
+
+1. Let Vbg act as ADC input.
+ADC0.MUXPOS = ADC_MUXPOS_INTREF_gc /* ADC internal reference, the Vbg*/;
+1. Let VCC act as ADC reference.
+ADC0.CTRLC = ADC_PRESC_DIV2_gc /* CLK_PER divided by 2 */
+ | ADC_REFSEL_VDDREF_gc /* Vdd (Vcc) be ADC reference */
+ | 0 << ADC_SAMPCAP_bp /* Sample Capacitance Selection: disabled */;
+1. Start the ADC and calculate the result.
+float Vcc_value = 0 /* measured Vcc value */;
+ADC0.CTRLA = 1 << ADC_ENABLE_bp /* ADC Enable: enabled */
+ | 1 << ADC_FREERUN_bp /* ADC Free run mode: enabled */
+ | ADC_RESSEL_10BIT_gc /* 10-bit mode */;
+ADC0.COMMAND |= 1; // start running ADC
+while(1) {
+ if (ADC0.INTFLAGS)
+ {
+ Vcc_value = ( 0x400 * 1.1 ) / ADC0.RES /* calculate the Vcc value */;
+ }
+ }
 
 ## Referências
 
@@ -130,7 +153,7 @@ https://curtocircuito.com.br/datasheet/sensor/nivel_de_agua_analogico.pdf
 
 https://5.imimg.com/data5/IQ/GJ/PF/SELLER-1833510/dc-mini-submersible-water-pump.pdf
 
-https://www.mouser.com/datasheet/2/744/Seeed_101020008-838655.pdf
+https://www.eletrogate.com/modulo-sensor-de-umidade-de-solo
 
 https://www.e-lab.de/downloads/DOCs/Tiny43U.pdf
 
@@ -146,6 +169,6 @@ https://assets.nexperia.com/documents/data-sheet/PMEG2010AEH_PMEG2010AET.pdf
 
 https://www.mouser.com/datasheet/2/597/lps6235-270704.pdf
 
-https://www.ineltro.ch/media/downloads/SAAItem/45/45958/36e3e7f3-2049-4adb-a2a7-79c654d92915.pdf
+https://ww1.microchip.com/downloads/en/Appnotes/00002447A.pdf
 
 https://www.molex.com/en-us/products/part-detail/510210200
