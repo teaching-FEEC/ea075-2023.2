@@ -4,7 +4,9 @@ Atmega328
 
 Botão Switch - Responsável pelo ligamento de desligamento do circuito;
 
-3 Reles do tipo biestável 314A24 ( Datasheet ) |3 Resistores;
+3 Reles do tipo biestável 314A24 
+
+3 Resistores;
 
 2 sensores digitais de humidade e temperatura DHT11
 
