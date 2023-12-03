@@ -8,9 +8,9 @@ oferecida no segundo semestre de 2023, na Unicamp, sob supervisão da Profa. Dra
 
 > Incluir nome RA e foco de especialização de cada membro do grupo. Os projetos devem ser desenvolvidos em duplas.
 > |Nome  | RA | Curso|
-> |--|--|--|
-> | Bruno Moreira Pilarski | 195119 | Eng. Elétrica|
-> | Felipe Martins Nogueira | 167263 | Eng. Elétrica|
+|--|--|--|
+| Bruno Moreira Pilarski | 195119 | Eng. Elétrica|
+| Felipe Martins Nogueira | 167263 | Eng. Elétrica|
 
 ## Arquivos Importantes (:warning: NOVO :warning:)
 
