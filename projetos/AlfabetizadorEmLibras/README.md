@@ -85,7 +85,7 @@ A descrição estrutural do sistema conta com um diagrama de blocos, no qual est
 Para a especificação estrutural do projeto, inicialmente definimos os periféricos de entrada e saída, sendo eles:
 - **Push button**: Botão para determinação do intervalo do sinal. Enquanto o botão estiver pressionado, o sinal sonoro será captado.
 - **Sensor**: Microfone com amplificador no modelo MAX4466.
-- **Filtro**: Filtro passa banda passivo, composto por 2 resistores e 2 capacitores. A banda de frequência ainda será definida em testes posteriores.
+- **Filtro**: Após análise do circuito com o auxílio do PAD da disciplina, identificamos que não será necessária a utilização do filtro que faria conexão entre o sensor e o microcontrolador, dessa forma, esse componente não fará mais parte do circuito pois o sinal analógico emitido pelo sensor é diretamente compatível com a entrada analógica do microcontrolador.
 - **Microcontrolador**: ESP32, com 2 pinos de entrada (Captação do som e resposta do Push Button) e 13 pinos de saída (dentro dos pinos do ESP32). Usaremos a técnica PWM para posicionar os servo motores corretamente. O microcontrolador conterá o algorítmo para análise do som e identificação dos micro servo motores a serem acionados, assim como as suas respectivas durações de ativação.
 - **Conversor de nível lógico 3,3V-5V**: Conversor de Nivel Lógico 3.3V-5V Bidirecional 8 Canais - CNL8, 2 unidades, visto que temos 13 pinos de saída do microcontrolador. 
 - **Servo motores**: 13 micro servo-motores 9G SG90, responsáveis pela movimentação das articulações da mão (1 no dedão e 3 nos demais dedos).
