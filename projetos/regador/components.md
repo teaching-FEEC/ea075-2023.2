@@ -5,8 +5,8 @@ Sensor de nível d'água: https://curtocircuito.com.br/datasheet/sensor/nivel_de
 Sensor de umidade: https://www.mouser.com/datasheet/2/744/Seeed_101020008-838655.pdf
 
 Transistores MOSFET PMOS e NMOS para circuito de acionamento da bomba:
-https://pdf1.alldatasheet.com/datasheet-pdf/view/37028/SAMSUNG/IRF9530.html
-https://pdf1.alldatasheet.com/datasheet-pdf/view/3043/MOTOROLA/IRF530.html
+https://pdf1.alldatasheet.com/datasheet-pdf/view/37040/SAMSUNG/IRF9540.html
+https://pdf1.alldatasheet.com/datasheet-pdf/view/17799/PHILIPS/IRF540.html
 
 Mini bomba d'água: https://5.imimg.com/data5/IQ/GJ/PF/SELLER-1833510/dc-mini-submersible-water-pump.pdf
 

@@ -142,6 +142,6 @@ https://www.molex.com/en-us/products/part-detail/510210200
 
 https://www.circuitlab.com/editor/#?id=wb7uaq4s4fb6
 
-https://pdf1.alldatasheet.com/datasheet-pdf/view/37028/SAMSUNG/IRF9530.html
+https://pdf1.alldatasheet.com/datasheet-pdf/view/37040/SAMSUNG/IRF9540.html
 
-https://pdf1.alldatasheet.com/datasheet-pdf/view/3043/MOTOROLA/IRF530.html
+https://pdf1.alldatasheet.com/datasheet-pdf/view/17799/PHILIPS/IRF540.html
