@@ -23,7 +23,7 @@ oferecida no segundo semestre de 2023, na Unicamp, sob supervisão da Profa. Dra
 ## Descrição do Projeto (:warning: ATUALIZAR :warning:)
 > Deve refletir a última versão do projeto.
 >
->Deve refletir a última versão do projeto. (por hora, manter )
+
 O propósito deste projeto é empregar uma variedade de sensores capazes de diagnosticar as condições climáticas, tais como umidade e temperatura, a fim de auxiliar no gerenciamento das condições internas de um espaço fechado. Esse conceito pode ser extrapolado para uma ampla gama de ambientes que buscam o controle da temperatura interna, fazendo uso das condições externas favoráveis, como exemplificado pelo caso de um Contêiner Data Center. Apesar de possuir a possibilidade de tais extrapolações, este projeto será conduzido tomando como base o controle interno de uma residência. Com o dispositivo em mãos, o usuário diminuirá o tempo despendido no gerenciamento e controle da temperatura da sua residência. A instalação deve ser conduzida a partir das instruções apresentadas no manual.
 
 O presente projeto não apresenta um nível de complexidade elevado. A configurabilidade tende a evoluir à medida que o know-how e conhecimento interdiciplinar evoluirem. Ao longo do processo de desenvolvimento do projeto, não forma observados potências trade offs que pudessem comprometer o desenvolvimento do projeto. A velocidade de processamento das informações, eficiência energética, e risco à segurança do usuário foram alguns dos fatores considerados e que, em última instância, apresentam um baixo nível de comprometimento ao desenvolvimento do projeto. 
