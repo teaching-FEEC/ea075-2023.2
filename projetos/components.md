@@ -1,6 +1,7 @@
 # Lista de componentes
 
 Atmega328
+> https://pdf1.alldatasheet.com/datasheet-pdf/download/1425004/MICROCHIP/ATMEGA328.html 
 
 Botão Switch - Responsável pelo ligamento de desligamento do circuito;
 
