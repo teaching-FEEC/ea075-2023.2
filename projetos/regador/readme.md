@@ -122,26 +122,30 @@ https://www.digikey.com/en/resources/conversion-calculators/conversion-calculato
 
 https://curtocircuito.com.br/blog/Categoria%20Arduino/como-usar-um-sensor-de-nivel-de-agua
 
-https://curtocircuito.com.br/datasheet/sensor/nivel_de_agua_analogico.pdf
-
 https://www.electronicshub.org/transistor-as-a-switch/#:~:text=Both%20NPN%20and%20PNP%20transistors,drive%20the%20high%2Dpower%20transistor
+
+Datasheets:
+
+https://curtocircuito.com.br/datasheet/sensor/nivel_de_agua_analogico.pdf
 
 https://5.imimg.com/data5/IQ/GJ/PF/SELLER-1833510/dc-mini-submersible-water-pump.pdf
 
-https://wp.josh.com/2014/11/06/battery-fuel-guage-with-zero-parts-and-zero-pins-on-avr/
-
-https://ww1.microchip.com/downloads/en/AppNotes/00002447A.pdf
-
 https://www.mouser.com/datasheet/2/744/Seeed_101020008-838655.pdf
-
-https://pdf1.alldatasheet.com/datasheet-pdf/view/713320/DIODES/DMN10H220L-13.html
 
 https://www.e-lab.de/downloads/DOCs/Tiny43U.pdf
 
-https://www.molex.com/en-us/products/part-detail/510210200
-
 https://www.circuitlab.com/editor/#?id=wb7uaq4s4fb6
 
-https://pdf1.alldatasheet.com/datasheet-pdf/view/37040/SAMSUNG/IRF9540.html
+https://www.infineon.com/dgdl/irf9540npbf.pdf?fileId=5546d462533600a401535611cfa21dc8&redirId=112299
 
-https://pdf1.alldatasheet.com/datasheet-pdf/view/17799/PHILIPS/IRF540.html
+https://www.infineon.com/dgdl/irf540npbf.pdf?fileId=5546d462533600a4015355e39f0d19a1&redirId=112283
+
+https://www.yuden.co.jp/productdata/catalog/mlcc06_e.pdf
+
+https://assets.nexperia.com/documents/data-sheet/PMEG2010AEH_PMEG2010AET.pdf
+
+https://www.mouser.com/datasheet/2/597/lps6235-270704.pdf
+
+https://www.ineltro.ch/media/downloads/SAAItem/45/45958/36e3e7f3-2049-4adb-a2a7-79c654d92915.pdf
+
+https://www.molex.com/en-us/products/part-detail/510210200
