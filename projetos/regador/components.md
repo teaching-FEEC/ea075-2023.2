@@ -23,6 +23,7 @@ Demais componentes:
 
 4. Transistores MOSFET PMOS e NMOS para circuito de acionamento da bomba:
 http://www.diodes.com/assets/Datasheets/DMN10H220L.pdf
+https://www.diodes.com/assets/Datasheets/DMP10H400SE.pdf
 
 5. Mini bomba d'água: https://5.imimg.com/data5/IQ/GJ/PF/SELLER-1833510/dc-mini-submersible-water-pump.pdf
 

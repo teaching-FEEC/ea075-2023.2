@@ -173,3 +173,5 @@ https://ww1.microchip.com/downloads/en/Appnotes/00002447A.pdf
 https://www.molex.com/en-us/products/part-detail/510210200
 
 http://www.diodes.com/assets/Datasheets/DMN10H220L.pdf
+
+https://www.diodes.com/assets/Datasheets/DMP10H400SE.pdf
