@@ -151,6 +151,24 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
   Finalmente, deve-se especificar as restrições físicas e ambientais de funcionamento do  circuito, tais como limites mecânicos
   (altura, largura, profundidade) e limites de dissipação térmica. -->
 
+### Componnentes
+Microcontrolador PIC18F4550
+	Este microcontrolador possui 8 entradas analógicas, que são mais do que o suficientes para os sensores que serão utilizados. Para armazenar os dados dos sensores, o dispositivo disponibiliza duas memórias não voláteis: uma EEPROM  de 256 Kbytes, possibilitando realizar a leitura e escrita de dados; uma memória Flash com capacidade de 32 KB de memória (neste caso, para armazenamento de programas). Para comunicação serial, oferece uma comunicação serial que utiliza o o módulo com protocolo I2C, possibilitando enviar dados ao display. Além disso, possui uma estrutura de oscilação flexível, por exemplo possui quatro modos Crystal, dois modos de relógio externo (até 48 MHz). Por fim, O microcontrolador possui uma tecnologia de nanoWatt, que é para baixo consumo, que é importante para o projeto visto que será utilizado por períodos longos. 
+
+Display LCD 16x2 - LM16255K
+Este display pode operar em um range de temperatura -25 a 70 °C, sendo importante para o projeto, pois pode ser aplicado para diversos ambientes (temperaturas muito diferentes). Possui entradas digitais para receber os dados da comunicação serial (protocolo I2C).
+
+Expansor PCF8574 
+	Este dispositivo fornece uma expansão de E/S remota de uso geral para a maioria das famílias de microcontroladores por meio da interface I2C, que é a interface de comunicação serial do microcontrolador. Além disso, oferece um baixo consumo de corrente de Standby de 10 μA (máximo). O PCF8574 fornece 8 pinos de E/S digitais configuráveis, sendo que cada pino pode ser utilizado como entrada ou saída. 
+
+Sensor FC-28
+O sensor de umidade do solo FC-28 opera com uma faixa de voltagem de 3.3V a 5V, com uma corrente de operação inferior a 20mA. Seu design modular permite fácil integração, e sua saída analógica varia de acordo com os níveis de umidade do solo. 
+
+Sensor DHT-22
+
+O Sensor de umidade e temperatura DHT-22 é compatível com uma faixa de operação de 3.3V a 6V. Oferece uma precisão de ±2% para umidade e ±0.5°C para temperatura, aliada à saída digital, torna-o ideal para aplicações que demandam controle climático, como em sistemas de monitoramento ambiental e automação residencial.
+
+
 ### Especificação de Algoritmos
 
   <!-- (Se preferir, adicione um link para o documento de especificação de algoritmos).
