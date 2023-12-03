@@ -110,12 +110,14 @@ Com base no fluxograma apresentado na descrição estrutural do sistema, definim
 
 - 1 ADC de 10 bits para utilização do sensor umidade
 
-Verificação no datasheet da bateria para medir o nível dela através do microcontrolador:
+Verificação no datasheet do micro-controlador para medir o nível dela através do microcontrolador:
 
 |ATtiny devices|Have ADC|Vbg as input|VCC as VREF|Conclusion|
 |--|--|--|--|--|
 |ATTiny43U|Yes|Yes, 1.1V|Yes|OK|
 
+Snippet do código para verificar o nível da bateria utilizando o ADMUX interno.
+```c++
 1. Let Vbg act as ADC input.
 ADC0.MUXPOS = ADC_MUXPOS_INTREF_gc /* ADC internal reference, the Vbg*/;
 1. Let VCC act as ADC reference.
@@ -134,6 +136,7 @@ while(1) {
  Vcc_value = ( 0x400 * 1.1 ) / ADC0.RES /* calculate the Vcc value */;
  }
  }
+```
 
 ## Referências
 
