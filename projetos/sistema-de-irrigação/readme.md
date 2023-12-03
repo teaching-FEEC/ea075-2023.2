@@ -28,7 +28,7 @@ O projeto contará como componentes principais:
   - Este que será reponsável por ser o cérebro do projeto podendo tomar decisões a partir dos dados coletados por meio dos sensores a serem especificados.
 - **Sensores:**
   - Sensor de Umidade do Solo (Solo Moisture Sensor) FC-28.
-  - Sensor de Temperatura e Umidade do Ar DHT-22.
+  - Sensor de Temperatura e Umidade do Ar DHT-11.
 - **Atuador:**
   - Atuador é composto de um sistema envolvendo relé e válvula solenóide.
 - **Visualizador:**
@@ -60,11 +60,11 @@ P.S.: O modo de operação será descrito no subtópico Eventos e Tratamento de 
 
 ### Eventos
 
-Utilizando o temporizador presente no microcontrolador, iremos verificar a cada minuto, a umidade do solo utilizando o sensor FC-28 e a umidade e temperatura do ar utilizando o sensor DHT-22, e utilizar esses parâmetros para determinar a ativação do relé responsável pela irrigação.
+Utilizando o temporizador presente no microcontrolador, iremos verificar a cada minuto, a umidade do solo utilizando o sensor FC-28 e a umidade e temperatura do ar utilizando o sensor DHT-11, e utilizar esses parâmetros para determinar a ativação do relé responsável pela irrigação.
 
 ### Tratamento de Eventos
 
-Utilizando a informação dos sensores DHT-22 e FC-28 descritos acima, o sistema irá determinar se o solo deverá ser irrigado e a quantidade de água que será liberada.
+Utilizando a informação dos sensores DHT-11 e FC-28 descritos acima, o sistema irá determinar se o solo deverá ser irrigado e a quantidade de água que será liberada.
 O principal indicador será a umidade do solo, com o solo estando mais seco, mais água será liberada. Além disso, caso a temperatura do ar esteja alta e/ou a umidade do ar estiver baixa, a quantidade de água a ser irrigada será maior.
 Por fim, os valores de temperatura, umidade do solo e umidade do ar da última medição serão mostrados no display LCD
 
@@ -100,7 +100,7 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
   | LM16255K | Display LCD 16x2 | 1 | Mostrar as medidas captadas pelos sensores | Faz parte da categoria visualizadores| <https://pdf.datasheetcatalog.com/datasheet/Sharp/mXvtrzw.pdf> |
   | PCF8574 | Expansor de I/O remoto de 8 bits para barramento I2C | 1 | Realizar intermediário entre a comunicação serial do MC e a paralela do display LCD | - | <https://www.ti.com/lit/ds/symlink/pcf8574.pdf> |
   | FC-28 | Sensor de Umidade do Solo | 1 |  Através de suas pontas de prova, medir a resistência do solo | Faz parte da categoria sensores|<https://datasheethub.com/wp-content/uploads/2022/08/SEN0114_Web.pdf> |
-  | DHT-22 | Sensor de Umidade e Temperatura | 1 |  Medir temperatura e umidade do ar | Faz parte da categoria sensores|<https://datasheetspdf.com/pdf-file/792211/Aosong/DHT22/1> |
+  | DHT-11 | Sensor de Umidade e Temperatura | 1 |  Medir temperatura e umidade do ar | Faz parte da categoria sensores|<https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf> |
   | HC-49S | Cristal Oscilador 20 MHz | 1 | Gerar sinal de clock ao microcontrolador | - | <https://datasheet.lcsc.com/lcsc/2008251934_HD-71008000RW1_C655216.pdf> |
   | GCM1885C1H150JA16D | Capacitor 15 pF 50V | 2 |  Componente auxiliar do circuito cristal| - |<https://br.mouser.com/datasheet/2/281/1/GCM1885C1H150JA16_01A-3142522.pdf> |
   | BC547 | Transistor de silício epitaxial NPN | 1 |  Componente auxiliar do circuito do acionamento do motor | Faz parte da categoria atuadores | <https://www.sparkfun.com/datasheets/Components/BC546.pdf> |
@@ -115,7 +115,7 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
   Utiliza-se o CI PCF8574 para realizar a expansão de portas de 2 para 8 portas, com isso, poderia por exemplo, utilizar outras portas do microcontrolador para outra
   tarefa por exemplo, ou adicionar mais "features" ao meu projeto futuramente.
 
-  De início, não identificamos a necessidade de circuitos auxiliares para leitura das informações medidas pelos sensores FC-28 e DHT-22, onde pretende-se utilizar duas entradas analógicas
+  De início, não identificamos a necessidade de circuitos auxiliares para leitura das informações medidas pelos sensores FC-28 e DHT-11, onde pretende-se utilizar duas entradas analógicas
   que o microcontrolador fornece, sendo elas (RA0 / AN0) e (RA1 / AN1). Com isso, tendo essas tensões lidas pelo MC, ocorre a conversão desses valores para as gradezas de cada sensor, e a
   partir da lógica definida na subseção "Especificação de Algoritmos", ocorre a comunicação com o atuador.
   
@@ -168,9 +168,9 @@ Este dispositivo fornece uma expansão de E/S remota de uso geral para a maioria
 
 O sensor de umidade do solo FC-28 opera com uma faixa de voltagem de 3.3V a 5V, com uma corrente de operação inferior a 20mA. Seu design modular permite fácil integração, e sua saída analógica varia de acordo com os níveis de umidade do solo. 
 
-- **Sensor DHT-22**
+- **Sensor DHT-11**
 
-O Sensor de umidade e temperatura DHT-22 é compatível com uma faixa de operação de 3.3V a 6V. Oferece uma precisão de ±2% para umidade e ±0.5°C para temperatura, aliada à saída digital, torna-o ideal para aplicações que demandam controle climático, como em sistemas de monitoramento ambiental e automação residencial.
+O Sensor de umidade e temperatura DHT-11 é compatível com uma faixa de operação de 3.3V a 5V. Oferece uma precisão de ±5% para umidade e ±2°C para temperatura, aliada à saída digital, torna-o ideal para aplicações que demandam controle climático, como em sistemas de monitoramento ambiental e automação residencial.
 
 - **Cristal oscilador HC-49S**
 
@@ -227,7 +227,7 @@ Pseudoalgoritmo(C):
   Declaração do modo de operação do timer
 
   Declaração do endereço onde está mapeado o FC-28 na variável sensor_fc
-  Declaração do endereço onde está mapeado o DHT_22 na variável sensor_dht
+  Declaração do endereço onde está mapeado o DHT_11 na variável sensor_dht
 
   Declaração da variável UmiSolo com valor inicial Null
   Declaração da variável UmiAr com valor inicial Null
