@@ -105,6 +105,12 @@ Na segunda aba do arquivo “Requisito Funcional”, cada processo gerou um conj
 
 Estão presentes no processo descritos no  [Sheet](https://docs.google.com/spreadsheets/d/1-1rj091qlxhiRs93vTr5_trmvLaekvoHrqH35_JUYkg/edit?usp=sharing), contudo serão passados algoritimos.
 
+## Projeto
+
+### Esquemático do sistema
+
+![Schematic_Manta_2023-12-03](https://github.com/piaiman/phms.2023.s2-feec-ea075/assets/144074445/eaad8ceb-9140-46fb-bbba-3637c0e00c55)
+
 ## Referências
 
 [ABNT NBR IEC 60601-1-2010: Equipamento eletromédico Parte 1: Requisitos gerais para segurança básica e desempenho essencial](https://www.zambini.org.br/pdfs/ABNT%20NBR%20IEC%2060601-1-2010%20Emenda%201-2016%20-%20Equipamento%20eletrom%C3%A9dico%20-%20Parte%201-%20Requisitos%20gerais%20para%20seguran%C3%A7a%20b%C3%A1sica%20e%20desempenho%20essencial.pdf)
