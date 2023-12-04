@@ -100,3 +100,8 @@ A Chocadeira Automatizada é um dispositivo projetado para incubação artificia
 
 ## Referências
 Material da disciplina de graduação *EA075 - Introdução ao Projeto de Sistemas Embarcados*
+Standalone arduino: https://www.youtube.com/watch?v=RvBLmwF8JIE&t=477s
+Datasheet do display: https://www.usinainfo.com.br/index.php?controller=attachment&id_attachment=131
+Datasheet do cristal oscilador: https://www.eletrogate.com/cristal-oscilador-16mhz
+Datasheet do micocontrolador ATMEGA328P: https://www.ic-components.hk/files/cb/DEV-14083.pdf
+Dimmer arduino: https://www.youtube.com/watch?v=_vMG9QmPtNE&t=356s
