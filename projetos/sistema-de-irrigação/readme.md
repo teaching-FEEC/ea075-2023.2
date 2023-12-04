@@ -116,8 +116,10 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
   | - | Válvula de Vazão Solenóide Água 12VDC | 1 |  Realizar a irrigação do solo | Faz parte da categoria atuadores |<https://www.makerhero.com/produto/valvula-de-vazao-solenoide-agua-12vdc/#tab-description> |
 
   O microcontrolador escolhido para realizar a tarefa escolhida pelo projeto foi o PIC18F4550, este que conta com mais de uma entrada analógica,
-  conta com suporte ao protocolo de comunicação serial I2C, para 8 portas, com isso, poderia por exemplo, utilizar outras portas do microcontrolador para outra
-  tarefa por exemplo, ou adicionar mais "features" ao meu projeto futuramente.
+  conta com suporte ao protocolo de comunicação serial I2C, e claro possui uma estrutura de oscilação flexível.
+
+  Para a escolha de visualização, escolheu-se prezar pela pouca estrutura, utilizando comunicação serial I2C para transmitir as informações necessárias ao display LCD (LM16255K).
+  Utiliza-se o CI PCF8574 para realizar a expansão de portas de 2 para 8 portas, com isso, poderia por exemplo, utilizar outras portas do microcontrolador para outra tarefa por exemplo, ou adicionar mais "features" ao meu projeto futuramente.
 
   De início, não identificamos a necessidade de circuitos auxiliares para leitura das informações medidas pelos sensores FC-28 e DHT-11, onde pretende-se utilizar duas entradas analógicas
   que o microcontrolador fornece, sendo elas (RA0 / AN0) e (RA1 / AN1). Com isso, tendo essas tensões lidas pelo MC, ocorre a conversão desses valores para as gradezas de cada sensor, e a
