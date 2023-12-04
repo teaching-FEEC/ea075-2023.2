@@ -89,7 +89,7 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
 
 ### Diagrama
 
-<h1 align="center"><img src="/projetos/sistema-de-irrigação/ea075-e1.drawio-att.png"/></h1>
+<h1 align="center"><img src="/projetos/sistema-de-irrigação/ea075-e1.drawio.png"/></h1>
 
 ### Estrutura e funcionamento do sistema
 
