@@ -98,15 +98,31 @@ A partir da descrição funcional foi montado a primeira versão do fluxo de pro
   ![image](https://github.com/piaiman/phms.2023.s2-feec-ea075/assets/62679350/b796bf82-d057-45c4-8fe2-b529ad15c862)
 
 Na segunda aba do arquivo “Requisito Funcional”, cada processo gerou um conjunto de requisitos funcionais, RF-SAXX, para esclarecer e identificar o que cada função e componente do processo deve fazer. Além de já conter a indicação de componente de possam atender a demanda. Conforme a imagem abaixo.
-
+<div align="center">
+ 
   ![image](https://github.com/piaiman/phms.2023.s2-feec-ea075/assets/62679350/cc66dbc1-754a-4a36-815e-c2141c1f1384)
 
+  ![image](https://github.com/piaiman/phms.2023.s2-feec-ea075/assets/62679350/ced7a3a6-e7b0-4d8c-9839-f94df5a13b11)
 
- [Canva](https://www.canva.com/design/DAFz6RIcbNM/g90yYzKMPcfDOYWUtmQxiA/view?utm_content=DAFz6RIcbNM&utm_campaign=designshare&utm_medium=link&utm_source=editor)
+  ![image](https://github.com/piaiman/phms.2023.s2-feec-ea075/assets/62679350/a79f914c-16ad-42eb-bcfd-2c5da8404e1b)
+
+</div>
 
 ### Especificação de Algoritmos 
 
 Estão presentes no processo descritos no  [Sheet](https://docs.google.com/spreadsheets/d/1-1rj091qlxhiRs93vTr5_trmvLaekvoHrqH35_JUYkg/edit?usp=sharing), contudo serão passados algoritimos.
+
+<div align="center">
+
+![image](https://github.com/piaiman/phms.2023.s2-feec-ea075/assets/62679350/fbd69272-6719-4824-96ff-1ff71acf5b40)
+
+![image](https://github.com/piaiman/phms.2023.s2-feec-ea075/assets/62679350/c7a46948-c610-4094-b46b-66e94ce35ac2)
+
+![image](https://github.com/piaiman/phms.2023.s2-feec-ea075/assets/62679350/339a0c3a-a23a-4dd8-afaf-5f7a55926f50)
+
+![image](https://github.com/piaiman/phms.2023.s2-feec-ea075/assets/62679350/ba0bc06a-104e-49ae-9031-2db9f3f6f0e8)
+
+</div>
 
 ## Projeto
 
