@@ -5,13 +5,13 @@ Componentes do circuito de verificação do nível da bateria conectados aos pin
 |C1|6 x JMK212BJ106KD-T|6 x 10 µF = 60 µF|
 |C3|JMK212BJ226MG-T|22 µF|
 |D1|PMEG2010AEH|0.35V|
-|L1|LPS6235-153MLB|15 µH|
+|L1|LPS5030|15 µH|
 
 Capacitores: https://www.yuden.co.jp/productdata/catalog/mlcc06_e.pdf
 
 Diodo: https://assets.nexperia.com/documents/data-sheet/PMEG2010AEH_PMEG2010AET.pdf
 
-Indutor: https://www.mouser.com/datasheet/2/597/lps6235-270704.pdf
+Indutor: https://www.coilcraft.com/getmedia/11b17d19-33b4-4b4c-8f03-09560f682bf1/lps5030.pdf
 
 Demais componentes:
 

@@ -166,8 +166,6 @@ https://www.yuden.co.jp/productdata/catalog/mlcc06_e.pdf
 
 https://assets.nexperia.com/documents/data-sheet/PMEG2010AEH_PMEG2010AET.pdf
 
-https://www.mouser.com/datasheet/2/597/lps6235-270704.pdf
-
 https://ww1.microchip.com/downloads/en/Appnotes/00002447A.pdf
 
 https://www.molex.com/en-us/products/part-detail/510210200
@@ -175,3 +173,5 @@ https://www.molex.com/en-us/products/part-detail/510210200
 http://www.diodes.com/assets/Datasheets/DMN10H220L.pdf
 
 https://www.diodes.com/assets/Datasheets/DMP10H400SE.pdf
+
+https://www.coilcraft.com/getmedia/11b17d19-33b4-4b4c-8f03-09560f682bf1/lps5030.pdf
