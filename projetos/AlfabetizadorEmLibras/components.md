@@ -8,15 +8,15 @@ Este arquivo tem como objetivo listar os componentes escolhidos para a elaboraç
 Seu datasheet está disponível em: https://pdf1.alldatasheet.com/datasheet-pdf/view/73367/MAXIM/MAX4466.html
 
 - **Filtro**: Após análise do circuito com o auxílio do PAD da disciplina, identificamos que não será necessária a utilização do filtro que faria conexão entre o sensor e o microcontrolador, dessa forma, esse componente não fará mais parte do circuito pois o sinal analógico emitido pelo sensor é diretamente compatível com a entrada analógica do microcontrolador.
-(substituir por divisor de tensão)
 
 - **Microcontrolador**: O microcontrolador escolhido foi o ESP32, devido a sua possibilidade de uso com aplicações de audio, entrada analógica de sinal (necessária devido a saída analógica do sensor) e quantidade suficiente de pinos para a conexão com os treze atuadores. Seu datasheet está disponível em: https://pdf1.alldatasheet.com/datasheet-pdf/view/1148023/ESPRESSIF/ESP32.html.
 
 - **Conversor de nível lógico 3,3V-5V**: O conversor de nível lógico 3.3V-5V bidirecional com 8 canais **CNL8** foi substituído pelo conversor de nível lógico bidirecional 3,3V-5V no modelo **BSS138**, pois ele é ideal para aplicações com baixa corrente como é o caso da utilização de servo-motores, que é o previsto para esse projeto, além do tamanho físico reduzido em comparação ao CNL8. Seu datasheet está disponível em: https://cdn.awsli.com.br/945/945993/arquivos/BSS138.pdf. 
 
-- **Servo motores**: 13 micro servo-motores 9g SG90 com tamanho aproximado de 22.2x11.8x31mm e voltagem de operação de 4.8V (aproximadamente 5V). Foram escolhidos devido ao tamanho adequado para montagem da estrutura física da mão robótica em tamanho real. Seu datasheet está disponível em: https://pdf1.alldatasheet.com/datasheet-pdf/view/1572383/ETC/SG90.html.
+- **Atuadores**: 13 micro servo-motores 9g SG90 com tamanho aproximado de 22.2x11.8x31mm e voltagem de operação de 4.8V (aproximadamente 5V). Foram escolhidos devido ao tamanho adequado para montagem da estrutura física da mão robótica em tamanho real. Seu datasheet está disponível em: https://pdf1.alldatasheet.com/datasheet-pdf/view/1572383/ETC/SG90.html.
 
-- **Fonte de alimentação**: Para o circuito, a fonte escolhida é uma fonte LiPO de 5V para alimentação da ESP32 com conector micro-USB e uma segunda fonte com as mesmas especificações para a alimentação dos servo-motores, porém com conexão a um adaptador DC Power Jack de dois fios. Modelos semelhantes aos esperados podem ser encontrados em: 
+- **Fonte de alimentação**: Para o circuito, as fontes escolhidas são uma LiPO de 5V para alimentação da ESP32 com conector micro-USB, e uma segunda fonte com as mesmas especificações para a alimentação dos servo-motores, porém com conexão a um adaptador DC Power Jack de dois fios. Modelos semelhantes aos esperados podem ser encontrados em: 
 https://www.robocore.net/acessorios-raspberry-pi/fonte-chaveada-5v-3a?gad_source=1&gclid=Cj0KCQiA67CrBhC1ARIsACKAa8S9v4JIgiPzvwi2AIoa48Tf8U4bnOohH93T4OX_Son_fc5yCwUwXCcaAr4SEALw_wcB
 https://www.amazon.com.br/Fonte-Estabilizada-Chaveada-Bivolt-5-5mm/dp/B082XK9F28/ref=asc_df_B082XK9F28/?tag=googleshopp00-20&linkCode=df0&hvadid=647747402352&hvpos=&hvnetw=g&hvrand=6919078278302083958&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001729&hvtargid=pla-2066362067708&psc=1&mcid=912931c701d93237b38bd582d6f24841
+
 

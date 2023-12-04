@@ -109,8 +109,13 @@ Para a determinação do limite de dissipação térmica, o microcontrolador ESP
 ### Especificação de Algoritmos 
 ![imagem 02](./FuxogramaAlgoritmoMicrocontrolador.drawio.png "Diagrama inicial do algorítmo de tratamento dos dados e acionamento dos micro servo motores")
 
-## Referências
+### Inclusão do algoritmo
+O programa utilizado para a interpretação do sinal sonoro capturado está elaborado no arquivo IdentificadorDeFala.py, no qual é utilizada a biblioteca speech_recognition para a construção do algoritmo na função MicrofoneToText.
 
+### Alterações no esquemático
+Para a elaboração do esquemático, foi necessário alterar alguns dos componentes para que sua representação fosse incluída no software kiCad, por isso, o microcontrolador ESP32 foi representado pelo ESP32-WROOM-32U, o sensor MAX4466 foi substituído pelo MAX9814 e os micro servo-motores estão identificadoa como Motor_Servo. Para estes, foi necessária a adição de uma biblioteca de footprints compatível com o servo-motor, que foi desenhada pelo do grupo para a compatibilidade com o circuito, incluindo as entradas PWM, positiva (+) e negativa (-).
+
+## Referências
 COSTA, P. D. P. Notas de Aula. Em: UNICAMP, D. F. (Ed.). Introdução ao Projeto de Sistemas Embarcados. [s.l: s.n.].
 COSTA, P. D. P. Introdução a Projetos. 2023. Disponível em: <https://docs.google.com/presentation/d/1afvy-OOdnNWq14U_VM_S1gdlB8W96pPzuXCWzTYaslg/edit#slide=id.p>
 CENTRO UNIVERSITÁRIO DE BARRA MANSA, U. B. M. População brasileira é composta por mais de 10 milhões de pessoas surdas. Disponível em: <https://g1.globo.com/rj/sul-do-rio-costa-verde/especial-publicitario/ubm/conhecimento-transforma/noticia/2020/02/12/populacao-brasileira-e-composta-por-mais-de-10-milhoes-de-pessoas-surdas.ghtml>. Acesso em: 28 ago. 2023.
