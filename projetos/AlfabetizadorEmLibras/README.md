@@ -64,7 +64,7 @@ Além disso, o processamento faz parte do tratamento de eventos, pois é atravé
 
 A descrição estrutural do sistema conta com um diagrama de blocos, no qual estão ilustrados os blocos funcionais (caixas retangulares) que compõem o sistema, juntamente com a sua respectiva síntese de funcionalidades e o relacionamento entre eles (representado por setas indicativas do fluxo de sinais). 
 
-![imagem 01](./Screenshot%20from%202023-09-11%2018-03-53.png "Diagrama inicial do projeto")
+![imagem 01](./DiagramaDeBlocos.png "Diagrama inicial do projeto")
 
 1. **Pessoa usuária:** é representada no diagrama como responsável pela emissão de ondas sonoras a serem captadas.
     **(a):** onda sonora emitida pela pessoa usuária.
@@ -79,9 +79,42 @@ A descrição estrutural do sistema conta com um diagrama de blocos, no qual est
 6. **Servo-Motores:** componentes responsáveis pela realização do movimento desejado de acordo com o sinal identificado pelo microcontrolador.
 
 
+## Especificações
+
+### Especificação Estrutural
+Para a especificação estrutural do projeto, inicialmente definimos os periféricos de entrada e saída, sendo eles:
+- **Push button**: Botão para determinação do intervalo do sinal. Enquanto o botão estiver pressionado, o sinal sonoro será captado.
+- **Sensor**: Microfone com amplificador no modelo MAX4466.
+- **Filtro**: Após análise do circuito com o auxílio do PAD da disciplina, identificamos que não será necessária a utilização do filtro que faria conexão entre o sensor e o microcontrolador, dessa forma, esse componente não fará mais parte do circuito pois o sinal analógico emitido pelo sensor é diretamente compatível com a entrada analógica do microcontrolador.
+- **Microcontrolador**: ESP32, com 2 pinos de entrada (Captação do som e resposta do Push Button) e 13 pinos de saída (dentro dos pinos do ESP32). Usaremos a técnica PWM para posicionar os servo motores corretamente. O microcontrolador conterá o algorítmo para análise do som e identificação dos micro servo motores a serem acionados, assim como as suas respectivas durações de ativação.
+- **Conversor de nível lógico 3,3V-5V**: Conversor de Nivel Lógico 3.3V-5V Bidirecional 8 Canais - CNL8, 2 unidades, visto que temos 13 pinos de saída do microcontrolador. 
+- **Servo motores**: 13 micro servo-motores 9G SG90, responsáveis pela movimentação das articulações da mão (1 no dedão e 3 nos demais dedos).
+- **Fonte de alimentação**: 2 fontes de alimentação, uma de 3,3V (Para o microcontrolador e o sensor), e outra de 5V para os Micro Servo Motores.
+
+#### Características elétricas
+De acordo com os datasheets dos componentes selecionados acima, temos as seguintes especificações:
+- microcontrolador (ESP32): voltagem recomendada é 3.3V (com intervalo entre 2.3 V e 3.6 V)
+- sensor (MAX4466): voltagem recomendada é 3.3V (com intervalo entre 2.4V e 5.5V)
+- micro servo motor (9G SG90): voltagem recomendada é 5V (com intervalo entre 4.9V e 6V)
+
+#### Conexões
+No caso da conexão entre sensor e microcontrolador, não será necessária a utilização de um circuito de interface, pois o microfone possui saída analógica, que poderá ser conectada à entrada analógica do microcontrolador para o processamento. Como a saída do sensor a entrada do ESP32 é analógica, assim como a saída do ESP32 e a entrada dos servo motores são digitais, não há necessidade de conversores.
+
+#### Restrições físicas e ambientais
+A respeito do limite mecânico do circuito integrado, imaginamos que a mão projetada deverá ter altura máxima de 25cm (base do punho até a ponta do dedo médio), largura máxima de 13cm (lateral do dedo mínimo até a lateral do polegar) e 4cm de profundidade máxima (“grossura” entre a palma da mão), assim, estimamos que o interior da palma da mão seja suficiente para comportar os componentes e circuitos integrados responsáveis pela interpretação e processamento do comando de voz, enquanto o interior de cada dedo seja suficiente para comportar os micro servo-motores responsáveis por efetuar o movimento das articulações que buscamos representar. Com estas dimensões buscamos manter a proporção adequada para a representação de uma mão.
+
+#### Limite de dissipação térmica
+Para a determinação do limite de dissipação térmica, o microcontrolador ESP32 possui temperatura típica de operação na faixa entre -40 e 125°C, enquanto isso, o sensor MAX4466 pode sofrer danos permanentes ao operar em temperaturas acima de 70°C, além de que a faixa de temperatura do micro servo-motor está definida entre 0°C e 55°C. Dessa forma, considerando todos os componentes do circuito, definimos que seu limite de dissipação térmica deve ser menor que o limite recomendado para os micro servo-motores, sendo estimadamente equivalente a 45°C, a fim de se manter as condições físicas ideais para o funcionamento adequado.
+
+### Especificação de Algoritmos 
+![imagem 02](./FuxogramaAlgoritmoMicrocontrolador.drawio.png "Diagrama inicial do algorítmo de tratamento dos dados e acionamento dos micro servo motores")
+
 ## Referências
 
 COSTA, P. D. P. Notas de Aula. Em: UNICAMP, D. F. (Ed.). Introdução ao Projeto de Sistemas Embarcados. [s.l: s.n.].
-COSTA, P. D. P. Introdução a Projetos. 2023. Disponível em: [Link](https://docs.google.com/presentation/d/1afvy-OOdnNWq14U_VM_S1gdlB8W96pPzuXCWzTYaslg/edit#slide=id.p).
-CENTRO UNIVERSITÁRIO DE BARRA MANSA, U. B. M. População brasileira é composta por mais de 10 milhões de pessoas surdas. Disponível em: [Link](https://g1.globo.com/rj/sul-do-rio-costa-verde/especial-publicitario/ubm/conhecimento-transforma/noticia/2020/02/12/populacao-brasileira-e-composta-por-mais-de-10-milhoes-de-pessoas-surdas.ghtml). Acesso em: 28 ago. 2023.
-O que é Libras? Disponível em: [Link](https://www.libras.com.br/). Acesso em: 28 ago. 2023.
+COSTA, P. D. P. Introdução a Projetos. 2023. Disponível em: <https://docs.google.com/presentation/d/1afvy-OOdnNWq14U_VM_S1gdlB8W96pPzuXCWzTYaslg/edit#slide=id.p>
+CENTRO UNIVERSITÁRIO DE BARRA MANSA, U. B. M. População brasileira é composta por mais de 10 milhões de pessoas surdas. Disponível em: <https://g1.globo.com/rj/sul-do-rio-costa-verde/especial-publicitario/ubm/conhecimento-transforma/noticia/2020/02/12/populacao-brasileira-e-composta-por-mais-de-10-milhoes-de-pessoas-surdas.ghtml>. Acesso em: 28 ago. 2023.
+O que é Libras? Disponível em: <https://www.libras.com.br/>. Acesso em: 28 ago. 2023.
+Espressif Systems. ([s.d.]). ESP32 Series Datasheet. Www.espressif.com. Disponível em https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf. Acesso em: 26 set. 2023
+SG90 9g micro servo datasheet. ([s.d.]). alldatasheet.Disponível em https://pdf1.alldatasheet.com/datasheet-pdf/view/1572383/ETC/SG90.html. Acesso em: 26 set. 2023
+Products, M. I. ([s.d.]). Low-Cost, Micropower, SC70/SOT23-8, MicrophonePreamplifiers with Complete Shutdown. alldatasheet. Disponível em https://pdf1.alldatasheet.com/datasheet-pdf/view/73367/MAXIM/MAX4466.html. Acesso em: 26 set. 2023
