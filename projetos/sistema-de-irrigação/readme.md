@@ -14,11 +14,11 @@ O presente projeto foi originado no contexto das atividades da disciplina de gra
 
 ## Arquivos Importantes
 
-[Esquemático em PDF]()
+[Esquemático em PDF](https://github.com/frgardin/ea075-2023.2/blob/main/projetos/sistema-de-irriga%C3%A7%C3%A3o/pdf/esquema_eletrico.pdf)
 
-[Lista de Componentes]()
+[Lista de Componentes](https://github.com/frgardin/ea075-2023.2/blob/main/projetos/sistema-de-irriga%C3%A7%C3%A3o/componentes.md)
 
-[PCB]()
+[PCB](https://github.com/frgardin/ea075-2023.2/tree/main/projetos/sistema-de-irriga%C3%A7%C3%A3o/images)
 
 ## Descrição do Projeto
 
@@ -116,10 +116,7 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
   | - | Válvula de Vazão Solenóide Água 12VDC | 1 |  Realizar a irrigação do solo | Faz parte da categoria atuadores |<https://www.makerhero.com/produto/valvula-de-vazao-solenoide-agua-12vdc/#tab-description> |
 
   O microcontrolador escolhido para realizar a tarefa escolhida pelo projeto foi o PIC18F4550, este que conta com mais de uma entrada analógica,
-  conta com suporte ao protocolo de comunicação serial I2C, e claro possui uma estrutura de oscilação flexível.
-
-  Para a escolha de visualização, escolheu-se prezar pela pouca estrutura, utilizando comunicação serial I2C para transmitir as informações necessárias ao display LCD (LM16255K).
-  Utiliza-se o CI PCF8574 para realizar a expansão de portas de 2 para 8 portas, com isso, poderia por exemplo, utilizar outras portas do microcontrolador para outra
+  conta com suporte ao protocolo de comunicação serial I2C, e clahttps://repositorio.ufpe.br/bitstream/123456789/48412/1/TCC%20Railton%20Silva%20Rocha%20Junior.pdf2 para 8 portas, com isso, poderia por exemplo, utilizar outras portas do microcontrolador para outra
   tarefa por exemplo, ou adicionar mais "features" ao meu projeto futuramente.
 
   De início, não identificamos a necessidade de circuitos auxiliares para leitura das informações medidas pelos sensores FC-28 e DHT-11, onde pretende-se utilizar duas entradas analógicas
