@@ -33,4 +33,4 @@ https://www.diodes.com/assets/Datasheets/DMP10H400SE.pdf
 
 8. LEDs Amarelo, Azul e Vermelho para tratamento dos eventos críticos (LED_THT:LED_D3.0mm).
 
-9. Resistores 1kOhm para pull-up e para polarização dos componentes (Resistor_SMD:R_0815_2038Metric_Pad1.20x4.05mm_HandSolder).
+9. Resistores 1kOhm para pull-up e para polarização dos componentes (Resistor_SMD:R_0815_2038Metric_Pad1.20x4.05mm_HandSolder)
