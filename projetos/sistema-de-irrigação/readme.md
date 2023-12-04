@@ -12,6 +12,14 @@ O presente projeto foi originado no contexto das atividades da disciplina de gra
  | Igor Silva Mota | 199009 | Eng. Elétrica|
  | Vinicius Errero| 206768 | Eng. Computação(AB)|
 
+## Arquivos Importantes
+
+[Esquemático em PDF]()
+
+[Lista de Componentes]()
+
+[PCB]()
+
 ## Descrição do Projeto
 
 O "Smart Watering System" tem por objetivo principal o fornecimento de uma solução capaz de irrigar pequenas hortas de forma automatizada, visando a economia de água e independência do fator humano. Este produto busca atingir pessoas aquelas que não possuem tempo disponível para fazer o cuidado adequado no que diz respeito a atividade de irrigação, ou entusiastas de automações residenciais.
@@ -102,7 +110,6 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
   | FC-28 | Sensor de Umidade do Solo | 1 |  Através de suas pontas de prova, medir a resistência do solo | Faz parte da categoria sensores|<https://datasheethub.com/wp-content/uploads/2022/08/SEN0114_Web.pdf> |
   | DHT-11 | Sensor de Umidade e Temperatura | 1 |  Medir temperatura e umidade do ar | Faz parte da categoria sensores|<https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf> |
   | HC-49S | Cristal Oscilador 20 MHz | 1 | Gerar sinal de clock ao microcontrolador | - | <https://datasheet.lcsc.com/lcsc/2008251934_HD-71008000RW1_C655216.pdf> |
-  | GCM1885C1H150JA16D | Capacitor 15 pF 50V | 2 |  Componente auxiliar do circuito cristal| - |<https://br.mouser.com/datasheet/2/281/1/GCM1885C1H150JA16_01A-3142522.pdf> |
   | BC547 | Transistor de silício epitaxial NPN | 1 |  Componente auxiliar do circuito do acionamento do motor | Faz parte da categoria atuadores | <https://www.sparkfun.com/datasheets/Components/BC546.pdf> |
   | JQC-3F | Relé | 1 |  Relé que aciona a valvula solenóide | Faz parte da categoria atuadores |<https://pdf.voron.ua/files/pdf/relay/JQC-3F(T73).pdf> |
   | 1N4007 | Retificador de plástico de uso geral | 1 |  Diodo de proteção do relé | Faz parte da categoria atuadores |<https://www.vishay.com/docs/88503/1n4001.pdf> |
@@ -246,3 +253,5 @@ Pseudoalgoritmo(C):
   [7] DATTA, Sumon; TAGHVAEIAN, Saleh; OCHSNER, Tyson; MORIASI, Daniel; GOWDA, Prasanna; STEINER, Jean. Performance Assessment of Five Different Soil Moisture Sensors under Irrigated Field Conditions in Oklahoma. MDPI. Disponível em: <https://www.mdpi.com/1424-8220/18/11/3786>. Acesso em: 10 de setembro de 2023.
 
   [8] ALBERT, Stephen. Soil and Air Temperatures for Growing Vegetables. Harvest to Table. Disponível em: <https://harvesttotable.com/soil-and-air-temperatures-for-growing-vegetables/>. Acesso em: 10 de setembro de 2023.
+
+  [9] JUNIOR, Railton Silva Rocha. Sistema embarcado para automação da irrigação por pulsos acionada por v´alvulas solenoides tipo latching. Disponível em: <https://repositorio.ufpe.br/bitstream/123456789/48412/1/TCC%20Railton%20Silva%20Rocha%20Junior.pdf>. Acesso em 03 de dezembro de 2023.
