@@ -15,12 +15,13 @@ oferecida no segundo semestre de 2023, na Unicamp, sob supervisão da Profa. Dra
 ## Arquivos Importantes (:warning: NOVO :warning:)
 
 >[Esquemático em PDF](link para imagens/pdf esquemático)
-
-> [Esquemático.pdf](https://github.com/f741963/ea075-2023.2/files/13540209/Esquematico.pdf)
+>
+https://github.com/f741963/ea075-2023.2/blob/main/projetos/pdf.md
 
 [Lista de Componentes](link para components.md)
 >
 >[PCB](link para imagens/pdf PCB)
+>https://github.com/f741963/ea075-2023.2/blob/main/projetos/images.md 
 >
 > [PCB.pdf](https://github.com/f741963/ea075-2023.2/files/13540211/PCB.pdf)
 
