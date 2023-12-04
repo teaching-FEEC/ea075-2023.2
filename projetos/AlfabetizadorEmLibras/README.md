@@ -10,6 +10,7 @@ oferecida no segundo semestre de 2023, na Unicamp, sob supervisão da Profa. Dra
 > |--|--|--|
 > | Beatriz Iamauchi Barroso  | 166531  | Ciência da Computação|
 > | Emily Sayuri Morihiro  | 233880  | Ciência da Computação|
+
 ## Arquivos Importantes (:warning: NOVO :warning:)
 
 >[Esquemático em PDF](./pdf/PlotEsquematico.pdf)
@@ -52,15 +53,12 @@ O usuário não poderá alterar a configuração do brinquedo, uma vez que não 
 
 ### Eventos
 
-O sistema deve tratar os eventos de ligar e desligar seu sistema a partir do uso de botões pelo usuário, quando ligado, capturar sons do ambiente, gerar um sinal a partir dessa captura, amplificar e filtrar o sinal (visando a adaptação do sinal para a faixa exigida pelos componentes de processamento diminuição de ruído), processar o sinal e identificar os sons relevantes para que a movimentação seja ativada, e por fim, de acordo com o resultado do processamento e através do movimento dos servo-motores, responder (realizando ou não a movimentação) com o sinal em libras correspondente a cada uma das letras do alfabeto.
 O sistema deve tratar os eventos de ligar e desligar seu sistema, quando ligado, capturar sons do ambiente, gerar um sinal a partir dessa captura, amplificar e filtrar o sinal (visando a adaptação do sinal para a faixa exigida pelos componentes de processamento diminuição de ruído), processar o sinal e identificar os sons relevantes para que a movimentação seja ativada, e por fim, de acordo com o resultado do processamento e através do movimento dos servo-motores, responder (realizando ou não a movimentação) com o sinal em libras correspondente a cada uma das letras do alfabeto.
 
 Os eventos periódicos são dados com a captura do som do ambiente, no qual o brinquedo constantemente registra as ondas sonoras e processa o sinal originado, tentando identificar se alguma palavra reconhecida em seu sistema foi pronunciada para que o bloco de movimentação seja iniciado. Além disso, a amplificação e filtragem do sinal e também são eventos periódicos a serem realizados logo após a captura do som e anterior ao seu processamento.
 
-Para os eventos não periódicos, temos a ativação (ligar) e desativação (desligar) do brinquedo, que depende da ação da pessoa usuária, e também a resposta com o sinal em libras, que por depender do processamento, é realizada a partir da capacidade do sistema reconhecer um som que ative os comandos de movimentação.
 Para os eventos não periódicos, temos a ativação (ligar) e desativação (desligar) do brinquedo, além de apertar o botão enquanto o usuário estiver falando, que depende da ação da pessoa usuária, e também a resposta com o sinal em libras, que por depender do processamento, é realizada a partir da capacidade do sistema reconhecer um som que ative os comandos de movimentação.
 
-Acerca do tempo mínimo de processamento entre dois eventos sucessivos, em nosso projeto, ele é definido como o tempo de captura, amplificação, filtragem e processamento para o reconhecimento do sinal. Se a palavra gravada não for reconhecida em seu sistema, o brinquedo não deverá executar o bloco de movimentação, e portanto continuará captando sons do ambiente até que identifique um som que ative uma movimentação específica para a letra identificada.
 Acerca do tempo mínimo de processamento entre dois eventos sucessivos, em nosso projeto, ele é definido como o tempo de captura, amplificação, filtragem e processamento para o reconhecimento do sinal. Se a palavra gravada não for reconhecida em seu sistema, o brinquedo não deverá executar o bloco de movimentação, e portanto continuará esperando que o usuário aperte o botão novamente para falar.
 
 
@@ -75,7 +73,6 @@ Além disso, o processamento faz parte do tratamento de eventos, pois é atravé
 
 A descrição estrutural do sistema conta com um diagrama de blocos, no qual estão ilustrados os blocos funcionais (caixas retangulares) que compõem o sistema, juntamente com a sua respectiva síntese de funcionalidades e o relacionamento entre eles (representado por setas indicativas do fluxo de sinais). 
 
-![imagem 01](./DiagramaDeBlocos.png "Diagrama inicial do projeto")
 ![imagem 01](./images/DiagramaDeBlocos.png "Diagrama inicial do projeto")
 
 1. **Pessoa usuária:** é representada no diagrama como responsável pela emissão de ondas sonoras a serem captadas.
@@ -118,14 +115,9 @@ A respeito do limite mecânico do circuito integrado, imaginamos que a mão proj
 Para a determinação do limite de dissipação térmica, o microcontrolador ESP32 possui temperatura típica de operação na faixa entre -40 e 125°C, enquanto isso, o sensor MAX4466 pode sofrer danos permanentes ao operar em temperaturas acima de 70°C, além de que a faixa de temperatura do micro servo-motor está definida entre 0°C e 55°C. Dessa forma, considerando todos os componentes do circuito, definimos que seu limite de dissipação térmica deve ser menor que o limite recomendado para os micro servo-motores, sendo estimadamente equivalente a 45°C, a fim de se manter as condições físicas ideais para o funcionamento adequado.
 
 ### Especificação de Algoritmos 
-![imagem 02](./FuxogramaAlgoritmoMicrocontrolador.drawio.png "Diagrama inicial do algorítmo de tratamento dos dados e acionamento dos micro servo motores")
 ![imagem 02](./images/FuxogramaAlgoritmoMicrocontrolador.drawio.png "Diagrama inicial do algorítmo de tratamento dos dados e acionamento dos micro servo motores")
 
 ### Inclusão do algoritmo
-O programa utilizado para a interpretação do sinal sonoro capturado está elaborado no arquivo IdentificadorDeFala.py, no qual é utilizada a biblioteca speech_recognition para a construção do algoritmo na função MicrofoneToText.
-
-### Alterações no esquemático
-Para a elaboração do esquemático, foi necessário alterar alguns dos componentes para que sua representação fosse incluída no software kiCad, por isso, o microcontrolador ESP32 foi representado pelo ESP32-WROOM-32U, o sensor MAX4466 foi substituído pelo MAX9814 e os micro servo-motores estão identificadoa como Motor_Servo. Para estes, foi necessária a adição de uma biblioteca de footprints compatível com o servo-motor, que foi desenhada pelo do grupo para a compatibilidade com o circuito, incluindo as entradas PWM, positiva (+) e negativa (-).
 O código modificado para wokwi está no arquivo [CodigoESP32.py](./pdf/CodigoESP32.py). Visto que não há suporte para microfone, nem para importação de bibliotecas, na versão livre do wokwi, adicionamos a função (alterada para funcionamento em computador) que realiza o processamento e interpretação do sinal sonoro capturado no arquivo [IdentificadorDeFala.py](./pdf/IdentificadorDeFala.py), no qual é utilizada a biblioteca speech_recognition para a construção do algoritmo na função MicrofoneToText.
 
 ## Referências
