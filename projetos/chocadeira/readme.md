@@ -28,11 +28,11 @@ A Chocadeira Automatizada é um dispositivo projetado para incubação artificia
 3. **Viragem automática:** para evitar que o embrião grude na casca e promover seu desenvolvimento uniforme, a Chocadeira Automatizada gira os ovos em intervalos regulares.
 
 ### Configurabilidade
-**Temperatura:** o usuário deve configurar a temperatura da chocadeira de acordo com as especificações da espécie. Isso pode incluir a capacidade de ajustar a temperatura de incubação e, em alguns casos, a temperatura de eclosão.
+**Temperatura:** A temperatura da chocadeira é ajustada de acordo com as especificações da espécie. Isso pode incluir a capacidade de ajustar a temperatura de incubação e, em alguns casos, a temperatura de eclosão. No caso para ovos de galinha a temperatura será fixa em 37,7 °C.
 
-**Umidade:** a configurabilidade da umidade é fundamental para criar as condições ideais para o desenvolvimento dos embriões. O usuário deve ajustar os níveis de umidade de acordo com as necessidades da espécie.
+**Umidade:** A configurabilidade da umidade é fundamental para criar as condições ideais para o desenvolvimento dos embriões. Para ovos de galinha o ideal é que a humidade esteja em torno de 70%.
 
-**Viragem dos ovos:** a chocadeira permite que o usuário configure a frequência da viragem automática dos ovos. Além disso, a viragem automática pode ser desativada, dando ao usuário a opção de virar os ovos manualmente.
+**Viragem dos ovos:** a chocadeira permite que o usuário configure a frequência da viragem automática dos ovos. Além disso, a viragem automática será desativada quando faltar menos de 4 dias para a eclosão.
 
 ### Eventos
 #### Periódicos:
@@ -63,7 +63,7 @@ A Chocadeira Automatizada é um dispositivo projetado para incubação artificia
 1. A unidade micro-controladora escolhida para o projeto é o Microcontrolador AVR ATmega328P, devido à sua confiabilidade e ampla aceitação na comunidade de projetos embarcados.
 
 ### Periféricos de Entrada e Saída:
-1. **Sensor de Temperatura e Umidade:** Será utilizado um sensor DHT22 para monitorar a temperatura e a umidade dentro da chocadeira.
+1. **Sensor de Temperatura e Umidade:** Será utilizado um sensor DHT11 para monitorar a temperatura e a umidade dentro da chocadeira.
 2. **Atuador de Aquecimento:** Um elemento de aquecimento será controlado para manter a temperatura interna dentro dos limites desejados.
 3. **Ventilador:** Um ventilador será usado para garantir a circulação adequada do ar dentro da chocadeira.
 4. **Tela de Exibição:** Uma tela LCD será utilizada para mostrar informações relevantes aos usuários, como temperatura, umidade e status dos ovos.
@@ -93,10 +93,6 @@ A Chocadeira Automatizada é um dispositivo projetado para incubação artificia
 3. Ativar o aquecedor ou o ventilador conforme necessário para manter a temperatura e umidade dentro dos limites aceitáveis.
 4. Atualizar a tela LCD com os valores atuais de temperatura e umidade.
 
-## Algoritmo de Controle dos Ovos na Chocadeira:
-### Verificação de Presença de Ovos:
-1. Ler os sinais dos sensores de ovos.
-2. Atualizar o status de cada compartimento da chocadeira com base na presença ou ausência de ovos.
 
 ## Referências
 Material da disciplina de graduação *EA075 - Introdução ao Projeto de Sistemas Embarcados*
