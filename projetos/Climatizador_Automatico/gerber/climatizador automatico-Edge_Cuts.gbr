@@ -1,0 +1,23 @@
+%TF.GenerationSoftware,KiCad,Pcbnew,7.0.7*%
+%TF.CreationDate,2023-12-03T21:53:00-03:00*%
+%TF.ProjectId,climatizador automatico,636c696d-6174-4697-9a61-646f72206175,rev?*%
+%TF.SameCoordinates,Original*%
+%TF.FileFunction,Profile,NP*%
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 7.0.7) date 2023-12-03 21:53:00*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+%TA.AperFunction,Profile*%
+%ADD10C,0.100000*%
+%TD*%
+G04 APERTURE END LIST*
+D10*
+X68580000Y-39370000D02*
+X215900000Y-39370000D01*
+X215900000Y-130810000D01*
+X68580000Y-130810000D01*
+X68580000Y-39370000D01*
+M02*
