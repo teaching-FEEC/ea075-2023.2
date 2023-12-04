@@ -12,6 +12,13 @@ oferecida no segundo semestre de 2023, na Unicamp, sob supervisão da Profa. Dra
 | Aron Simoes Ferreira Maciel  | 261064 | Eng. da Computação|
 | Erivelton da Rocha Tavares   | 170645 | Eng. Elétrica|
 
+## Arquivos Importantes
+
+[Esquemático em PDF](./pdf/schematic)
+
+[Lista de Componentes](./components.md)
+
+[PCB](./imagens/PCB.jpg)
 
 ## Descrição do Projeto
 O Climatizador Automático foi idealizado pensando no conforto das pessoas que aderiram às novas modalidades de trabalho (home office) e estudo (aulas EAD) para que elas possam ter um ambiente agradável tanto em termos de temperatura quanto de umidade.  
@@ -149,7 +156,7 @@ display:
 https://www.arducore.com.br/display-lcd-16x2-c-blacklight
 
 BC548:
-https://html.alldatasheet.com/html-pdf/857905/SUNMATE/BC548/292/1/BC548.html
+    
 
 TIP122: 
 https://html.alldatasheet.com/html-pdf/5764/MOTOROLA/TIP122/257/1/TIP122.html
