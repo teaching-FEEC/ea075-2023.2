@@ -251,4 +251,4 @@ Pseudoalgoritmo(C):
 
   [8] ALBERT, Stephen. Soil and Air Temperatures for Growing Vegetables. Harvest to Table. Disponível em: <https://harvesttotable.com/soil-and-air-temperatures-for-growing-vegetables/>. Acesso em: 10 de setembro de 2023.
 
-  [9] JUNIOR, Railton Silva Rocha. Sistema embarcado para automação da irrigação por pulsos acionada por v´alvulas solenoides tipo latching. Disponível em: <https://repositorio.ufpe.br/bitstream/123456789/48412/1/TCC%20Railton%20Silva%20Rocha%20Junior.pdf>. Acesso em 03 de dezembro de 2023.
+  [9] JUNIOR, Railton Silva Rocha. Sistema embarcado para automação da irrigação por pulsos acionada por válvulas solenoides tipo latching. Disponível em: <https://repositorio.ufpe.br/bitstream/123456789/48412/1/TCC%20Railton%20Silva%20Rocha%20Junior.pdf>. Acesso em 03 de dezembro de 2023.
