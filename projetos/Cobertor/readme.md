@@ -109,13 +109,13 @@ Estão presentes no processo descritos no  [Sheet](https://docs.google.com/sprea
 
 ### Esquemático do sistema
 
-![Schematic_Manta_2023-12-03](https://github.com/piaiman/phms.2023.s2-feec-ea075/assets/144074445/eaad8ceb-9140-46fb-bbba-3637c0e00c55)]
+![Schematic_Manta_2023-12-03](https://github.com/piaiman/phms.2023.s2-feec-ea075/assets/144074445/eaad8ceb-9140-46fb-bbba-3637c0e00c55)
 
 ### Descrição
 
-*Alimentação é de entrada de tensão AC com retificador e abaixador de tensão. A bateria é para suprir possíveis faltas de energia.
-*O controle do sistema é feito por sensores de temperatura e podem ser monitorados por indicadores visuais, LEDs e Display.
-*Há o sistema de segurança que atua em casos de sobre corrente.
+* Alimentação é de entrada de tensão AC com retificador e abaixador de tensão. A bateria é para suprir possíveis faltas de energia.
+* O controle do sistema é feito por sensores de temperatura e podem ser monitorados por indicadores visuais, LEDs e Display.
+* Há o sistema de segurança que atua em casos de sobre corrente.
 
 ## Referências
 
