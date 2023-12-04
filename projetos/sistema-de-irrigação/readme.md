@@ -116,7 +116,7 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
   | - | Válvula de Vazão Solenóide Água 12VDC | 1 |  Realizar a irrigação do solo | Faz parte da categoria atuadores |<https://www.makerhero.com/produto/valvula-de-vazao-solenoide-agua-12vdc/#tab-description> |
 
   O microcontrolador escolhido para realizar a tarefa escolhida pelo projeto foi o PIC18F4550, este que conta com mais de uma entrada analógica,
-  conta com suporte ao protocolo de comunicação serial I2C, e clahttps://repositorio.ufpe.br/bitstream/123456789/48412/1/TCC%20Railton%20Silva%20Rocha%20Junior.pdf2 para 8 portas, com isso, poderia por exemplo, utilizar outras portas do microcontrolador para outra
+  conta com suporte ao protocolo de comunicação serial I2C, para 8 portas, com isso, poderia por exemplo, utilizar outras portas do microcontrolador para outra
   tarefa por exemplo, ou adicionar mais "features" ao meu projeto futuramente.
 
   De início, não identificamos a necessidade de circuitos auxiliares para leitura das informações medidas pelos sensores FC-28 e DHT-11, onde pretende-se utilizar duas entradas analógicas
@@ -127,6 +127,8 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
   para esta aplicação escolheu-se o cristal de 20 MHz, juntamente com os capacitores de cerâmica de 15 pF.
 
   Para o circuito do atuador [1], pensou-se em um circuito de chaveamento com transistores, onde o transistor aciona um relé, este que aciona a válvula solenóide.
+
+  Vale ressaltar que o conector J1, está relacionado aos terminais do sensor FC-28 e o conector J2 a válvula solenóide, ambos componentes não estão anexados a placa pois os mesmos precisam estar em contato com o solo.
 
   Por fim, o sensor FC-28 precisa estar infincado ao solo, enquanto o restante pode estar sobre a pcb mesmo, espera-se deixar uma quantidade considerável de área para o microcontrolador
   e para o transistor e relé, no momento, não identifica-se a necessidade de um dissipador de calor.
