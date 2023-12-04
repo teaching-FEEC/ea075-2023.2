@@ -6,20 +6,20 @@
 O presente projeto foi originado no contexto das atividades da disciplina de graduação *EA075 - Introdução ao Projeto de Sistemas Embarcados*, 
 oferecida no segundo semestre de 2023, na Unicamp, sob supervisão da Profa. Dra. Paula Dornhofer Paro Costa, do Departamento de Engenharia de Computação e Automação (DCA) da Faculdade de Engenharia Elétrica e de Computação (FEEC).
 
-> |Nome  | RA | Curso|
-> |--|--|--|
-> | Beatriz Iamauchi Barroso  | 166531  | Ciência da Computação|
-> | Emily Sayuri Morihiro  | 233880  | Ciência da Computação|
+ |Nome  | RA | Curso|
+ |--|--|--|
+ | Beatriz Iamauchi Barroso  | 166531  | Ciência da Computação|
+ | Emily Sayuri Morihiro  | 233880  | Ciência da Computação|
 
 ## Arquivos Importantes (:warning: NOVO :warning:)
 
->[Esquemático em PDF](./pdf/PlotEsquematico.pdf)
->
->[Lista de Componentes](./components.md)
->
->[PCB1](./images/Placa3DFrente.png)
->
->[PCB2](./images/Placa3DTras.png)
+[Esquemático em PDF](./pdf/PlotEsquematico.pdf)
+
+[Lista de Componentes](./components.md)
+
+[PCB1](./images/Placa3DFrente.png)
+
+[PCB2](./images/Placa3DTras.png)
 
 ## Descrição do Projeto
 
