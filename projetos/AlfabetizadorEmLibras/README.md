@@ -68,15 +68,13 @@ A descrição estrutural do sistema conta com um diagrama de blocos, no qual est
 
 1. **Pessoa usuária:** é representada no diagrama como responsável pela emissão de ondas sonoras a serem captadas.
     **(a):** onda sonora emitida pela pessoa usuária.
-2. **Sensor:** componente responsável pela captura de ondas sonoras do ambiente e conversão da onda sonora em sinais elétricos para o sistema.
-    **(b):** sinal elétrico oriundo da captura de som.
-3. **Amplificador:** responsável pelo ajuste do sinal gerado pelo sensor, com a finalidade de ajustar a onda sonora a níveis adequados para filtragem e processamento.
-    **(c):** sinal amplificado.
-4. **Filtro:** responsável pela remoção de ruído oriundo da captura de ondas sonoras do ambiente.
-    **(d):** sinal filtrado.
-5. **Microcontrolador:** componente responsável pelo processamento do sinal filtrado e acionamento dos servo-motores desejados do sistema.
-    **(e):** sinal de acionamento.
-6. **Servo-Motores:** componentes responsáveis pela realização do movimento desejado de acordo com o sinal identificado pelo microcontrolador.
+2. **Push-button (Pull-up):** Entendemos ao longo do projeto que seria muito trabalhoso manter o brinquedo ouvindo e analisando os sons do ambiente ininterruptamente enquanto ligado. Portanto, optamos por fazer a lógica de início da análise dos sons ser iniciada apenas enquanto um botão estivesse sendo pressionado.
+    **(b):** sinal de acionamento da análise.
+3. **Sensor com Amplificador:** componente responsável pela captura de ondas sonoras do ambiente e conversão da onda sonora em sinais elétricos para o sistema. esse componente também é responsável pelo ajuste do sinal gerado pelo sensor, com a finalidade de ajustar a onda sonora a níveis adequados para filtragem e processamento.
+    **(c):** sinal elétrico oriundo da captura de som amplificado.
+4. **Microcontrolador:** componente responsável pelo processamento do sinal filtrado e acionamento dos servo-motores desejados do sistema.
+    **(d):** sinal de acionamento.
+5. **Servo-Motores:** componentes responsáveis pela realização do movimento desejado de acordo com o sinal identificado pelo microcontrolador.
 
 
 ## Especificações
