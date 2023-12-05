@@ -13,74 +13,113 @@ oferecida no segundo semestre de 2023, na Unicamp, sob supervisão da Profa. Dra
 
 ## Descrição do Projeto
 
-Visando uma melhor qualidade de vida e humanização no tratamento dos pacientes de ambientes hospitalares, desenvolvemos uma manta aquecedora para controle de temperatura.
+Com o objetivo de promover uma significativa melhoria na qualidade de vida e na humanização do tratamento oferecido aos pacientes em ambientes hospitalares, desenvolvemos uma inovadora manta aquecedora para o controle preciso da temperatura.
 
-Entre alguns procedimentos onde controle de temperatura continuo é importante, temos: procedimentos como transfusão de concentrado de hemácias requerem o aquecimento antes de serem aplicadas nos pacientes para evitar a coagulação; para apoio na analgesia da pele suprapúbica quando de insere um DIU; aquecimento por contado para recém-nascidos nos primeiros minutos de vida, além do condicionamento térmico de uma bolsa de ocitocina antes de infundi-la no pôs parto (período de grenberg), mas também visando o conforto térmico do paciente dado que frio de clínicas e hospitais é necessário, porém desagradável para muitos.
+Dentre os diversos procedimentos nos quais a manutenção contínua da temperatura se revela crucial, destacam-se: a necessidade de aquecimento prévio durante a transfusão de concentrado de hemácias, a fim de evitar coagulação; o suporte à analgesia da pele suprapúbica durante a inserção de um DIU; o aquecimento direto para recém-nascidos nos primeiros minutos de vida; e o condicionamento térmico de uma bolsa de ocitocina antes de sua infusão no pós-parto (período de grenberg). Adicionalmente, a consideração do conforto térmico do paciente é fundamental, uma vez que o frio presente em clínicas e hospitais, embora necessário, pode ser desagradável para muitos.
 
-O produto possui dois componentes: um controlar para aquecimento e a malha resistiva que pode ter diferentes tamanhos, sendo que um controlado pode ser usado para malhas de diferentes medidas desde peça de 20x20 cm até peças de 2x1 m transmitindo o calor de forma constante. Ele trabalha com pré-set de 37,5 °C no equilíbrio, além de contar com termômetro que acompanhar a temperatura do paciente e quantifica o quanto de calor deverá ser transmitido. Além disso, ele conta com modos rápido e lente de aquecimento. E também, conta com alimentação por tomada e baterias.
+O produto em questão é composto por dois elementos essenciais: um controlador de aquecimento e uma malha resistiva, disponível em diferentes tamanhos. Destaca-se a versatilidade do controlador, que pode ser utilizado em malhas variando desde 20x20 cm até 2x1 m, proporcionando uma distribuição constante e eficaz do calor. O dispositivo opera com uma configuração pré-definida de 37,5 °C, mantendo o equilíbrio térmico, e está equipado com um termômetro que monitora a temperatura do paciente, quantificando a quantidade necessária de calor a ser transmitida.
+
+Ademais, o produto oferece modos rápido e lento de aquecimento, proporcionando flexibilidade no tratamento. Além disso, apresenta a opção de alimentação por tomada elétrica ou bateria, garantindo praticidade e mobilidade em diferentes contextos hospitalares. Essas características tornam nossa manta aquecedora não apenas uma solução eficaz para os desafios térmicos em procedimentos médicos, mas também um instrumento versátil e adaptável às diversas necessidades clínicas.
 
 ## Descrição Funcional
 
- O controle de temperatura é feito a partir de um microcontrolador, e a temperatura será configurada pelo operador e controlada por sensores de temperatura. Também deverá:
+O controle de temperatura é realizado por meio de um microcontrolador, permitindo ao operador configurar e monitorar a temperatura por meio de sensores especializados. Este inovador dispositivo apresenta uma série de características essenciais para garantir um tratamento térmico eficaz e seguro:
 
-*É interessante conter um pré-set de temperatura em 37,5°C, mas que seja possível alterar;
-*É importante que tenha dois modos de aquecimento, um rápido e outro lento;
-*Que não faça barulho;
-*Que tenha um indicador de temperatura do paciente, além de ter um sinalizador onde demonstre se paciente não está conseguindo manter o calor sem o equipamento;
-*Que seja inteligente e monitore o paciente após ter atingido a homeostase, mas também que em caso de queda de temperatura fora da faixa adequada, volte a aquecer e avise a equipe;
-*O dispositivo não deve oferecer risco de queimaduras aos pacientes, devendo trabalhar na região de homeostase, com temperatura uniforme;
-*Caso dispositivo tenha contato direto com a pele, deverá oferecer o menor risco de contaminação;
-*Em caso de problema a equipamento precisa se autodesligar e sinalizar o problema por uma IHM;
-*Não usar métodos invasivos;
-*Confortável ao toque. em caso de contato.
+1. **Configuração Flexível de Temperatura:**
+   - O equipamento oferece a conveniência de um pré-set inicial de temperatura em 37,5°C, facilitando a operação, mas permitindo ajustes conforme necessário.
+
+2. **Modos de Aquecimento Rápido e Lento:**
+   - Conta com dois modos de aquecimento distintos, um rápido e outro lento, proporcionando flexibilidade e adaptabilidade aos diferentes requisitos clínicos.
+
+3. **Operação Silenciosa:**
+   - Garante um ambiente tranquilo no ambiente hospitalar, evitando qualquer interferência sonora, assegurando conforto tanto para pacientes quanto para profissionais de saúde.
+
+4. **Indicador de Temperatura do Paciente:**
+   - Apresenta um indicador claro da temperatura do paciente, permitindo uma monitorização constante e eficaz do estado térmico.
+
+5. **Sinalizador de Alerta:**
+   - Incorpora um sinalizador que alerta a equipe no caso de o paciente não conseguir manter a temperatura adequada sem o dispositivo, garantindo intervenção rápida.
+
+6. **Monitoramento Inteligente pós-Homeostase:**
+   - Após atingir a homeostase, o dispositivo continua monitorando o paciente. Em caso de uma queda de temperatura fora da faixa adequada, reinicia automaticamente o aquecimento e notifica a equipe.
+
+7. **Segurança contra Queimaduras:**
+   - Trabalha na região de homeostase, mantendo uma temperatura uniforme que evita riscos de queimaduras aos pacientes.
+
+8. **Mínimo Risco de Contaminação:**
+   - No caso de contato direto com a pele, o dispositivo é projetado para oferecer o menor risco possível de contaminação, cumprindo rigorosos padrões de segurança.
+
+9. **Autodesligamento e Sinalização de Problemas:**
+   - Em situações adversas, o equipamento é capaz de se autodesligar e sinalizar o problema por meio de uma Interface Homem-Máquina (IHM), proporcionando segurança adicional.
+
+10. **Métodos Não Invasivos e Toque Confortável:**
+    - O dispositivo utiliza métodos não invasivos, garantindo conforto ao paciente, inclusive ao toque, sem comprometer a segurança ou eficácia do tratamento térmico.
+
 
 ### Funcionalidades
 
-* O sistema será capaz de identificar a temperatura corporal do usuário, a temperatura ambiente e a temperatura interna do cobertor;
-* Será possível selecionar a temperatura desejada atarvés de uma interface com o operador;
-* Será possível monitorar todas as temperaturas pela interface com o operador;
-* Deve contar com sistema de aquecimento lento e rápido;
-* Um timer para ajuste de períodos de aquecimento;
-* Proteção sobre aquecimento;
-* Sinalizadores para situações emergências;
-* Deverá ter um indicador de nível de bateria.
+- O sistema apresenta capacidade para monitorar três diferentes temperaturas: a corporal do usuário, a ambiente e a interna do cobertor;
+
+- Os usuários podem facilmente selecionar a temperatura desejada por meio de uma intuitiva interface com o operador;
+
+- Monitoramento completo de todas as temperaturas é possível através da interface com o operador;
+
+- O sistema oferece tanto opções de aquecimento lento quanto rápido;
+
+- Inclusão de um timer para ajustar períodos específicos de aquecimento;
+
+- Proteção contra superaquecimento integrada;
+
+- Sinalizadores para situações de emergência, assegurando rápida intervenção;
+
+- Indicador de nível de bateria para acompanhamento do status energético.
+
 
 ### Configurabilidade
 
-Será configurada a temperatura que é desejada entre cobertor e usuário. Pode se adaptar a diferentes malhas de tamanhos distuntos; pode trabalhar com a  rede AC convencional  e com baterias.
+O sistema permite a configuração da temperatura desejada entre o cobertor e o usuário, sendo adaptável a diferentes malhas de tamanhos distintos;
+
+Compatibilidade com a rede elétrica convencional (AC) e a opção de operação por baterias.
 
 ### Eventos
 
-O sistema deve ler as temperaturas do sistema e ajustar a corrente fornecida às resistências para manipular a temperatura gerada pela malha térmica.O ciclo de operação do sistema seguirá a seguinte lógica:
+O sistema é projetado para ler as temperaturas do ambiente e ajustar a corrente fornecida às resistências, manipulando assim a temperatura gerada pela malha térmica. O ciclo de operação do sistema segue a seguinte lógica:
 
-1. Operador deverá verificar qual a forma de alimentação será usada, AC ou bateria.
-2. Ligar a chave geral de operação do equipamento para ligá-lo.
-3. Após isso, o microcontrolador deverá detectar se a manta térmica está conectada a ele.
-   
-       3-A. Caso a condição anterior seja cumprida, a próxima etapa, caso não seguirá o item 3-B.
-  
-       3-B. O controlador deverá indicar que existe um problema com a malha, ficando travado nesta condição, sendo liberado com o reset (liga e desliga geral do equipamento).
-  
-4. O controlador verificará se os sensores de temperatura estão conectavados e prontos para operar, caso contrário ocorrerá a mesma situação do item 3-B indicando qual sensor apresenta problemas.
-5. Dado que todas as condições foram atendidas a IHM liberada para configuração.
-       5-A. O controlador deverá permitir o ajuste de temperatura de aquecimento, sendo que por padrão ele deve iniciar com a temperatura de 37,5 C.
-       5-B. Após realizar o ajuste de temperatura, deverá ser escolher o modo de aquecimento rápido e lento.
-       5-C Por fim, ajustar o tempo de operação.
+1. O operador deve verificar qual forma de alimentação será utilizada, AC ou bateria.
 
-6. Feito isso, o operador deve apertar o botão para iniciar o ciclo de aquecimento.
+2. Ligar a chave geral de operação do equipamento para ativá-lo.
 
-7. Durante o ciclo de aquecimento o sistema atuará com uma rotina de inteligente de monitoramento do paciente e temperatura. Contudo, a algumas condições poderão gera a interrupção do ciclo, entre elas:
+3. Após a ativação, o microcontrolador detectará se a manta térmica está conectada a ele.
 
-       7-A.Sobre aquecimento do paciente;
-   
-       7-B. Sobre corrente no sistema;
-   
-       7-C. Dectação de fuga de corrente;
-   
-       7-D. Baixo ganho de temperatura;
+         - 3-A. Se a condição anterior for atendida, o sistema avançará para a próxima etapa; caso contrário, seguirá para o item 3-B.
+        
+         - 3-B. O controlador indicará a existência de um problema com a malha, permanecendo travado nessa condição até ser liberado pelo reset (liga e desliga geral do equipamento).
 
-8. Após o ciclo de aquecimento, o controlador deverá sinalizar que o ciclo foi finalizado, mostrando parâmetros de tempo médio de aquecimento.
-9.  Permitirá que seja feito um novo ciclo.
+4. O controlador verificará se os sensores de temperatura estão conectados e prontos para operar; em caso contrário, ocorrerá a mesma situação descrita no item 3-B, indicando qual sensor apresenta problemas.
+
+5. Com todas as condições atendidas, a Interface Homem-Máquina (IHM) é liberada para configuração.
+    
+       - 5-A. O controlador permite o ajuste da temperatura de aquecimento, iniciando por padrão em 37,5°C.
+      
+       - 5-B. Após o ajuste da temperatura, o operador pode escolher entre os modos de aquecimento rápido e lento.
+      
+       - 5-C. Por fim, o operador ajusta o tempo de operação.
+
+6. Após a configuração, o operador inicia o ciclo de aquecimento pressionando o botão correspondente.
+
+7. Durante o ciclo de aquecimento, o sistema atua com uma rotina inteligente de monitoramento do paciente e da temperatura. No entanto, algumas condições podem interromper o ciclo:
+
+       - 7-A. Superaquecimento do paciente;
+       
+       - 7-B. Sobrecorrente no sistema;
+       
+       - 7-C. Detecção de fuga de corrente;
+       
+       - 7-D. Baixo ganho de temperatura.
+
+8. Após a conclusão do ciclo de aquecimento, o controlador sinaliza que o processo foi finalizado, exibindo parâmetros como tempo médio de aquecimento.
+
+9. O sistema permite a realização de um novo ciclo.
 
 
 ## Descrição Estrutural do Sistema
