@@ -6,11 +6,20 @@
 O presente projeto foi originado no contexto das atividades da disciplina de graduação *EA075 - Introdução ao Projeto de Sistemas Embarcados*, 
 oferecida no segundo semestre de 2023, na Unicamp, sob supervisão da Profa. Dra. Paula Dornhofer Paro Costa, do Departamento de Engenharia de Computação e Automação (DCA) da Faculdade de Engenharia Elétrica e de Computação (FEEC).
 
-> |Nome  | RA | Curso|
-> |--|--|--|
-> | Beatriz Iamauchi Barroso  | 166531  | Ciência da Computação|
-> | Emily Sayuri Morihiro  | 233880  | Ciência da Computação|
+ |Nome  | RA | Curso|
+ |--|--|--|
+ | Beatriz Iamauchi Barroso  | 166531  | Ciência da Computação|
+ | Emily Sayuri Morihiro  | 233880  | Ciência da Computação|
 
+## Arquivos Importantes (:warning: NOVO :warning:)
+
+[Esquemático em PDF](./pdf/PlotEsquematico.pdf)
+
+[Lista de Componentes](./components.md)
+
+[PCB1](./images/Placa3DFrente.png)
+
+[PCB2](./images/Placa3DTras.png)
 
 ## Descrição do Projeto
 
@@ -44,13 +53,13 @@ O usuário não poderá alterar a configuração do brinquedo, uma vez que não 
 
 ### Eventos
 
-O sistema deve tratar os eventos de ligar e desligar seu sistema a partir do uso de botões pelo usuário, quando ligado, capturar sons do ambiente, gerar um sinal a partir dessa captura, amplificar e filtrar o sinal (visando a adaptação do sinal para a faixa exigida pelos componentes de processamento diminuição de ruído), processar o sinal e identificar os sons relevantes para que a movimentação seja ativada, e por fim, de acordo com o resultado do processamento e através do movimento dos servo-motores, responder (realizando ou não a movimentação) com o sinal em libras correspondente a cada uma das letras do alfabeto.
+O sistema deve tratar os eventos de ligar e desligar seu sistema, quando ligado, capturar sons do ambiente, gerar um sinal a partir dessa captura, amplificar e filtrar o sinal (visando a adaptação do sinal para a faixa exigida pelos componentes de processamento diminuição de ruído), processar o sinal e identificar os sons relevantes para que a movimentação seja ativada, e por fim, de acordo com o resultado do processamento e através do movimento dos servo-motores, responder (realizando ou não a movimentação) com o sinal em libras correspondente a cada uma das letras do alfabeto.
 
 Os eventos periódicos são dados com a captura do som do ambiente, no qual o brinquedo constantemente registra as ondas sonoras e processa o sinal originado, tentando identificar se alguma palavra reconhecida em seu sistema foi pronunciada para que o bloco de movimentação seja iniciado. Além disso, a amplificação e filtragem do sinal e também são eventos periódicos a serem realizados logo após a captura do som e anterior ao seu processamento.
 
-Para os eventos não periódicos, temos a ativação (ligar) e desativação (desligar) do brinquedo, que depende da ação da pessoa usuária, e também a resposta com o sinal em libras, que por depender do processamento, é realizada a partir da capacidade do sistema reconhecer um som que ative os comandos de movimentação.
+Para os eventos não periódicos, temos a ativação (ligar) e desativação (desligar) do brinquedo, além de apertar o botão enquanto o usuário estiver falando, que depende da ação da pessoa usuária, e também a resposta com o sinal em libras, que por depender do processamento, é realizada a partir da capacidade do sistema reconhecer um som que ative os comandos de movimentação.
 
-Acerca do tempo mínimo de processamento entre dois eventos sucessivos, em nosso projeto, ele é definido como o tempo de captura, amplificação, filtragem e processamento para o reconhecimento do sinal. Se a palavra gravada não for reconhecida em seu sistema, o brinquedo não deverá executar o bloco de movimentação, e portanto continuará captando sons do ambiente até que identifique um som que ative uma movimentação específica para a letra identificada.
+Acerca do tempo mínimo de processamento entre dois eventos sucessivos, em nosso projeto, ele é definido como o tempo de captura, amplificação, filtragem e processamento para o reconhecimento do sinal. Se a palavra gravada não for reconhecida em seu sistema, o brinquedo não deverá executar o bloco de movimentação, e portanto continuará esperando que o usuário aperte o botão novamente para falar.
 
 
 ### Tratamento de Eventos
@@ -64,19 +73,17 @@ Além disso, o processamento faz parte do tratamento de eventos, pois é atravé
 
 A descrição estrutural do sistema conta com um diagrama de blocos, no qual estão ilustrados os blocos funcionais (caixas retangulares) que compõem o sistema, juntamente com a sua respectiva síntese de funcionalidades e o relacionamento entre eles (representado por setas indicativas do fluxo de sinais). 
 
-![imagem 01](./DiagramaDeBlocos.png "Diagrama inicial do projeto")
+![imagem 01](./images/DiagramaDeBlocos.png "Diagrama inicial do projeto")
 
 1. **Pessoa usuária:** é representada no diagrama como responsável pela emissão de ondas sonoras a serem captadas.
     **(a):** onda sonora emitida pela pessoa usuária.
-2. **Sensor:** componente responsável pela captura de ondas sonoras do ambiente e conversão da onda sonora em sinais elétricos para o sistema.
-    **(b):** sinal elétrico oriundo da captura de som.
-3. **Amplificador:** responsável pelo ajuste do sinal gerado pelo sensor, com a finalidade de ajustar a onda sonora a níveis adequados para filtragem e processamento.
-    **(c):** sinal amplificado.
-4. **Filtro:** responsável pela remoção de ruído oriundo da captura de ondas sonoras do ambiente.
-    **(d):** sinal filtrado.
-5. **Microcontrolador:** componente responsável pelo processamento do sinal filtrado e acionamento dos servo-motores desejados do sistema.
-    **(e):** sinal de acionamento.
-6. **Servo-Motores:** componentes responsáveis pela realização do movimento desejado de acordo com o sinal identificado pelo microcontrolador.
+2. **Push-button (Pull-up):** Entendemos ao longo do projeto que seria muito trabalhoso manter o brinquedo ouvindo e analisando os sons do ambiente ininterruptamente enquanto ligado. Portanto, optamos por fazer a lógica de início da análise dos sons ser iniciada apenas enquanto um botão estivesse sendo pressionado.
+    **(b):** sinal de acionamento da análise.
+3. **Sensor com Amplificador:** componente responsável pela captura de ondas sonoras do ambiente e conversão da onda sonora em sinais elétricos para o sistema. esse componente também é responsável pelo ajuste do sinal gerado pelo sensor, com a finalidade de ajustar a onda sonora a níveis adequados para filtragem e processamento.
+    **(c):** sinal elétrico oriundo da captura de som amplificado.
+4. **Microcontrolador:** componente responsável pelo processamento do sinal filtrado e acionamento dos servo-motores desejados do sistema.
+    **(d):** sinal de acionamento.
+5. **Servo-Motores:** componentes responsáveis pela realização do movimento desejado de acordo com o sinal identificado pelo microcontrolador.
 
 
 ## Especificações
@@ -90,6 +97,7 @@ Para a especificação estrutural do projeto, inicialmente definimos os perifér
 - **Conversor de nível lógico 3,3V-5V**: Conversor de Nivel Lógico 3.3V-5V Bidirecional 8 Canais - CNL8, 2 unidades, visto que temos 13 pinos de saída do microcontrolador. 
 - **Servo motores**: 13 micro servo-motores 9G SG90, responsáveis pela movimentação das articulações da mão (1 no dedão e 3 nos demais dedos).
 - **Fonte de alimentação**: 2 fontes de alimentação, uma de 3,3V (Para o microcontrolador e o sensor), e outra de 5V para os Micro Servo Motores.
+- **Alterações no esquemático:** Para a elaboração do esquemático, foi necessário alterar alguns dos componentes para que sua representação fosse incluída no software kiCad, por isso, o microcontrolador ESP32 foi representado pelo ESP32-WROOM-32U, o sensor MAX4466 foi substituído pelo MAX9814 e os micro servo-motores estão identificadoa como Motor_Servo. Para estes, foi necessária a criação de uma biblioteca de footprints compatível com o servo-motor, que foi desenhada pelo do grupo para a compatibilidade com o circuito, incluindo as entradas PWM, positiva (+) e negativa (-).
 
 #### Características elétricas
 De acordo com os datasheets dos componentes selecionados acima, temos as seguintes especificações:
@@ -107,10 +115,12 @@ A respeito do limite mecânico do circuito integrado, imaginamos que a mão proj
 Para a determinação do limite de dissipação térmica, o microcontrolador ESP32 possui temperatura típica de operação na faixa entre -40 e 125°C, enquanto isso, o sensor MAX4466 pode sofrer danos permanentes ao operar em temperaturas acima de 70°C, além de que a faixa de temperatura do micro servo-motor está definida entre 0°C e 55°C. Dessa forma, considerando todos os componentes do circuito, definimos que seu limite de dissipação térmica deve ser menor que o limite recomendado para os micro servo-motores, sendo estimadamente equivalente a 45°C, a fim de se manter as condições físicas ideais para o funcionamento adequado.
 
 ### Especificação de Algoritmos 
-![imagem 02](./FuxogramaAlgoritmoMicrocontrolador.drawio.png "Diagrama inicial do algorítmo de tratamento dos dados e acionamento dos micro servo motores")
+![imagem 02](./images/FuxogramaAlgoritmoMicrocontrolador.drawio.png "Diagrama inicial do algorítmo de tratamento dos dados e acionamento dos micro servo motores")
+
+### Inclusão do algoritmo
+O código modificado para wokwi está no arquivo [CodigoESP32.py](./pdf/CodigoESP32.py). Visto que não há suporte para microfone, nem para importação de bibliotecas, na versão livre do wokwi, adicionamos a função (alterada para funcionamento em computador) que realiza o processamento e interpretação do sinal sonoro capturado no arquivo [IdentificadorDeFala.py](./pdf/IdentificadorDeFala.py), no qual é utilizada a biblioteca speech_recognition para a construção do algoritmo na função MicrofoneToText.
 
 ## Referências
-
 COSTA, P. D. P. Notas de Aula. Em: UNICAMP, D. F. (Ed.). Introdução ao Projeto de Sistemas Embarcados. [s.l: s.n.].
 COSTA, P. D. P. Introdução a Projetos. 2023. Disponível em: <https://docs.google.com/presentation/d/1afvy-OOdnNWq14U_VM_S1gdlB8W96pPzuXCWzTYaslg/edit#slide=id.p>
 CENTRO UNIVERSITÁRIO DE BARRA MANSA, U. B. M. População brasileira é composta por mais de 10 milhões de pessoas surdas. Disponível em: <https://g1.globo.com/rj/sul-do-rio-costa-verde/especial-publicitario/ubm/conhecimento-transforma/noticia/2020/02/12/populacao-brasileira-e-composta-por-mais-de-10-milhoes-de-pessoas-surdas.ghtml>. Acesso em: 28 ago. 2023.
