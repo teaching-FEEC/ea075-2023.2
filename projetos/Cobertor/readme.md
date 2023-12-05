@@ -277,19 +277,6 @@ Estão presentes no processo descritos no  [Sheet](https://docs.google.com/sprea
     **Processo dependente direto:** Processo M5.
 
 
-
-<div align="center">
-
-![image](https://github.com/piaiman/phms.2023.s2-feec-ea075/assets/62679350/fbd69272-6719-4824-96ff-1ff71acf5b40)
-
-![image](https://github.com/piaiman/phms.2023.s2-feec-ea075/assets/62679350/c7a46948-c610-4094-b46b-66e94ce35ac2)
-
-![image](https://github.com/piaiman/phms.2023.s2-feec-ea075/assets/62679350/339a0c3a-a23a-4dd8-afaf-5f7a55926f50)
-
-![image](https://github.com/piaiman/phms.2023.s2-feec-ea075/assets/62679350/ba0bc06a-104e-49ae-9031-2db9f3f6f0e8)
-
-</div>
-
 ## Projeto
 
 ### Esquemático do sistema
