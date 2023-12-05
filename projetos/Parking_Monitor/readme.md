@@ -59,3 +59,6 @@ O sistema projetado deve apresentar um comportamento semelhante em cada contexto
 
 ## Referências
 https://www.automsolution.com.br/services/controle-de-estacionamento-de-veiculos/
+https://www.sta-eletronica.com.br/artigos/arduinos/como-utilizar-um-lcd-e-um-modulo-i2c-com-o-arduino-uno
+https://www.arduinoecia.com.br/downloads/Datasheet_PCF8574_PCF8574A.pdf
+https://randomnerdtutorials.com/esp32-i2c-communication-arduino-ide/
