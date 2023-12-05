@@ -254,7 +254,9 @@ Estão presentes no processo descritos no  [Sheet](https://docs.google.com/sprea
 
     **Título:** Preset equipamento - IHM
     
-    **Entrada:** Potenciômetro, conectado ao pino A5 do PIC, com a função de alterar a escala de temperatura. Chave tátil, conectada ao pino A4 do PIC, usada para mudar as opções no menu de configuração (descrito no menu no MANUAL DE OPERAÇÃO).
+    **Entrada:** Potenciômetro, conectado ao pino A5 do PIC, com a função de alterar a escala de temperatura. Chave tátil, conectada ao pino A4 do PIC, usada para mudar as opções no menu de configuração.
+
+(descrito no menu no [MANUAL DE OPERAÇÃO 1](https://github.com/piaiman/phms.2023.s2-feec-ea075/blob/main/projetos/Cobertor/images/MANUAL%20DO%20USU%C3%81RIO/2.png) [MANUAL DE OPERAÇÃO 2](https://github.com/piaiman/phms.2023.s2-feec-ea075/blob/main/projetos/Cobertor/images/MANUAL%20DO%20USU%C3%81RIO/3.png) [MANUAL DE OPERAÇÃO 3](https://github.com/piaiman/phms.2023.s2-feec-ea075/blob/main/projetos/Cobertor/images/MANUAL%20DO%20USU%C3%81RIO/4.png)).
     
     **Saída:** Parâmetro de temperatura desejada para o S3 e tempo.
     
