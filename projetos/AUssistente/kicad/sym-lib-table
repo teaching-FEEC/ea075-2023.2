@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "BMI270")(type "KiCad")(uri "${KIPRJMOD}/BMI270/BMI270.kicad_sym")(options "")(descr ""))
+  (lib (name "MAX17043G_T")(type "KiCad")(uri "${KIPRJMOD}/MAX17043G_T/MAX17043G_T.kicad_sym")(options "")(descr ""))
+)

@@ -252,4 +252,5 @@ função hibernar():
 - Especificação do protocolo I2C https://www.nxp.com/docs/en/user-guide/UM10204.pdf
 - Cálculos de valores de resistência em barramentos I2C https://www.allaboutcircuits.com/technical-articles/the-i2c-bus-hardware-implementation-details/
 - Design de buzzers piezoelétricos https://www.diodes.com/assets/App-Note-Files/Design-Considerations-for-Driving-Piezoelectric-Buzzers.pdf
+- Roteamento de bus I2C https://hillmancurtis.com/i2c-pcb-layout/
 
