@@ -12,6 +12,14 @@ O presente projeto foi originado no contexto das atividades da disciplina de gra
  | Igor Silva Mota | 199009 | Eng. Elétrica|
  | Vinicius Errero| 206768 | Eng. Computação(AB)|
 
+## Arquivos Importantes
+
+[Esquemático em PDF](https://github.com/frgardin/ea075-2023.2/blob/main/projetos/sistema-de-irriga%C3%A7%C3%A3o/pdf/esquema_eletrico.pdf)
+
+[Lista de Componentes](https://github.com/frgardin/ea075-2023.2/blob/main/projetos/sistema-de-irriga%C3%A7%C3%A3o/componentes.md)
+
+[PCB](https://github.com/frgardin/ea075-2023.2/tree/main/projetos/sistema-de-irriga%C3%A7%C3%A3o/images)
+
 ## Descrição do Projeto
 
 O "Smart Watering System" tem por objetivo principal o fornecimento de uma solução capaz de irrigar pequenas hortas de forma automatizada, visando a economia de água e independência do fator humano. Este produto busca atingir pessoas aquelas que não possuem tempo disponível para fazer o cuidado adequado no que diz respeito a atividade de irrigação, ou entusiastas de automações residenciais.
@@ -81,7 +89,7 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
 
 ### Diagrama
 
-<h1 align="center"><img src="/projetos/sistema-de-irrigação/ea075-e1.drawio-att.png"/></h1>
+<h1 align="center"><img src="/projetos/sistema-de-irrigação/ea075-e1.drawio.png"/></h1>
 
 ### Estrutura e funcionamento do sistema
 
@@ -102,7 +110,6 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
   | FC-28 | Sensor de Umidade do Solo | 1 |  Através de suas pontas de prova, medir a resistência do solo | Faz parte da categoria sensores|<https://datasheethub.com/wp-content/uploads/2022/08/SEN0114_Web.pdf> |
   | DHT-11 | Sensor de Umidade e Temperatura | 1 |  Medir temperatura e umidade do ar | Faz parte da categoria sensores|<https://www.mouser.com/datasheet/2/758/DHT11-Technical-Data-Sheet-Translated-Version-1143054.pdf> |
   | HC-49S | Cristal Oscilador 20 MHz | 1 | Gerar sinal de clock ao microcontrolador | - | <https://datasheet.lcsc.com/lcsc/2008251934_HD-71008000RW1_C655216.pdf> |
-  | GCM1885C1H150JA16D | Capacitor 15 pF 50V | 2 |  Componente auxiliar do circuito cristal| - |<https://br.mouser.com/datasheet/2/281/1/GCM1885C1H150JA16_01A-3142522.pdf> |
   | BC547 | Transistor de silício epitaxial NPN | 1 |  Componente auxiliar do circuito do acionamento do motor | Faz parte da categoria atuadores | <https://www.sparkfun.com/datasheets/Components/BC546.pdf> |
   | JQC-3F | Relé | 1 |  Relé que aciona a valvula solenóide | Faz parte da categoria atuadores |<https://pdf.voron.ua/files/pdf/relay/JQC-3F(T73).pdf> |
   | 1N4007 | Retificador de plástico de uso geral | 1 |  Diodo de proteção do relé | Faz parte da categoria atuadores |<https://www.vishay.com/docs/88503/1n4001.pdf> |
@@ -112,8 +119,7 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
   conta com suporte ao protocolo de comunicação serial I2C, e claro possui uma estrutura de oscilação flexível.
 
   Para a escolha de visualização, escolheu-se prezar pela pouca estrutura, utilizando comunicação serial I2C para transmitir as informações necessárias ao display LCD (LM16255K).
-  Utiliza-se o CI PCF8574 para realizar a expansão de portas de 2 para 8 portas, com isso, poderia por exemplo, utilizar outras portas do microcontrolador para outra
-  tarefa por exemplo, ou adicionar mais "features" ao meu projeto futuramente.
+  Utiliza-se o CI PCF8574 para realizar a expansão de portas de 2 para 8 portas, com isso, poderia por exemplo, utilizar outras portas do microcontrolador para outra tarefa por exemplo, ou adicionar mais "features" ao meu projeto futuramente.
 
   De início, não identificamos a necessidade de circuitos auxiliares para leitura das informações medidas pelos sensores FC-28 e DHT-11, onde pretende-se utilizar duas entradas analógicas
   que o microcontrolador fornece, sendo elas (RA0 / AN0) e (RA1 / AN1). Com isso, tendo essas tensões lidas pelo MC, ocorre a conversão desses valores para as gradezas de cada sensor, e a
@@ -123,6 +129,8 @@ Para o tratamento de eventos, o sistema deverá seguir conforme abaixo:
   para esta aplicação escolheu-se o cristal de 20 MHz, juntamente com os capacitores de cerâmica de 15 pF.
 
   Para o circuito do atuador [1], pensou-se em um circuito de chaveamento com transistores, onde o transistor aciona um relé, este que aciona a válvula solenóide.
+
+  Vale ressaltar que o conector J1, está relacionado aos terminais do sensor FC-28 e o conector J2 a válvula solenóide, ambos componentes não estão anexados a placa pois os mesmos precisam estar em contato com o solo.
 
   Por fim, o sensor FC-28 precisa estar infincado ao solo, enquanto o restante pode estar sobre a pcb mesmo, espera-se deixar uma quantidade considerável de área para o microcontrolador
   e para o transistor e relé, no momento, não identifica-se a necessidade de um dissipador de calor.
@@ -246,3 +254,5 @@ Pseudoalgoritmo(C):
   [7] DATTA, Sumon; TAGHVAEIAN, Saleh; OCHSNER, Tyson; MORIASI, Daniel; GOWDA, Prasanna; STEINER, Jean. Performance Assessment of Five Different Soil Moisture Sensors under Irrigated Field Conditions in Oklahoma. MDPI. Disponível em: <https://www.mdpi.com/1424-8220/18/11/3786>. Acesso em: 10 de setembro de 2023.
 
   [8] ALBERT, Stephen. Soil and Air Temperatures for Growing Vegetables. Harvest to Table. Disponível em: <https://harvesttotable.com/soil-and-air-temperatures-for-growing-vegetables/>. Acesso em: 10 de setembro de 2023.
+
+  [9] JUNIOR, Railton Silva Rocha. Sistema embarcado para automação da irrigação por pulsos acionada por válvulas solenoides tipo latching. Disponível em: <https://repositorio.ufpe.br/bitstream/123456789/48412/1/TCC%20Railton%20Silva%20Rocha%20Junior.pdf>. Acesso em 03 de dezembro de 2023.
